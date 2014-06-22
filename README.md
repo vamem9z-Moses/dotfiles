@@ -22,6 +22,6 @@ configuration:
 1. CMake and the python libraries 2.7+ for YouCompleteMe
 1. pysmell
 
-Once these are installed you'll want to run the bootstrap script. Which will
+Once these are installed you'll want to run the bootstrap script, which will
 backup your current dotfiles and replace them with those in this repo.
 
