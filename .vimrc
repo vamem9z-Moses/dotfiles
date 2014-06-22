@@ -20,7 +20,6 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'altercation/vim-colors-solarized'
 
-Plugin 'dart-lang/dart-vim-plugin', {'name' : 'Dart'}, {'rtp': './'}
 Plugin 'tfnico/vim-gradle'
 Plugin 'yegappan/mru'
 "Plugin 'git://git.wincent.com/command-t.git/'
@@ -36,13 +35,15 @@ Plugin 'Lokaltog/powerline'
 Plugin 'klen/python-mode'
 Plugin 'alfredodeza/konira.vim'
 Plugin 'greyblake/vim-preview'
-"Plugin 'Blackrush/vim-gocode'
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'dgryski/vim-godef'
 Plugin 'chase/vim-ansible-yaml'
-
+Plugin 'vim-ruby/vim-ruby'
 call vundle#end() " required by vundle
+
+" Filetypes
+filetype plugin indent on    " required for vim bundle and pytho
 
 set t_Co=256 " Set colors to 256 (Works best in gnome terminal). Must be set before colorscheme
 
@@ -165,9 +166,10 @@ autocmd FileType python setlocal omnifunc=pysmell#Complete
 " Permenantly Disable Ex Mode
 "nnoremap Q <nop> " Don't need this now that Q is mapped to pq
 
-" Filetypes
-syntax on
-filetype plugin indent on    " required for vim bundle and pytho
+"Indent
+set smartindent 
+set autoindent
+
 
 " Autoreload .vimrc
 augroup reload_vimrc " {
