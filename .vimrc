@@ -170,6 +170,23 @@ autocmd FileType python setlocal omnifunc=pysmell#Complete
 set smartindent 
 set autoindent
 
+"Markdown to HTML Conversion Command - Requires Markdown.pl in path
+nmap <leader>md :%!~/bin/Markdown.pl --html4tags<cr>
+
+" Add Custom Functions Here
+
+" Word Processor Mode - http://www.drbunsen.org/writing-in-vim/ 
+func! WordProcessorMode()
+	setlocal formatoptions=1
+	setlocal noexpandtab
+	setlocal spell spelllang=en_us
+	set complete+=s
+	set formatprg=par
+	setlocal wrap
+	setlocal linebreak
+endfu
+com! WP call WordProcessorMode()
+
 
 " Autoreload .vimrc
 augroup reload_vimrc " {

@@ -22,6 +22,9 @@ configuration:
 1. CMake and the python libraries 2.7+ for YouCompleteMe
 1. pysmell
 
+You'll also want to make sure that the Markdown.pl file is in ~/bin or change
+its location in .vimrc.  My bin repo has the Markdown.pl file in it.
+
 Once these are installed you'll want to run the bootstrap script, which will
 backup your current dotfiles and replace them with those in this repo.
 
