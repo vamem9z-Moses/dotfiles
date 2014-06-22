@@ -14,4 +14,12 @@ ln -s $PWD/.bashrc $HOME/.bashrc
 ln -s $PWD/.vim $HOME/.vim
 ln -s $PWD/.vimrc $HOME/.vimrc
 
+
+### Installing Vundle
+echo "Installing Vundle"
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+echo "Installing Vim Plugins"
+vim +PluginInstall +qall
+
 echo "Done"
