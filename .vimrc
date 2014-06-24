@@ -40,6 +40,7 @@ Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'dgryski/vim-godef'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'bling/vim-bufferline'  
 call vundle#end() " required by vundle
 
 " Filetypes
@@ -64,6 +65,12 @@ highlight ColorColumn ctermbg=Black  guibg=#2c2d27
 " Set Split Defaults
 set splitbelow
 set splitright
+
+" Bufferline Integration with statusline
+let g:bufferline_echo = 1                                                    
+  "autocmd VimEnter *                                                            
+   " \ let &statusline='%{bufferline#refresh_status()}'                          
+    "  \ .bufferline#get_status_string() 
 
 " map turn off highligt to esc
 
