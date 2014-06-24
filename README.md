@@ -19,7 +19,8 @@ To use you'll want to install the following:
 In addition, there are a few prerequisites for the vim
 configuration:
 
-1. CMake and the python libraries 2.7+ for YouCompleteMe
+1. ctags
+1. CMake and the python libraries 2.7+ (libpython2.7-dev) for YouCompleteMe
 1. pysmell
 
 You'll also want to make sure that the Markdown.pl file is in ~/bin or change
