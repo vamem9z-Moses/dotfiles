@@ -116,3 +116,5 @@ fi
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/home/mmiles/.gvm/bin/gvm-init.sh" ]] && source "/home/mmiles/.gvm/bin/gvm-init.sh"
 [[ -s "/home/mmiles/.gvm/scripts/gvm" ]] && source "/home/mmiles/.gvm/scripts/gvm"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

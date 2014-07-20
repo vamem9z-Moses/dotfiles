@@ -41,6 +41,7 @@ Plugin 'dgryski/vim-godef'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'bling/vim-bufferline'  
+Plugin 'mxw/vim-jsx'
 call vundle#end() " required by vundle
 
 " Filetypes
@@ -112,6 +113,9 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+"Syntastic
+let g:syntastic_check_on_open=1
 
 "ConqueTerm
 nmap <leader>cq :ConqueTermSplit bash<CR>

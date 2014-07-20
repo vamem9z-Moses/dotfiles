@@ -88,6 +88,10 @@ export GOPATH=$HOME/Software/gocode
 PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH
 
+#NVM
+export NVM_DIR="/home/mmiles/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 ## The last thing we will do is export the PATH to make sure we got all of the changes
 
 # Set 256 Colors for Vim
@@ -116,3 +120,6 @@ alias 3rapp="source ~/bin/3rapp"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
