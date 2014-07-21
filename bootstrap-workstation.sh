@@ -29,6 +29,13 @@ sudo apt-get install -y aisleriot ctags cmake libpython2.7-dev virtualenvwrapper
 echo "Install CSS"
 sudo /usr/share/doc/libdvdread4/install-css.sh
 
+## Install Development Dependencies
+echo "Installing nvm"
+curl https://raw.githubusercontent.com/creationix/nvm/v0.11.1/install.sh | bash
+
+echo "Installing rvm"
+curl -sSL https://get.rvm.io | bash -s stable
+
 echo "Install Pythonz"
 sudo apt-get build-dep python2.7
 curl -kL https://raw.github.com/saghul/pythonz/master/pythonz-install | bash
