@@ -3,7 +3,17 @@
 These are my key dotfiles. The current configuration assumes Ubuntu 14.04
 (specifically Xubuntu 14.04). 
 
-## Setup
+## Bootstrapping
+
+There are 3 bootstrap scripts. The first is bootstrap-workstation.sh it will
+take a fresh ubuntu/xubuntu 14.04 install and set it up to my specifications
+favorite apps extra.  The second script bootstrap-thinkpad.sh runs
+bootstrap-workstation.sh and adds additional thinkpad specific libraries.  The
+last is boostrap vim it setups up vim and zsh to my specifications.  It
+requires the following (these depenedencies are in the boostrap-workstations.sh
+script):
+
+### Setup Vim
 
 To use you'll want to install the following:
 
