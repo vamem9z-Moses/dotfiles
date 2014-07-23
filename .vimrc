@@ -17,7 +17,7 @@ Plugin 'scrooloose/syntastic'
 
 Plugin 'plasticboy/vim-markdown'
 
-Plugin 'jelera/vim-javascript-syntax'
+"Plugin 'jelera/vim-javascript-syntax'
 Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'tfnico/vim-gradle'
@@ -42,6 +42,8 @@ Plugin 'chase/vim-ansible-yaml'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'bling/vim-bufferline'  
 Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript' 
+
 call vundle#end() " required by vundle
 
 " Filetypes
@@ -173,6 +175,10 @@ let g:pymode_doc_key="<leader>k"  " used jedi-vim for help
 
 " Add pysmell support
 autocmd FileType python setlocal omnifunc=pysmell#Complete
+
+"HTML Settings
+"Use F8 to close HTML tag
+inoremap <F8> </<C-X><C-O>
 
 " Permenantly Disable Ex Mode
 "nnoremap Q <nop> " Don't need this now that Q is mapped to pq
