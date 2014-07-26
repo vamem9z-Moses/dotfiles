@@ -79,6 +79,7 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 GROOVY_HOME=/home/mmiles/Apps/groovy-2.2.2
 PATH=$PATH:$GROOVY_HOME/bin
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # Add all new PATH addtitions above this line
 export NOGOPATH=$PATH
 
@@ -122,4 +123,3 @@ alias 3rapp="source ~/bin/3rapp"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

@@ -53,7 +53,7 @@ set t_Co=256 " Set colors to 256 (Works best in gnome terminal). Must be set bef
 
 " Colors dependent on the altercation/vim-colors-solarized plugin and have
 " to bp set afterard
-set background=light
+set background=dark
 colorscheme solarized
 
 " Showing line numbers and length
