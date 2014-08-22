@@ -24,7 +24,7 @@ Plugin 'tfnico/vim-gradle'
 Plugin 'yegappan/mru'
 "Plugin 'git://git.wincent.com/command-t.git/'
 "Plugin 'davidhalter/jedi-vim'
-Plugin 'Valloric/YouCompleteMe' 
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-fugitive'
 Plugin 'alfredodeza/pytest.vim'
@@ -40,9 +40,9 @@ Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'dgryski/vim-godef'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'bling/vim-bufferline'  
+Plugin 'bling/vim-bufferline'
 Plugin 'mxw/vim-jsx'
-Plugin 'pangloss/vim-javascript' 
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end() " required by vundle
 
@@ -55,7 +55,7 @@ set t_Co=256 " Set colors to 256 (Works best in gnome terminal). Must be set bef
 " to bp set afterard
 let g:solarized_visibility="high"
 let g:solarized_termcolors=256
-set background=light
+set background=dark
 colorscheme solarized
 
 " Showing line numbers and length
@@ -72,10 +72,10 @@ set splitbelow
 set splitright
 
 " Bufferline Integration with statusline
-let g:bufferline_echo = 1                                                    
-  "autocmd VimEnter *                                                            
-   " \ let &statusline='%{bufferline#refresh_status()}'                          
-    "  \ .bufferline#get_status_string() 
+let g:bufferline_echo = 1
+  "autocmd VimEnter *
+   " \ let &statusline='%{bufferline#refresh_status()}'
+    "  \ .bufferline#get_status_string()
 
 " map turn off highligt to esc
 
@@ -148,30 +148,30 @@ let g:SimpylFold_fold_docstring = 0 " Don't fold doc strings
 "To fix annoying issue with YouCompleteMe
 "let g:clang_user_options='|| exit 0'
 
-" python-mode                                                                   
-" https://github.com/klen/python-mode                                           
-let g:pymode_virtualenv=1 " Auto fix vim python paths if virtualenv enabled        
-let g:pymode_folding=1  " Enable python folding                                 
-let g:pymode_utils_whitespaces=0  " Do not autoremove unused whitespaces        
-map <Leader>rgd :call RopeGotoDefinition()<CR>                                  
-map <Leader>pl :PyLint<CR>                                                      
-let ropevim_enable_shortcuts=1                                                  
-let g:pymode_rope_goto_def_newwin="vnew"                                        
-let g:pymode_rope_extended_complete=1                                           
-let g:pymode_syntax=1                                                           
-let g:pymode_syntax_builtin_objs=0                                              
-let g:pymode_syntax_builtin_funcs=0                                             
+" python-mode
+" https://github.com/klen/python-mode
+let g:pymode_virtualenv=1 " Auto fix vim python paths if virtualenv enabled
+let g:pymode_folding=1  " Enable python folding
+let g:pymode_utils_whitespaces=0  " Do not autoremove unused whitespaces
+map <Leader>rgd :call RopeGotoDefinition()<CR>
+map <Leader>pl :PyLint<CR>
+let ropevim_enable_shortcuts=1
+let g:pymode_rope_goto_def_newwin="vnew"
+let g:pymode_rope_extended_complete=1
+let g:pymode_syntax=1
+let g:pymode_syntax_builtin_objs=0
+let g:pymode_syntax_builtin_funcs=0
 let g:pymode_lint_ignore = "C0110 Exported"  " ignore pep257 missing docstring warning
-let g:pymode_lint_minheight = 5   " Minimal height of pylint error window          
-let g:pymode_lint_maxheight = 15  " Maximal height of pylint error window          
-let g:pymode_lint_write = 0  " Disable pylint checking every save               
-let g:pymode_run_key = "<leader>run"  " default key conflicts with jedi-vim        
-let g:pymode_lint_mccabe_complexity = 10                                        
-let g:pymode_lint_checker="pyflakes,pep8,pep257,mccabe"                         
-let g:pymode_syntax_highlight_self=0  " do not highlight self                   
-let g:pymode_rope_vim_completion=0  " use jedi-vim for completion               
-let g:pymode_rope_guess_project=0                                               
-let g:pymode_doc_key="<leader>k"  " used jedi-vim for help  
+let g:pymode_lint_minheight = 5   " Minimal height of pylint error window
+let g:pymode_lint_maxheight = 15  " Maximal height of pylint error window
+let g:pymode_lint_write = 0  " Disable pylint checking every save
+let g:pymode_run_key = "<leader>run"  " default key conflicts with jedi-vim
+let g:pymode_lint_mccabe_complexity = 10
+let g:pymode_lint_checker="pyflakes,pep8,pep257,mccabe"
+let g:pymode_syntax_highlight_self=0  " do not highlight self
+let g:pymode_rope_vim_completion=0  " use jedi-vim for completion
+let g:pymode_rope_guess_project=0
+let g:pymode_doc_key="<leader>k"  " used jedi-vim for help
 "Disable Pyflakes for konira files
 "autocmd BufRead,BufWrite case_*.py :let g:pymode_lint = 0
 
@@ -186,7 +186,7 @@ inoremap <F8> </<C-X><C-O>
 "nnoremap Q <nop> " Don't need this now that Q is mapped to pq
 
 "Indent
-set smartindent 
+set smartindent
 set autoindent
 
 "Markdown to HTML Conversion Command - Requires Markdown.pl in path
@@ -194,7 +194,7 @@ nmap <leader>md :%!~/bin/Markdown.pl --html4tags<cr>
 
 " Add Custom Functions Here
 
-" Word Processor Mode - http://www.drbunsen.org/writing-in-vim/ 
+" Word Processor Mode - http://www.drbunsen.org/writing-in-vim/
 func! WordProcessorMode()
 	setlocal formatoptions=1
 	setlocal noexpandtab
@@ -206,9 +206,11 @@ func! WordProcessorMode()
 endfu
 com! WP call WordProcessorMode()
 
+" Remove trailing white space on save
+autocmd BufWritePre *.* :%s/\s\+$//e
 
 " Autoreload .vimrc
 augroup reload_vimrc " {
 	    autocmd!
 	        autocmd BufWritePost $MYVIMRC source $MYVIMRC
-	augroup END " }
+	augroup END " ;}

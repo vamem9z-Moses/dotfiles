@@ -73,9 +73,12 @@ PATH="/home/mmiles/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 
 # Virtualenv Wrapper Config
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-
-# Groovy 
+if [ -e /etc/redhat-release ]; then
+	source /usr/bin/virtualenv.sh
+else
+	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+fi
+# Groovy
 GROOVY_HOME=/home/mmiles/Apps/groovy-2.2.2
 PATH=$PATH:$GROOVY_HOME/bin
 
