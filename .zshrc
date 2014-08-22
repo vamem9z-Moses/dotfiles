@@ -74,7 +74,7 @@ PATH="/home/mmiles/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 # Virtualenv Wrapper Config
 export WORKON_HOME=$HOME/.virtualenvs
 if [ -e /etc/redhat-release ]; then
-	source /usr/bin/virtualenv.sh
+	source /usr/bin/virtualenvwrapper.sh
 else
 	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi

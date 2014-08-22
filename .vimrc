@@ -22,7 +22,7 @@ Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'tfnico/vim-gradle'
 Plugin 'yegappan/mru'
-"Plugin 'git://git.wincent.com/command-t.git/'
+Plugin 'git://git.wincent.com/command-t.git/'
 "Plugin 'davidhalter/jedi-vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-ragtag'
@@ -54,7 +54,7 @@ set t_Co=256 " Set colors to 256 (Works best in gnome terminal). Must be set bef
 " Colors dependent on the altercation/vim-colors-solarized plugin and have
 " to bp set afterard
 let g:solarized_visibility="high"
-let g:solarized_termcolors=256
+let g:solarized_termcolors=16
 set background=dark
 colorscheme solarized
 
