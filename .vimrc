@@ -55,7 +55,7 @@ set t_Co=256 " Set colors to 256 (Works best in gnome terminal). Must be set bef
 " to bp set afterard
 let g:solarized_visibility="high"
 let g:solarized_termcolors=16
-set background=dark
+set background=light
 colorscheme solarized
 
 " Showing line numbers and length
@@ -65,7 +65,7 @@ set nowrap " don't automatically wrap on load
 set fo-=t " don't automatically wrap when typing
 set colorcolumn=80
 "let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn  guibg=#2c2d27
+highlight ColorColumn
 
 " Set Split Defaults
 set splitbelow
@@ -208,6 +208,13 @@ com! WP call WordProcessorMode()
 
 " Remove trailing white space on save
 autocmd BufWritePre *.* :%s/\s\+$//e
+
+"slimv configuration
+let g:lisp_rainbow=1
+
+if has("gui_running")
+	set guioptions+=m
+endif
 
 " Autoreload .vimrc
 augroup reload_vimrc " {
