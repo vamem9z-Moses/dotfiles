@@ -1,7 +1,7 @@
 # Dotfiles
 
 These are my key dotfiles. The current configuration assumes Ubuntu 14.04
-(specifically Xubuntu 14.04). 
+(specifically Xubuntu 14.04).
 
 ## Bootstrapping
 
@@ -25,6 +25,7 @@ To use you'll want to install the following:
 1. golang
 1. nsf/gocode in the src directory of any golang workspaces
 1. git
+1. sbcl
 
 In addition, there are a few prerequisites for the vim
 configuration:
@@ -39,3 +40,8 @@ its location in .vimrc.  My bin repo has the Markdown.pl file in it.
 Once these are installed you'll want to run the bootstrap script, which will
 backup your current dotfiles and replace them with those in this repo.
 
+#### Slimv
+
+To make slimv work correctly you'll need to adsf installed.  The easiest way to
+do this is to install quicklisp and run `(ql:add-to-init-file)` to ensure that
+it loads whenever the REPL loads. See http://www.quicklisp.org/ for more info.
