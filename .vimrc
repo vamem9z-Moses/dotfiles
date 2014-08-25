@@ -35,14 +35,15 @@ Plugin 'Lokaltog/powerline'
 Plugin 'klen/python-mode'
 Plugin 'alfredodeza/konira.vim'
 Plugin 'greyblake/vim-preview'
-Plugin 'jnwhiteh/vim-golang'
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
-Plugin 'dgryski/vim-godef'
+"Plugin 'jnwhiteh/vim-golang'
+"Plugin 'nsf/gocode', {'rtp': 'vim/'}
+"Plugin 'dgryski/vim-godef'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'bling/vim-bufferline'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
+Plugin 'fatih/vim-go'
 
 call vundle#end() " required by vundle
 

@@ -7,9 +7,12 @@ These are my key dotfiles. The current configuration assumes Ubuntu 14.04
 
 There are 3 bootstrap scripts. The first is bootstrap-workstation.sh it will
 take a fresh ubuntu/xubuntu 14.04 install and set it up to my specifications
-favorite apps extra.  The second script bootstrap-thinkpad.sh runs
-bootstrap-workstation.sh and adds additional thinkpad specific libraries.  The
-last is boostrap vim it setups up vim and zsh to my specifications.  It
+favorite apps extra.  It will ask for user input 3 times during the first
+apt-get update, when mscorefonts installs and when the shell change program
+runs.
+
+The second script bootstrap-thinkpad.sh runs bootstrap-workstation.sh and adds
+additional thinkpad specific libraries.  The last is boostrap vim it setups up vim and zsh to my specifications.  It
 requires the following (these depenedencies are in the boostrap-workstations.sh
 script):
 
@@ -37,7 +40,7 @@ configuration:
 You'll also want to make sure that the Markdown.pl file is in ~/bin or change
 its location in .vimrc.  My bin repo has the Markdown.pl file in it.
 
-Once these are installed you'll want to run the bootstrap script, which will
+Once these are installed you'll want to run the bootstrap-vim.sh script, which will
 backup your current dotfiles and replace them with those in this repo.
 
 #### Slimv
@@ -45,3 +48,8 @@ backup your current dotfiles and replace them with those in this repo.
 To make slimv work correctly you'll need to adsf installed.  The easiest way to
 do this is to install quicklisp and run `(ql:add-to-init-file)` to ensure that
 it loads whenever the REPL loads. See http://www.quicklisp.org/ for more info.
+
+## Postinstall
+
+Occasionally you'll want to run the rvm-pythonz-update.sh script to update
+those 2 to the latest versions.
