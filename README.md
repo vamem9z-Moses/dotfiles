@@ -53,3 +53,11 @@ it loads whenever the REPL loads. See http://www.quicklisp.org/ for more info.
 
 Occasionally you'll want to run the rvm-pythonz-update.sh script to update
 those 2 to the latest versions.
+
+## Grub Configuration
+
+For thinkpads you'll want to add the following line to your grub configuration
+on ubuntu it is /etc/default/grub, be sure to rerun update-grub afterwards:
+'GRUB_CMDLINE_LINUX_DEFAULT="quiet splash thinkpad-acpi.brightness_enable=1 acpi_backlight=vendor i915.i915_enable_rc6=1 i915.i915_enable_fbc=1 i915.lvds_downclock=1 i915.semaphores=1 intel_pstate=enable pcie_aspm=
+force"'
+

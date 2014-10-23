@@ -2,7 +2,7 @@
 
 ### Copy Original Files to Old
 echo "Move Original Files to originalfile.old"
-mv $HOME/.vimrc $HOME/.vimrc
+mv $HOME/.vimrc $HOME/.vimrc.old
 mv $HOME/.vim $HOME/.vim.old
 
 ### Create Symbolic Links to dotfiles replacements
