@@ -217,6 +217,9 @@ if has("gui_running")
 	set guioptions+=m
 endif
 
+"Nginx syntax support
+au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
+
 " Autoreload .vimrc
 augroup reload_vimrc " {
 	    autocmd!
