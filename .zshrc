@@ -1,4 +1,4 @@
-# Path to your oh-my-zsh installation.
+#Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -106,7 +106,8 @@ else
 fi
 
 # Aliases
-alias 3rapp="source ~/bin/3rapp"
+alias 3rapp="source /home/mmiles/Software/ma/3rapp/src/github.com/MilesAheadLLC/3rapp/bin/3rapp"
+alias 3rappweb="source /home/mmiles/Software/ma/3rappweb/src/github.com/MilesAheadLLC/3rappweb/bin/3rappweb"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
