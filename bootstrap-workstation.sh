@@ -17,7 +17,7 @@ sudo apt-get remove -y gnumeric abiword
 
 # Install Applications
 echo "Install Apps"
-sudo apt-get install -y pylint gstreamer0.10-plugins-bad mercurial dkms sbcl okular okular-extra-backends aisleriot ctags cmake libpython2.7-dev virtualenvwrapper curl libreadline-dev zsh konsole unrar rar ttf-mscorefonts-installer libreoffice gstreamer0.10-plugins-ugly libxine1-ffmpeg gxine mencoder libdvdread4 totem-mozilla icedax tagtool easytag id3tool lame nautilus-script-audio-convert libmad0 mpg321 libavcodec-extra openjdk-7-jdk vlc clementine wine nautilus-dropbox firewalld firewall-applet chromium-browser filezilla gdebi
+sudo apt-get install -y gnome-disk-utility gparted pylint gstreamer0.10-plugins-bad mercurial dkms sbcl okular okular-extra-backends aisleriot ctags cmake libpython2.7-dev virtualenvwrapper curl libreadline-dev zsh konsole unrar rar ttf-mscorefonts-installer libreoffice gstreamer0.10-plugins-ugly libxine1-ffmpeg gxine mencoder libdvdread4 totem-mozilla icedax tagtool easytag id3tool lame nautilus-script-audio-convert libmad0 mpg321 libavcodec-extra openjdk-7-jdk vlc clementine wine nautilus-dropbox firewalld firewall-applet chromium-browser filezilla gdebi
 
 echo "Install CSS"
 sudo /usr/share/doc/libdvdread4/install-css.sh
