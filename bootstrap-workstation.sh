@@ -26,6 +26,10 @@ sudo /usr/share/doc/libdvdread4/install-css.sh
 echo "Install pysmell"
 sudo pip install pysmell
 
+# Install dependencies for development and shell
+echo "Install Python 2.7 devel files"
+sudo apt-get -y build-dep python2.7
+
 echo "All of the automated stuff is done"
 echo "Get  .gitconfig and id files and pull down /bin from github"
 echo "Run bootstrap-thinkpad.sh if your computer is a thinkpad"

@@ -6,7 +6,6 @@ echo "Installing rvm"
 curl -sSL https://get.rvm.io | bash -s stable
 
 echo "Install Pythonz"
-sudo apt-get -y build-dep python2.7
 curl -kL https://raw.github.com/saghul/pythonz/master/pythonz-install | bash
 
 echo "Install oh-my-zsh"
