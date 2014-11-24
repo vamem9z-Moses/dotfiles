@@ -43,6 +43,10 @@ its location in .vimrc.  My bin repo has the Markdown.pl file in it.
 Once these are installed you'll want to run the bootstrap-vim.sh script, which will
 backup your current dotfiles and replace them with those in this repo.
 
+If you are on fedora it uses an older version of ctags 5.8 vs the git commit
+for 5.9 that doesn't have support for go you need to run the boostrap-ctags.sh
+  `./boostrap-ctag.sh`. This will copy a ctags file that adds go bindings.
+
 #### Slimv
 
 To make slimv work correctly you'll need to adsf installed.  The easiest way to
