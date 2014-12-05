@@ -193,6 +193,9 @@ set autoindent
 "Markdown to HTML Conversion Command - Requires Markdown.pl in path
 nmap <leader>md :%!~/bin/Markdown.pl --html4tags<cr>
 
+"vim-go config
+let g:go_fmt_command = "goimports"
+
 " Add Custom Functions Here
 
 " Word Processor Mode - http://www.drbunsen.org/writing-in-vim/
