@@ -53,10 +53,11 @@ To make slimv work correctly you'll need to adsf installed.  The easiest way to
 do this is to install quicklisp and run `(ql:add-to-init-file)` to ensure that
 it loads whenever the REPL loads. See http://www.quicklisp.org/ for more info.
 
-## Postinstall
+## Postinstall and Updating
 
-Occasionally you'll want to run the rvm-pythonz-update.sh script to update
-those 2 to the latest versions.
+Occasionally you'll want to run the `rvm-pythonz-update.sh` script to update
+those 2 to the latest versions. There is also a script to update all of the vim
+plugins it is `update-vim.sh`.
 
 ## Grub Configuration
 
