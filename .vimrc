@@ -68,6 +68,9 @@ set colorcolumn=80
 "let &colorcolumn=join(range(81,999),",")
 highlight ColorColumn
 
+"  For OS X allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
 " Set Split Defaults
 set splitbelow
 set splitright
