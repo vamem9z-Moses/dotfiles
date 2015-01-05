@@ -93,7 +93,7 @@ PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH
 
 #NVM
-export NVM_DIR="/home/mmiles/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 ## The last thing we will do is export the PATH to make sure we got all of the changes
@@ -106,8 +106,8 @@ else
 fi
 
 # Aliases
-alias 3rapp="source /home/mmiles/Software/ma/3rapp/src/github.com/MilesAheadLLC/3rapp/bin/3rapp"
-alias 3rappweb="source /home/mmiles/Software/ma/3rappweb/src/github.com/MilesAheadLLC/3rappweb/bin/3rappweb"
+alias 3rapp="source $HOME/Software/ma/3rapp/src/github.com/MilesAheadLLC/3rapp/bin/3rapp"
+alias 3rappweb="source $HOME/Software/ma/3rappweb/src/github.com/MilesAheadLLC/3rappweb/bin/3rappweb"
 alias update-grub-fedora="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
 # export MANPATH="/usr/local/man:$MANPATH"
 
