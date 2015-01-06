@@ -71,13 +71,6 @@ PATH="/home/mmiles/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 # Pythonz
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
 
-# Virtualenv Wrapper Config
-export WORKON_HOME=$HOME/.virtualenvs
-if [ -e /etc/redhat-release ]; then
-	source /usr/bin/virtualenvwrapper.sh
-else
-	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-fi
 # Groovy
 GROOVY_HOME=/home/mmiles/Apps/groovy-2.2.2
 PATH=$PATH:$GROOVY_HOME/bin
@@ -127,4 +120,28 @@ alias update-grub-fedora="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# Platform specific configurations
 
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+   platform='linux'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+   platform='darwin'
+fi
+
+# Add Postgres App Path for mac
+#
+if [[ $platform == 'darwin' ]]; then
+	PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+fi
+
+# Virtualenv Wrapper Config
+export WORKON_HOME=$HOME/.virtualenvs
+if [[ $plaform == 'linux' ]]; then
+	if [ -e /etc/redhat-release ]; then
+		source /usr/bin/virtualenvwrapper.sh
+	else
+		source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+	fi
+fi
