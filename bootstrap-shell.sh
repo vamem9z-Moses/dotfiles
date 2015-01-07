@@ -12,7 +12,7 @@ echo "Install oh-my-zsh"
 curl -L http://install.ohmyz.sh | sh
 
 echo "Change shell to zsh"
-chsh /bin/zsh
+chsh -s /bin/zsh
 
 ### Copy Original Files to Old
 echo "Move Original Files to originalfile.old"
