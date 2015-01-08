@@ -20,6 +20,6 @@ vim +PluginInstall +qall
 
 echo "Install YouCompleteMe"
 cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
-~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
+~/.vim/bundle/YouCompleteMe/install.sh
 
 echo "Done"
