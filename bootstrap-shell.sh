@@ -1,6 +1,6 @@
 ## Install Development Dependencies
 echo "Installing nvm"
-curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash
+curl https://raw.githubusercontent.com/creationix/nvm/v0.22.0/install.sh | bash
 
 echo "Installing rvm"
 gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
