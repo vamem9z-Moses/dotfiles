@@ -65,5 +65,8 @@ For thinkpads you'll want to add the following line to your grub configuration
 on ubuntu it is /etc/default/grub, be sure to rerun update-grub afterwards:'GRUB_CMDLINE_LINUX_DEFAULT="quiet splash thinkpad-acpi.brightness_enable=1 acpi_backlight=vendor i915.i915_enable_rc6=1 i915.i915_enable_fbc=1 i915.lvds_downclock=1 i915.semaphores=1 intel_pstate=enable pcie_aspm=
 force"'
 
-For all other computers use this line: 'GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pcie_aspm=force acpi_osi='!Windows 2012' acpi=force acpi_enforce_resources=lax i915.i915_enable_rc6=1 i915.i915_enable_fbc=1 i9
-15.lvds_downclock=1 i915.semaphores=1 drm.vblankoffdelay=1 acpi_backlight=vendor"'
+For all other computers use this line: `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pcie_aspm=force acpi_osi='!Windows 2012' acpi=force acpi_enforce_resources=lax i915.i915_enable_rc6=1 i915.i915_enable_fbc=1 i9
+15.lvds_downclock=1 i915.semaphores=1 drm.vblankoffdelay=1 acpi_backlight=vendor`
+
+For computers with kernels 3.15+ the setting should look like this: pcie_aspm=force acpi_osi=Linux acpi=force acpi_enforce_resources=lax i915.enable_rc6=1 i915.enable_fbc=1 i915.lvds_downclock=1 i915.semaphores=1 drm.vblankoffdelay=1"
+
