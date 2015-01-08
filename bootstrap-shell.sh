@@ -3,7 +3,8 @@ echo "Installing nvm"
 curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash
 
 echo "Installing rvm"
-curl -sSL https://get.rvm.io | bash -s stable
+gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
+\curl -sSL https://get.rvm.io | bash -s stable
 
 echo "Install Pythonz"
 curl -kL https://raw.github.com/saghul/pythonz/master/pythonz-install | bash
