@@ -47,6 +47,9 @@ sudo yum install -y chromium
 echo "Turning off nemo desktop icons"
 gsettings set org.nemo.desktop show-desktop-icons false
 
+#Increase inotify limits - I ran into this doing a large sftp copy with filezilla
+cp 99-sysctl.conf /etc/sysctl.d/99-sysctl.conf
+
 echo "All of the automated stuff is done"
 echo "Run bootstrap-shell.sh for zsh, rvm, nvm, pythonz and run rvm-pythonz-update.sh to make sure you have the latest versions"
 echo "Run bootstrap-vim.sh to setup vim"
