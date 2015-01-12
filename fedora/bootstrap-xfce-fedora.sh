@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-echo "Install XFCE 4 apps and plugins"
-sudo yum install xarchiver xfburn xfce4-whiskermenu-plugin xfce4-volumed xfce4-mixer elementary-xfce-icon-theme.noarch
+echo "Install XFCE Desktop"
+sudo yum groupinstall -y "Xfce Desktop"
+
+echo "Install Additional XFCE 4 apps and plugins"
+sudo yum install -y xarchiver xfburn xfce4-whiskermenu-plugin xfce4-volumed xfce4-mixer elementary-xfce-icon-theme.noarch
 
 echo "Copy Compton Config - Compton is a compositor that eliminates tearing"
 echo "You will have to download compton from the opensuse factory"
