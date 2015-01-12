@@ -75,6 +75,11 @@ To make slimv work correctly you'll need to adsf installed.  The easiest way to
 do this is to install quicklisp and run `(ql:add-to-init-file)` to ensure that
 it loads whenever the REPL loads. See http://www.quicklisp.org/ for more info.
 
+## MS Office in Wine
+Office 2007 is installed in wine the `msoffice/bootstrap-wine-msoffice.sh`
+script will add icon and desktop files so that office will show up in the DE's
+Menu.
+
 ## Postinstall and Updating
 
 Occasionally you'll want to run the `rvm-pythonz-update.sh` script to update
