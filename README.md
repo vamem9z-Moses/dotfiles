@@ -29,6 +29,8 @@ To setup fedora you'll want to use the following scripts:
   `./boostrap-ctag.sh`. This will copy a ctags file that adds go bindings.
 1. `boostrap-xfce-fedora.sh` - Setup F21 to use XFCE. This should be run after
    boostrap-fedora-workstation.sh.
+1. `bootstrap-btsync.sh` - This will create the btsync systemd service for the
+   user that runs the script.
 
 ### Bootstrap The Shell
 `boostrap-shell.sh` will setup the shell with zsh, rvm, pythonz and nvm. This
