@@ -66,7 +66,7 @@ set nowrap " don't automatically wrap on load
 set fo-=t " don't automatically wrap when typing
 set colorcolumn=80
 "let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn
+highlight ColorColumn ctermbg=235 guibg=DarkRed
 
 "  For OS X allow backspacing over everything in insert mode
 set backspace=indent,eol,start
