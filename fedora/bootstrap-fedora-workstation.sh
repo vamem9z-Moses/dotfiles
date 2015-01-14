@@ -24,7 +24,7 @@ sudo yum install -y gedit-plugin* --exclude=gedit-plugin-zeitgeist --exclude=ged
 
 # Install dependencies for development and shell
 echo "Install Python 2.7 devel files"
-sudo yum install -y python-devel
+sudo yum install -y python-devel openssl-devel python-pip sqlite-devel zlib-devel readline-devel readline
 
 # Copy XResources for better fonts
 echo "Copying .Xresources"
