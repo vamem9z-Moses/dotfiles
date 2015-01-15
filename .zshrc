@@ -56,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 
-PATH="/home/mmiles/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+PATH="$PATH:/home/mmiles/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
 # Pyenv
 #export PYENV_ROOT="${HOME}/.pyenv"
@@ -71,13 +71,6 @@ PATH="/home/mmiles/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 # Pythonz
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
 
-# Virtualenv Wrapper Config
-export WORKON_HOME=$HOME/.virtualenvs
-if [ -e /etc/redhat-release ]; then
-	source /usr/bin/virtualenvwrapper.sh
-else
-	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-fi
 # Groovy
 GROOVY_HOME=/home/mmiles/Apps/groovy-2.2.2
 PATH=$PATH:$GROOVY_HOME/bin
@@ -93,7 +86,7 @@ PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH
 
 #NVM
-export NVM_DIR="/home/mmiles/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 ## The last thing we will do is export the PATH to make sure we got all of the changes
@@ -106,8 +99,8 @@ else
 fi
 
 # Aliases
-alias 3rapp="source /home/mmiles/Software/ma/3rapp/src/github.com/MilesAheadLLC/3rapp/bin/3rapp"
-alias 3rappweb="source /home/mmiles/Software/ma/3rappweb/src/github.com/MilesAheadLLC/3rappweb/bin/3rappweb"
+alias 3rapp="source $HOME/Software/ma/3rapp/src/github.com/MilesAheadLLC/3rapp/bin/3rapp"
+alias 3rappweb="source $HOME/Software/ma/3rappweb/src/github.com/MilesAheadLLC/3rappweb/bin/3rappweb"
 alias update-grub-fedora="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -127,4 +120,28 @@ alias update-grub-fedora="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# Platform specific configurations
 
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+   platform='linux'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+   platform='darwin'
+fi
+
+# Add Postgres App Path for mac
+#
+if [[ $platform == 'darwin' ]]; then
+	PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+fi
+
+# Virtualenv Wrapper Config
+export WORKON_HOME=$HOME/.virtualenvs
+if [[ $plaform == 'linux' ]]; then
+	if [ -e /etc/redhat-release ]; then
+		source /usr/bin/virtualenvwrapper.sh
+	else
+		source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+	fi
+fi

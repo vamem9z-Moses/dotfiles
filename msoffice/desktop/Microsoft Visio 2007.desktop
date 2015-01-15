@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Microsoft Visio 2007
+Encoding=UTF-8
+Exec=wine "/home/mmiles/.wine/drive_c/Program Files/Microsoft Office/Office12/VISIO.EXE"
+Icon=/home/mmiles/.local/share/icons/Office07/image022.png
+Type=Application
+Categories=GNOME;Office;
+Name[en_US]=Microsoft Visio 2007
