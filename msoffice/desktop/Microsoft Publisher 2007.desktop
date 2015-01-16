@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Microsoft Publisher 2007
+Encoding=UTF-8
+Exec=wine "/home/mmiles/.wine/drive_c/Program Files/Microsoft Office/Office12/MSPUB.EXE"
+Icon=/home/mmiles/.local/share/icons/Office07/Publisher_2007_trans.png
+Type=Application
+Categories=GNOME;Office;
+Name[en_US]=Microsoft Publisher 2007
