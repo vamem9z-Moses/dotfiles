@@ -8,8 +8,8 @@ sudo rpm -ivh http://rpm.livna.org/livna-release.rpm
 sudo yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 echo "Add google repository key"
-wget https://dl-ssl.google.com/linux/linux_signing_key.pub
-sudo rpm --import linux_signing_key.pub
+wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O $HOME/linux_signing_key.pub
+sudo rpm --import $HOME/linux_signing_key.pub
 
 # Install Apps
 echo "Install Apps"
@@ -61,7 +61,7 @@ echo "Disable nautilus handling the desktop"
 gsettings set org.gnome.desktop.background show-desktop-icons false
 
 #Increase inotify limits - I ran into this doing a large sftp copy with filezilla
-cp 99-sysctl.conf /etc/sysctl.d/99-sysctl.conf
+sudo cp 99-sysctl.conf /etc/sysctl.d/99-sysctl.conf
 
 echo "All of the automated stuff is done"
 echo "Run bootstrap-shell.sh for zsh, rvm, nvm, pythonz and run rvm-pythonz-update.sh to make sure you have the latest versions"
