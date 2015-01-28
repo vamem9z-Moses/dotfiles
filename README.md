@@ -31,6 +31,8 @@ To setup fedora you'll want to use the following scripts:
    boostrap-fedora-workstation.sh.
 1. `bootstrap-btsync.sh` - This will create the btsync systemd service for the
    user that runs the script.
+1. `bootstrap-fonts` - This will add additional fonts to system. Right now it
+   only adds the Monaco font.
 
 ### Bootstrap The Shell
 `boostrap-shell.sh` will setup the shell with zsh, rvm, pythonz and nvm. This
