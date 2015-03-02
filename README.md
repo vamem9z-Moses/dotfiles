@@ -84,8 +84,8 @@ Menu.
 
 ## Postinstall and Updating
 
-Occasionally you'll want to run the `rvm-pythonz-update.sh` script to update
-those 2 to the latest versions. There is also a script to update all of the vim
+Occasionally you'll want to run the `rvm-pythonz-nvm-update.sh` script to update
+those 2 to their latest versions. There is also a script to update all of the vim
 plugins it is `update-vim.sh`.
 
 ## Grub Configuration
