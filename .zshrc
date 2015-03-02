@@ -138,10 +138,9 @@ fi
 
 # Virtualenv Wrapper Config
 export WORKON_HOME=$HOME/.virtualenvs
-if [[ $plaform == 'linux' ]]; then
-	if [ -e /etc/redhat-release ]; then
-		source /usr/bin/virtualenvwrapper.sh
-	else
-		source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-	fi
+if [ -e /etc/redhat-release ]; then
+	source /usr/bin/virtualenvwrapper.sh
+fi
+if [ -e /etc/debian_version ]; then
+	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
