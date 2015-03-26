@@ -47,6 +47,11 @@ echo "Installing Chromium"
 sudo dnf copr enable churchyard/chromium-russianfedora
 sudo yum install -y chromium
 
+# Setup rpmbuild
+echo "Setting Up rpmbuild"
+sudo yum install -y mock rpmbuild
+sudo useradd -s /sbin/nologin mockbuild
+
 #Turn off Nemo Desktop Icons
 echo "Turning off nemo desktop icons"
 gsettings set org.nemo.desktop show-desktop-icons false
