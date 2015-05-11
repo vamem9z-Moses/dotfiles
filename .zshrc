@@ -56,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 
-PATH="$PATH:/home/mmiles/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+PATH="$PATH:$HOME/Apps:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
 # Pyenv
 #export PYENV_ROOT="${HOME}/.pyenv"
