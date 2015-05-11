@@ -199,6 +199,10 @@ nmap <leader>md :%!~/bin/Markdown.pl --html4tags<cr>
 "vim-go config
 "let g:go_fmt_command = "goimports"
 
+" Add xsd config here
+
+autocmd FileType xsd setlocal shiftwidth=2 tabstop=2
+
 " Add Custom Functions Here
 
 " Word Processor Mode - http://www.drbunsen.org/writing-in-vim/
