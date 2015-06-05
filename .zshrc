@@ -134,6 +134,9 @@ fi
 #
 if [[ $platform == 'darwin' ]]; then
 	PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+	unalias run-help
+	autoload run-help
+	HELPDIR=/usr/local/share/zsh/help
 fi
 
 # Virtualenv Wrapper Config
