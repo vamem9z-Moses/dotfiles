@@ -12,7 +12,7 @@ sudo rpm --import $HOME/linux_signing_key.pub
 
 # Install Apps
 echo "Install Apps"
-sudo dnf install -y libvdpau-va-gl kodi postgresql-devel pavucontrol xpaint gimp pinta minitube vim-X11 gnome-power-manager gparted virt-manager libvirt qemu* wine brasero gpodder strace google-droid* lm_sensors python-pysmell powertop tmux freetype-freeworld libXScrnSaver.x86_64 redhat-lsb.x86_64 gnome-tweak-tool vim vlc filezilla libmad lame ike sound-juicer htop aisleriot autotrace firewall-applet gitg python-devel sqlite-devel readline-devel mercurial google-roboto-fonts google-roboto-condensed-fonts zsh python-pysmell ctags ctags-etags cmake sbcl python-virtualenvwrapper nodejs glibc-devel.x86_64 cmake automake gcc gcc-c++ kernel-devel dnf-plugins-core okular  gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-bad gstreamer1-plugins-bad-free-extras gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good gstreamer1-plugins-good gstreamer-plugins-good-extras gstreamer1-plugins-good-extras gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-base gstreamer1 gstreamer-ffmpeg lsdvd dvdbackup HandBrake-gui HandBrake-cli makemkv libdvdcss libdvdread libdvdnav curl cabextract xorg-x11-font-utils fontconfig clementine nemo nemo-fileroller nemo-extensions nemo-rabbitvcs nemo-dropbox nemo-image-converter nemo-emblems totem-nautilus rabbitvcs-nautilus sushi nautilus-dropbox file-roller-nautilus brasero-nautilus nautilus-open-terminal nautilus-image-converter evince-nautilus raw-thumbnailer rabbitvcs-gedit rabbitvcs-cli tlp simple-scan xsane font-manager gnome-shell-extension-drive-menu alacarte terminator
+sudo dnf install -y vagrant libvdpau-va-gl kodi postgresql-devel pavucontrol xpaint gimp pinta minitube vim-X11 gnome-power-manager gparted virt-manager libvirt qemu* wine brasero gpodder strace google-droid* lm_sensors python-pysmell powertop tmux freetype-freeworld libXScrnSaver.x86_64 redhat-lsb.x86_64 gnome-tweak-tool vim vlc filezilla libmad lame ike sound-juicer htop aisleriot autotrace firewall-applet gitg python-devel sqlite-devel readline-devel mercurial google-roboto-fonts google-roboto-condensed-fonts zsh python-pysmell ctags ctags-etags cmake sbcl python-virtualenvwrapper nodejs glibc-devel.x86_64 cmake automake gcc gcc-c++ kernel-devel dnf-plugins-core okular  gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-bad gstreamer1-plugins-bad-free-extras gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good gstreamer1-plugins-good gstreamer-plugins-good-extras gstreamer1-plugins-good-extras gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-base gstreamer1 gstreamer-ffmpeg lsdvd dvdbackup HandBrake-gui HandBrake-cli makemkv libdvdcss libdvdread libdvdnav curl cabextract xorg-x11-font-utils fontconfig clementine nemo nemo-fileroller nemo-extensions nemo-rabbitvcs nemo-dropbox nemo-image-converter nemo-emblems totem-nautilus rabbitvcs-nautilus sushi nautilus-dropbox file-roller-nautilus brasero-nautilus nautilus-open-terminal nautilus-image-converter evince-nautilus raw-thumbnailer rabbitvcs-gedit rabbitvcs-cli tlp simple-scan xsane font-manager gnome-shell-extension-drive-menu alacarte terminator
 
 # Install mscorefonts
 sudo rpm -ivh https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
@@ -47,8 +47,9 @@ sudo dnf copr enable churchyard/chromium-russianfedora-tested
 sudo dnf install -y chromium
 
 # Setup skype
+echo "Installing Skype"
 sudo dnf config-manager --add-repo=http://negativo17.org/repos/fedora-skype.repo
-sudo install -y skyp
+sudo install -y skype
 
 # Setup rpmbuild
 echo "Setting Up rpmbuild"
@@ -77,4 +78,4 @@ echo "Install Extra fonts"
 echo "All of the automated stuff is done"
 echo "Run bootstrap-shell.sh for zsh, rvm, nvm, pythonz and run rvm-pythonz-update.sh to make sure you have the latest versions"
 echo "Run bootstrap-vim.sh to setup vim"
-echo "You'll want to install skype, vagrant, virtualbox, google chrome, racket, go, and dart from their websites"
+echo "You'll want to install google chrome, racket, go, and dart from their websites"
