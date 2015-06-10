@@ -102,6 +102,7 @@ fi
 alias 3rapp="source $HOME/Software/ma/3rapp/src/github.com/MilesAheadLLC/3rapp/bin/3rapp"
 alias 3rappweb="source $HOME/Software/ma/3rappweb/src/github.com/MilesAheadLLC/3rappweb/bin/3rappweb"
 alias update-grub-fedora="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
+alias update-grub-fedora-efi="sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
