@@ -3,8 +3,8 @@
 # Install Repos
 echo "Adding Repos livna, rpmfusion, fedora-handbrake"
 
-sudo dnf-config-manager --add-repo=http://negativo17.org/repos/fedora-handbrake.repo
-sudo dnf localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf config-manager -y --add-repo=http://negativo17.org/repos/fedora-handbrake.repo
+sudo dnf install -y --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 echo "Add google repository key"
 wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O $HOME/linux_signing_key.pub
@@ -35,7 +35,7 @@ echo "Adding go ctag support"
 
 # Setup thermald
 echo "Setting up thermald"
-sudo dnf copr enable hadrons123/thermald
+sudo dnf copr -y enable hadrons123/thermald
 sudo dnf install -y thermal-daemon
 
 sudo systemctl enable thermald
@@ -43,13 +43,13 @@ sudo systemctl start thermald
 
 # Setup Chromium
 echo "Installing Chromium"
-sudo dnf copr enable churchyard/chromium-russianfedora-tested
+sudo dnf copr -y enable churchyard/chromium-russianfedora-tested
 sudo dnf install -y chromium
 
 # Setup skype
 echo "Installing Skype"
-sudo dnf config-manager --add-repo=http://negativo17.org/repos/fedora-skype.repo
-sudo install -y skype
+sudo dnf config-manager -y --add-repo=http://negativo17.org/repos/fedora-skype.repo
+sudo dnf install -y skype
 
 # Setup rpmbuild
 echo "Setting Up rpmbuild"
