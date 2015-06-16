@@ -71,6 +71,21 @@ sudo cp 99-sysctl.conf /etc/sysctl.d/99-sysctl.conf
 echo "Install Extra fonts"
 ./bootstrap-fonts.sh
 
+echo "***********************************"
+echo "An Important Message for IKE"
+echo
+echo "Run the command sudo sysctl -a | grep rp_filter | grep -v arp"
+echo "For IKE to work all the values must be zero"
+echo "If not update /etc/sysctl.d/99-sysctl.conf to include the following:"
+echo "net.ipv4.conf.all.rp_filter = 0"
+echo "net.ipv4.conf.default.rp_filter = 0"
+echo "And the same lines for each of the physical network adapters e.g. net.ipv4.conf.enp5s0.rp_filter = 0"
+echo "Reboot and IKE should work"
+echo
+echo "*************************************"
+echo
+echo
+echo
 echo "All of the automated stuff is done"
 echo "Run bootstrap-shell.sh for zsh, rvm, nvm, pythonz and run rvm-pythonz-update.sh to make sure you have the latest versions"
 echo "Run bootstrap-vim.sh to setup vim"
