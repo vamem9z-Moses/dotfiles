@@ -80,7 +80,7 @@ echo "If not update /etc/sysctl.d/99-sysctl.conf to include the following:"
 echo "net.ipv4.conf.all.rp_filter = 0"
 echo "net.ipv4.conf.default.rp_filter = 0"
 echo "And the same lines for each of the physical network adapters e.g. net.ipv4.conf.enp5s0.rp_filter = 0"
-echo "Reboot and IKE should work"
+echo "Reboot or run sudo sysctl -p  and IKE should work"
 echo
 echo "*************************************"
 echo
