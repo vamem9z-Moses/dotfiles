@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Eclipse
+Encoding=UTF-8
+Exec=/home/mmiles/bin/eclipse
+Icon=/home/mmiles/.local/share/icons/eclipseicon.xpm
+Type=Application
+Categories=GNOME;Development;
+Name[en_US]=Eclipse
