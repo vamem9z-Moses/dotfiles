@@ -125,10 +125,12 @@ alias update-grub-fedora-efi="sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.c
 
 platform='unknown'
 unamestr=`uname`
-if [[ "$unamestr" == 'Linux' ]]; then
-   platform='linux'
-elif [[ "$unamestr" == 'Darwin' ]]; then
-   platform='darwin'
+if [[ "$unamestr" == 'Darwin' ]]; then
+  platform='darwin'
+elif [ -e /etc/redhat-release ]; then
+  platform='fedora'
+elif [ -e /etc/debian_version ]; then
+  platform='ubuntu'
 fi
 
 # Add Postgres App Path for mac
@@ -142,9 +144,14 @@ fi
 
 # Virtualenv Wrapper Config
 export WORKON_HOME=$HOME/.virtualenvs
-if [ -e /etc/redhat-release ]; then
+if [ $platform == 'fedora' ]; then
 	source /usr/bin/virtualenvwrapper.sh
 fi
-if [ -e /etc/debian_version ]; then
+if [ $platform == 'ubuntu' ]; then
 	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+fi
+
+#JAVA_HOME
+if  [ $platform == 'ubuntu' ]; then
+	export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 fi
