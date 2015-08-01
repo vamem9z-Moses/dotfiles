@@ -99,3 +99,8 @@ For all other computers use this line: `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash
 
 For computers with kernels 3.15+ the setting should look like this: pcie_aspm=force acpi_osi=Linux acpi=force acpi_enforce_resources=lax i915.enable_rc6=1 i915.enable_fbc=1 i915.lvds_downclock=1 i915.semaphores=1 drm.vblankoffdelay=1"
 
+Haswell and newer computers can add the following i915.enable_psr=1 to enable
+Panel Self Refresh.
+
+Sandy Bridge and Ivy Bridge can use i915.enable_rc6=7 instead of
+i915.enable_rc=1 to enable lower rc6 states that only exist on those processors.
