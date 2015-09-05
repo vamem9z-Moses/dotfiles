@@ -139,6 +139,10 @@ fi
 #
 if [[ $platform == 'darwin' ]]; then
 	PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+fi
+
+## Add help for zsh on mac installed with Homebrew
+if [ $platform == 'darwin' ]; then
 	unalias run-help
 	autoload run-help
 	HELPDIR=/usr/local/share/zsh/help
@@ -151,6 +155,9 @@ if [ $platform == 'fedora' ]; then
 fi
 if [ $platform == 'ubuntu' ]; then
 	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+fi
+if [ $platform == 'darwin' ]; then
+	source /usr/local/bin/virtualenvwrapper.sh
 fi
 
 #JAVA_HOME
