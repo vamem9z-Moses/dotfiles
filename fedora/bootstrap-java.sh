@@ -8,3 +8,5 @@ cp ./eclipseicon.xpm $HOME/.local/share/icons
 
 echo "Copy desktop to local application directory"
 cp ./eclipse.desktop $HOME/.local/share/applications
+
+echo "Be sure to create a symbolic link between the eclipse executable and the $/HOME/bin directory e.g. ln -s ~/Apps/eclipse/eclipse ~/bin"
