@@ -19,8 +19,10 @@ chsh -s /bin/zsh
 echo "Move Original Files to originalfile.old"
 mv $HOME/.bashrc $HOME/.bashrc.old
 mv $HOME/.zshrc $HOME/.zshrc.old
+mv $HOME/.ctags $HOME/.ctags.old
 
 ### Create Symbolic Links to dotfiles replacements
 echo "Creating Symbolic Links to dotfiles Replacements"
 ln -s $PWD/.zshrc $HOME/.zshrc
 ln -s $PWD/.bashrc $HOME/.bashrc
+ln -s $PWD/.ctags $HOME/.ctags

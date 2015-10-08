@@ -8,7 +8,9 @@ syntax enable
 
 " Vundle and it plugins
 set rtp+=~/.vim/bundle/Vundle.vim
+let g:vundle_default_git_proto = 'git'
 call vundle#begin()
+
 
 Plugin 'gmarik/Vundle.vim'
 
@@ -44,6 +46,7 @@ Plugin 'bling/vim-bufferline'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'fatih/vim-go'
+Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end() " required by vundle
 
