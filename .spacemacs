@@ -225,11 +225,13 @@ layers configuration. You are free to put any usr code."
       (setq goroot (concat home "/Apps/go"))
       (setq goroot-bin (concat goroot "/bin"))
       (setq gopath (concat home "/Software/ATHN/formanalysis"))
+      (setq gopath-bin (concat gopath "/bin"))
       (setq path-bin (concat path (concat ":" (concat goroot (concat ":/bin:" (concat gopath "/bin"))))))
       (setenv "GOPATH" gopath)
       (setenv "GOROOT" goroot)
       (setenv "PATH" path-bin)
       (setq exec-path (append exec-path '(goroot-bin)))
+      (setq exec-path (append exec-path '(gopath-bin)))
       (message "Environment set for the form analysis project"))
   )
 
