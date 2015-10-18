@@ -210,9 +210,11 @@ user code."
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any usr code."
   ;; Set emacs to use system clipboard
-  (setq mac-command-modifier 'meta)
   (setq x-select-enable-clipboard t)
 
+  ;; Set emacs on mac to use right option as control
+  ;; This is requires Karbiner to be installed with the correct mapping
+  (setq mac-command-modifier 'meta)
   ;; Set shell to use zsh via bin file
   (setenv "ESHELL" (expand-file-name "~/bin/eshell"))
 
@@ -231,8 +233,8 @@ layers configuration. You are free to put any usr code."
       (setenv "GOPATH" gopath)
       (setenv "GOROOT" goroot)
       (setenv "PATH" path-bin)
-      (setq exec-path (append exec-path '(goroot-bin)))
-      (message exec-path))
+      (setq exec-path (append exec-path '(gopath-bin) '(goroot-bin)))
+      (message "Formanalysis Environment is setup"))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
