@@ -210,6 +210,7 @@ user code."
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any usr code."
   ;; Set emacs to use system clipboard
+  (setq mac-command-modifier 'meta)
   (setq x-select-enable-clipboard t)
 
   ;; Set shell to use zsh via bin file
