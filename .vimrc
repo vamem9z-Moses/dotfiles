@@ -86,7 +86,7 @@ let g:bufferline_echo = 1
 
 " map turn off highligt to esc
 
-noremap <leader>h :noh<return><esc>
+nmap <leader>h :noh<return><esc>
 
 " Fold code
 "noremap <space> zo
