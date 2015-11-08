@@ -29,6 +29,10 @@ sudo rpm -ivh https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttco
 echo "Installing gedit plugins"
 sudo dnf install -y gedit-plugin* --exclude=gedit-plugin-zeitgeist --exclude=gedit-plugins
 
+echo "Install clojure syntax support for clojure"
+git clone git@github.com:mattfenwick/gedit-clojure.git ~/Apps/gedit-clojure
+sudo cp ~/Apps/gedit-clojure/clojure.lang /usr/share/gtksourceview-3.0/language-specs/
+
 # Install dependencies for development and shell
 echo "Install Python 2.7 devel files"
 sudo dnf install -y python-devel openssl-devel python-pip sqlite-devel zlib-devel readline-devel readline
