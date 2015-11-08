@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo "Update System"
+sudo dnf update -y
+
 # Install Repos
 echo "Adding Repos livna, rpmfusion, fedora-handbrake"
 
@@ -9,6 +12,11 @@ sudo dnf install -y --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmf
 echo "Add google repository key"
 wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O $HOME/linux_signing_key.pub
 sudo rpm --import $HOME/linux_signing_key.pub
+
+echo "Install Development Tools"
+
+sudo dnf group install "Development Tools" -y
+sudo dnf install kernel-devel kernel-headers -y
 
 # Install Apps
 echo "Install Apps"
