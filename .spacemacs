@@ -189,7 +189,13 @@ values."
    ;; specified with an installed package.
    ;; Not used for now. (default nil)
    dotspacemacs-default-package-repository nil
-   ))
+   )
+    (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
+    (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
+    (add-to-list 'package-pinned-packages '(clj-refactor . "melpa-stable") t)
+    (add-to-list 'package-pinned-packages '(cljr-helm . "melpa-stable") t)
+    (add-to-list 'package-pinned-packages '(ac-cider . "melpa-stable") t)
+  )
 
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
