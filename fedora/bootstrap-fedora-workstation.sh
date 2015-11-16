@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo "Update System"
+sudo dnf update -y
+
 # Install Repos
 echo "Adding Repos livna, rpmfusion, fedora-handbrake"
 
@@ -9,6 +12,14 @@ sudo dnf install -y --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmf
 echo "Add google repository key"
 wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O $HOME/linux_signing_key.pub
 sudo rpm --import $HOME/linux_signing_key.pub
+
+echo "Install Development Tools"
+
+sudo dnf group install "Development Tools" -y
+sudo dnf install kernel-devel kernel-headers -y
+
+echo "Install vdpau support"
+sudo dnf install mesa-vdpau-drivers vdpauinfo -y
 
 # Install Apps
 echo "Install Apps"
@@ -20,6 +31,10 @@ sudo rpm -ivh https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttco
 # Install gedit plugins
 echo "Installing gedit plugins"
 sudo dnf install -y gedit-plugin* --exclude=gedit-plugin-zeitgeist --exclude=gedit-plugins
+
+echo "Install clojure syntax support for clojure"
+git clone git@github.com:mattfenwick/gedit-clojure.git ~/Apps/gedit-clojure
+sudo cp ~/Apps/gedit-clojure/clojure.lang /usr/share/gtksourceview-3.0/language-specs/
 
 # Install dependencies for development and shell
 echo "Install Python 2.7 devel files"
