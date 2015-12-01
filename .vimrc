@@ -2,6 +2,8 @@
 ":set background&
 
 " General Settigns
+" Set sheel to sh so that env set in .zshenv is ignored
+set shell=bash
 set nocompatible
 filetype off	"required
 syntax enable
