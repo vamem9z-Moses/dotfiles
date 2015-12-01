@@ -33,10 +33,10 @@ echo "Install System Utilities"
 sudo dnf install -y tmux strace lm_sensors powertop exfat-utils fuse-exfat libvdpau-va-gl tlp  gnome-shell-extension-drive-menu alacarte terminator gnome-power-manager gparted virt-manager libvirt qemu* redhat-lsb.x86_64 htop zsh autotrace curl dnf-plugins-core
 
 echo "Install Development Tools"
-sudo dnf install -y emacs gcc-c++ cmake ctags vim-pysmell vagrant vim-enhanced postgresql-devel gitg  mercurial ctags ctags-etags cmake sbcl python-virtualenvwrapper nodejs cmake automake gcc gcc-c++
+sudo dnf install -y emacs gcc-c++ cmake ctags vim-pysmell vagrant vim-enhanced gitg  mercurial ctags ctags-etags cmake sbcl python-virtualenvwrapper nodejs cmake automake gcc gcc-c++ pgadmin3 postgresql-server postgresql-contrib
 
 echo "Install Development Libraries"
-sudo dnf install -y glibc-devel.x86_64
+sudo dnf install -y glibc-devel.x86_64 postgresql-devel
 
 echo "Install Nautilus Extensions"
 sudo dnf install -y totem-nautilus rabbitvcs-nautilus sushi nautilus-dropbox file-roller-nautilus brasero-nautilus nautilus-open-terminal nautilus-image-converter evince-nautilus raw-thumbnailer rabbitvcs-gedit rabbitvcs-cli
