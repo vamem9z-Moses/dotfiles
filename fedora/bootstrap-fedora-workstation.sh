@@ -7,6 +7,7 @@ sudo dnf update -y
 echo "Adding Repos livna, rpmfusion, fedora-handbrake"
 
 sudo dnf config-manager -y --add-repo=http://negativo17.org/repos/fedora-handbrake.repo
+
 sudo dnf install -y --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 echo "Add google repository key"
@@ -35,7 +36,7 @@ echo "Install Development Tools"
 sudo dnf install -y emacs gcc-c++ cmake ctags vim-pysmell vagrant vim-enhanced postgresql-devel gitg  mercurial ctags ctags-etags cmake sbcl python-virtualenvwrapper nodejs cmake automake gcc gcc-c++
 
 echo "Install Development Libraries"
-sudo dnf install -y glibc-devel.x86_64 kernel-devel
+sudo dnf install -y glibc-devel.x86_64
 
 echo "Install Nautilus Extensions"
 sudo dnf install -y totem-nautilus rabbitvcs-nautilus sushi nautilus-dropbox file-roller-nautilus brasero-nautilus nautilus-open-terminal nautilus-image-converter evince-nautilus raw-thumbnailer rabbitvcs-gedit rabbitvcs-cli
