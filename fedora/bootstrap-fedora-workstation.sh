@@ -23,7 +23,25 @@ sudo dnf install mesa-vdpau-drivers vdpauinfo -y
 
 # Install Apps
 echo "Install Apps"
-sudo dnf install -y emacs exfat fuse-exfat vagrant libvdpau-va-gl kodi postgresql-devel pavucontrol xpaint gimp pinta minitube vim-X11 gnome-power-manager gparted virt-manager libvirt qemu* wine brasero gpodder strace google-droid* lm_sensors python-pysmell powertop tmux freetype-freeworld libXScrnSaver.x86_64 redhat-lsb.x86_64 gnome-tweak-tool vim vlc filezilla libmad lame ike sound-juicer htop aisleriot autotrace firewall-applet gitg python-devel sqlite-devel readline-devel mercurial google-roboto-fonts google-roboto-condensed-fonts zsh python-pysmell ctags ctags-etags cmake sbcl python-virtualenvwrapper nodejs glibc-devel.x86_64 cmake automake gcc gcc-c++ kernel-devel dnf-plugins-core okular  gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-bad gstreamer1-plugins-bad-free-extras gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good gstreamer1-plugins-good gstreamer-plugins-good-extras gstreamer1-plugins-good-extras gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-base gstreamer1 gstreamer-ffmpeg lsdvd dvdbackup HandBrake-gui HandBrake-cli makemkv libdvdcss libdvdread libdvdnav curl cabextract xorg-x11-font-utils fontconfig clementine nemo nemo-fileroller nemo-extensions nemo-rabbitvcs nemo-dropbox nemo-image-converter nemo-emblems totem-nautilus rabbitvcs-nautilus sushi nautilus-dropbox file-roller-nautilus brasero-nautilus nautilus-open-terminal nautilus-image-converter evince-nautilus raw-thumbnailer rabbitvcs-gedit rabbitvcs-cli tlp simple-scan xsane font-manager gnome-shell-extension-drive-menu alacarte terminator
+sudo dnf install -y simple-scan xsane clementine kodi pavucontrol xpaint gimp pinta minitube wine brasero gpodder libXScrnSaver.x86_64 gnome-tweak-tool vlc filezilla ike sound-juicer aisleriot firewall-applet okular lsdvd dvdbackup HandBrake-gui HandBrake-cli makemkv
+
+echo "Install Codecs"
+sudo dnf install -y gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-bad gstreamer1-plugins-bad-free-extras gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good gstreamer1-plugins-good gstreamer-plugins-good-extras gstreamer1-plugins-good-extras gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-base gstreamer1 gstreamer-ffmpeg libdvdcss libdvdread libdvdnav libmad lame
+
+echo "Install System Utilities"
+sudo dnf install -y tmux strace lm_sensors powertop exfat-utils fuse-exfat libvdpau-va-gl tlp  gnome-shell-extension-drive-menu alacarte terminator gnome-power-manager gparted virt-manager libvirt qemu* redhat-lsb.x86_64 htop zsh autotrace curl dnf-plugins-core
+
+echo "Install Development Tools"
+sudo dnf install -y emacs gcc-c++ cmake ctags vim-pysmell vagrant vim-enhanced postgresql-devel gitg  mercurial ctags ctags-etags cmake sbcl python-virtualenvwrapper nodejs cmake automake gcc gcc-c++
+
+echo "Install Development Libraries"
+sudo dnf install -y glibc-devel.x86_64 kernel-devel
+
+echo "Install Nautilus Extensions"
+sudo dnf install -y totem-nautilus rabbitvcs-nautilus sushi nautilus-dropbox file-roller-nautilus brasero-nautilus nautilus-open-terminal nautilus-image-converter evince-nautilus raw-thumbnailer rabbitvcs-gedit rabbitvcs-cli
+
+echo "Install Additional Fonts"
+sudo dnf install -y cabextract xorg-x11-font-utils fontconfig font-manager google-droid* freetype-freeworld google-roboto-fonts google-roboto-condensed-fonts
 
 # Install mscorefonts
 sudo rpm -ivh https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
@@ -68,6 +86,9 @@ sudo dnf install -y mock rpmbuild
 sudo useradd -s /sbin/nologin mockbuild
 
 #Turn off Nemo Desktop Icons
+echo "Install Nemo"
+sudo dnf install -y nemo nemo-fileroller nemo-extensions nemo-rabbitvcs nemo-dropbox nemo-image-converter nemo-emblems
+
 echo "Turning off nemo desktop icons"
 gsettings set org.nemo.desktop show-desktop-icons false
 
