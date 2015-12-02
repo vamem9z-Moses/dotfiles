@@ -225,13 +225,6 @@ com! WP call WordProcessorMode()
 " Remove trailing white space on save
 autocmd BufWritePre *.* :%s/\s\+$//e
 
-"slimv configuration
-let g:lisp_rainbow=1
-
-if has("gui_running")
-	set guioptions+=m
-endif
-
 "Nginx syntax support
 au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
 
