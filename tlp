@@ -6,6 +6,10 @@
 # Set to 0 to disable/1 to enable TLP
 TLP_ENABLE=1
 
+# Operation mode when no power supply can be detected: AC, BAT
+# Concerns some desktop and embedded hardware only.
+TLP_DEFAULT_MODE=AC
+
 # Seconds laptop mode has to to wait after the disk goes idle before doing a sync.
 # Non-zero value enables, zero disables laptop mode.
 DISK_IDLE_SECS_ON_AC=0
@@ -38,8 +42,8 @@ MAX_LOST_WORK_SECS_ON_BAT=60
 # Important:
 # - This may conflict with your distribution's governor settings
 # - A value of 1 does *not* activate boosting, it just allows it
-CPU_BOOST_ON_AC=1
-CPU_BOOST_ON_BAT=0
+#CPU_BOOST_ON_AC=1
+#CPU_BOOST_ON_BAT=0
 
 # Minimize number of used cpu cores/hyper-threads under light load conditions
 SCHED_POWERSAVE_ON_AC=0
@@ -53,6 +57,12 @@ NMI_WATCHDOG=0
 # Freq:voltage pairs are written to /sys/devices/system/cpu/cpu0/cpufreq/phc_controls
 # CAUTION: only use this, if you thoroughly understand what you are doing!
 #PHC_CONTROLS="F:V F:V F:V F:V"
+
+# Set CPU performance versus energy savings policy:
+#   performance, normal, powersave
+# Requires kernel module msr and x86_energy_perf_policy from linux-tools
+ENERGY_PERF_POLICY_ON_AC=performance
+ENERGY_PERF_POLICY_ON_BAT=powersave
 
 # Hard disk devices, separate multiple devices with spaces (default: sda).
 # Devices can be specified by disk id too (lookup with: tlp diskid).
@@ -138,6 +148,12 @@ RUNTIME_PM_ALL=1
 # Exclude pci(e) device adresses the following list from Runtime PM
 # (separate with spaces). Use lspci to get the adresses (1st column).
 #RUNTIME_PM_BLACKLIST="bb:dd.f 11:22.3 44:55.6"
+
+# Exclude PCI(e) devices assigned to the listed drivers from Runtime PM
+# (should prevent accidential power on of hybrid graphics' discrete part).
+# Default is "radeon nouveau"; use "" to disable the feature completely.
+# Separate multiple drivers with spaces.
+RUNTIME_PM_DRIVER_BLACKLIST="radeon nouveau"
 
 # Set to 0 to disable/1 to enable usb autosuspend feature
 USB_AUTOSUSPEND=1
