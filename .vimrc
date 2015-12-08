@@ -61,6 +61,7 @@ Plugin 'tpope/vim-salve'
 Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fireplace'
+Plugin 'elzr/vim-json'
 call vundle#end() " required by vundle
 
 " Filetypes
@@ -107,6 +108,10 @@ noremap <space> za
 
 "Map Leader Key
 let mapleader = ","
+
+"Json Formatter
+
+nmap =j :%!python -m json.tool<CR>
 
 "Movement maps
 map <Leader>n <Esc>:tabprevious<CR>
