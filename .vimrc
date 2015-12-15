@@ -18,7 +18,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-
+Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
 "Plugin 'jelera/vim-javascript-syntax'
