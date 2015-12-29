@@ -71,6 +71,13 @@ sudo dnf install -y thermal-daemon
 sudo systemctl enable thermald
 sudo systemctl start thermald
 
+# Setup acpid
+echo "Setting up acpid"
+sudo dnf install -y acpid
+
+sudo systemctl enable acpid
+sudo systemctl start acpid
+
 # Setup Chromium
 echo "Installing Chromium"
 sudo dnf copr -y enable churchyard/chromium-russianfedora-tested
