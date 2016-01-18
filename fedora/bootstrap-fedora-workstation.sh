@@ -24,7 +24,7 @@ sudo dnf install mesa-vdpau-drivers vdpauinfo -y
 
 # Install Apps
 echo "Install Apps"
-sudo dnf install -y simple-scan xsane clementine kodi pavucontrol xpaint gimp pinta minitube wine brasero gpodder libXScrnSaver.x86_64 gnome-tweak-tool vlc filezilla ike sound-juicer aisleriot firewall-applet okular lsdvd dvdbackup HandBrake-gui HandBrake-cli makemkv
+sudo dnf install -y simple-scan xsane clementine kodi paprefs pavucontrol xpaint gimp pinta minitube wine brasero gpodder libXScrnSaver.x86_64 gnome-tweak-tool vlc filezilla ike sound-juicer aisleriot firewall-applet okular lsdvd dvdbackup HandBrake-gui HandBrake-cli makemkv
 
 echo "Install Codecs"
 sudo dnf install -y gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-bad gstreamer1-plugins-bad-free-extras gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good gstreamer1-plugins-good gstreamer-plugins-good-extras gstreamer1-plugins-good-extras gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-base gstreamer1 gstreamer-ffmpeg libdvdcss libdvdread libdvdnav libmad lame
