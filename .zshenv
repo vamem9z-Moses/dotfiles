@@ -40,7 +40,9 @@ alias 3rappweb="source $HOME/Software/ma/3rappweb/src/github.com/MilesAheadLLC/3
 alias formanalysis="source $HOME/Software/ATHN/formanalysis/setgopath"
 alias update-grub-fedora="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
 alias update-grub-fedora-efi="sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg"
-alias oracle_mvn="JAVA_HOME=/usr/java/jdk1.8.0_51 mvn"
+alias oracle_mvn="JAVA_HOME=/usr/java/latest mvn"
+alias ojava="/usr/java/latest/bin/java"
+alias ojavac="/usr/java/latest/bin/javac"
 
 # Platform specific configurations
 
