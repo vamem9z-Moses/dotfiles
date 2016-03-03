@@ -22,13 +22,6 @@ PATH=$PATH:$GROOVY_HOME/bin
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # Add all new PATH addtitions above this line
-export NOGOPATH=$PATH
-
-# Go
-export GOROOT=$HOME/Apps/go
-export GOPATH=$HOME/Software/gocode
-PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export PATH
 
 #NVM
 export NVM_DIR="$HOME/.nvm"
@@ -43,6 +36,7 @@ alias update-grub-fedora-efi="sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.c
 alias oracle_mvn="JAVA_HOME=/usr/java/latest mvn"
 alias ojava="/usr/java/latest/bin/java"
 alias ojavac="/usr/java/latest/bin/javac"
+alias gopath="source $HOME/bin/gopath"
 
 # Platform specific configurations
 
@@ -85,3 +79,6 @@ fi
 if  [ $platform == 'ubuntu' ]; then
 	export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 fi
+
+# Visual Studio Code for Mac
+function vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args "$@"; }
