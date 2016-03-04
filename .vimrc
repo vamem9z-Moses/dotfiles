@@ -200,6 +200,10 @@ let g:pymode_doc_key="<leader>k"  " used jedi-vim for help
 "Disable Pyflakes for konira files
 "autocmd BufRead,BufWrite case_*.py :let g:pymode_lint = 0
 
+"YCM cache
+let g:ycm_cache_omnifunc = 0
+
+
 " Add pysmell support
 autocmd FileType python setlocal omnifunc=pysmell#Complete
 
