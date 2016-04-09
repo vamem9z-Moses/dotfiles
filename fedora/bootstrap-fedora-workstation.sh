@@ -30,7 +30,7 @@ echo "Install Codecs"
 sudo dnf install -y gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-bad gstreamer1-plugins-bad-free-extras gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good gstreamer1-plugins-good gstreamer-plugins-good-extras gstreamer1-plugins-good-extras gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-base gstreamer1 gstreamer-ffmpeg libdvdcss libdvdread libdvdnav libmad lame
 
 echo "Install System Utilities"
-sudo dnf install -y gnome-system-log tmux strace lm_sensors powertop exfat-utils fuse-exfat libvdpau-va-gl tlp  gnome-shell-extension-drive-menu alacarte terminator gnome-power-manager gparted virt-manager libvirt qemu* redhat-lsb.x86_64 htop zsh autotrace curl dnf-plugins-core
+sudo dnf install -y smartmontools gnome-system-log tmux strace lm_sensors powertop exfat-utils fuse-exfat libvdpau-va-gl tlp  gnome-shell-extension-drive-menu alacarte terminator gnome-power-manager gparted virt-manager libvirt qemu* redhat-lsb.x86_64 htop zsh autotrace curl dnf-plugins-core
 
 echo "Install Development Tools"
 sudo dnf install -y emacs gcc-c++ cmake ctags vim-pysmell vagrant vim-enhanced gitg  mercurial ctags ctags-etags cmake sbcl python-virtualenvwrapper nodejs cmake automake gcc gcc-c++ pgadmin3 postgresql-server postgresql-contrib
