@@ -1,7 +1,7 @@
 #/usr/bin/env bash
 
 echo "Install Generic workstation"
-./boostrap-fedora-workstation.sh
+./bootstrap-fedora-workstation.sh
 
 echo "Install vdpau support"
 sudo dnf install -y mesa-vdpau-drivers vdpauinfo libvdpau-va-gl

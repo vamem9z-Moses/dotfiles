@@ -1,7 +1,7 @@
 #/usr/bin/env bash
 
 echo "Install Generic workstation"
-./boostrap-fedora-workstation.sh
+./bootstrap-fedora-workstation.sh
 
 echo "Install and Configure Tuned"
 sudo dnf install -y tuned
