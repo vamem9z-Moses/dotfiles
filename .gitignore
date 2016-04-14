@@ -2,3 +2,4 @@
 .vim/.VimballRecord
 *.swp
 *.swo
+.DS_Store
