@@ -19,18 +19,11 @@ echo "Install Development Tools"
 sudo dnf group install "Development Tools" -y
 sudo dnf install kernel-devel kernel-headers -y
 
-echo "Install vdpau support"
-sudo dnf install mesa-vdpau-drivers vdpauinfo -y
-
 # Install Apps
 echo "Install Apps"
-sudo dnf install -y simple-scan xsane clementine kodi paprefs pavucontrol xpaint gimp pinta minitube wine brasero gpodder libXScrnSaver.x86_64 gnome-tweak-tool vlc filezilla ike sound-juicer aisleriot firewall-applet okular lsdvd dvdbackup HandBrake-gui HandBrake-cli makemkv
-
-echo "Install Codecs"
-sudo dnf install -y gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-bad gstreamer1-plugins-bad-free-extras gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good gstreamer1-plugins-good gstreamer-plugins-good-extras gstreamer1-plugins-good-extras gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-base gstreamer1 gstreamer-ffmpeg libdvdcss libdvdread libdvdnav libmad lame
-
+sudo dnf install -y paprefs pavucontrol gimp pinta wine brasero gpodder libXScrnSaver.x86_64 gnome-tweak-tool filezilla ike firewall-applet okular
 echo "Install System Utilities"
-sudo dnf install -y smartmontools gnome-system-log tmux strace lm_sensors powertop exfat-utils fuse-exfat libvdpau-va-gl tlp  gnome-shell-extension-drive-menu alacarte terminator gnome-power-manager gparted virt-manager libvirt qemu* redhat-lsb.x86_64 htop zsh autotrace curl dnf-plugins-core
+sudo dnf install -y gnome-system-log tmux strace exfat-utils fuse-exfat  gnome-shell-extension-drive-menu alacarte terminator gnome-power-manager gparted virt-manager libvirt qemu* redhat-lsb.x86_64 htop zsh autotrace curl dnf-plugins-core
 
 echo "Install Development Tools"
 sudo dnf install -y emacs gcc-c++ cmake ctags vim-pysmell vagrant vim-enhanced gitg  mercurial ctags ctags-etags cmake sbcl python-virtualenvwrapper nodejs cmake automake gcc gcc-c++ pgadmin3 postgresql-server postgresql-contrib
@@ -63,30 +56,10 @@ sudo dnf install -y python-devel openssl-devel python-pip sqlite-devel zlib-deve
 echo "Copying .Xresources"
 cp .Xresources ~/.Xresources
 
-# Setup thermald
-echo "Setting up thermald"
-sudo dnf copr -y enable hadrons123/thermald
-sudo dnf install -y thermal-daemon
-
-sudo systemctl enable thermald
-sudo systemctl start thermald
-
-# Setup acpid
-echo "Setting up acpid"
-sudo dnf install -y acpid
-
-sudo systemctl enable acpid
-sudo systemctl start acpid
-
 # Setup Chromium
 echo "Installing Chromium"
 sudo dnf copr -y enable churchyard/chromium-russianfedora-tested
 sudo dnf install -y chromium
-
-# Setup skype
-echo "Installing Skype"
-sudo dnf config-manager -y --add-repo=http://negativo17.org/repos/fedora-skype.repo
-sudo dnf install -y skype
 
 # Setup rpmbuild
 echo "Setting Up rpmbuild"
