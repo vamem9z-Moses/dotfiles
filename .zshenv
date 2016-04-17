@@ -1,7 +1,7 @@
 # User configuration
 
 
-PATH="$HOME/Apps:$HOME/bin:/usr/local/bin:/usr/games:/usr/local/games:$PATH"
+PATH="$HOME/Apps:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$PATH"
 
 # Pyenv
 #export PYENV_ROOT="${HOME}/.pyenv"
