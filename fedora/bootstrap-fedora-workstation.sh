@@ -23,10 +23,10 @@ sudo dnf install kernel-devel kernel-headers -y
 echo "Install Apps"
 sudo dnf install -y paprefs pavucontrol gimp pinta wine brasero gpodder libXScrnSaver.x86_64 gnome-tweak-tool filezilla ike firewall-applet okular
 echo "Install System Utilities"
-sudo dnf install -y gnome-system-log tmux strace exfat-utils fuse-exfat  gnome-shell-extension-drive-menu alacarte terminator gnome-power-manager gparted virt-manager libvirt qemu* redhat-lsb.x86_64 htop zsh autotrace curl dnf-plugins-core
+sudo dnf install -y gnome-system-log tmux strace exfat-utils fuse-exfat  gnome-shell-extension-drive-menu alacarte terminator gnome-power-manager gparted redhat-lsb.x86_64 htop zsh autotrace curl dnf-plugins-core
 
 echo "Install Development Tools"
-sudo dnf install -y emacs gcc-c++ cmake ctags vim-pysmell vagrant vim-enhanced gitg  mercurial ctags ctags-etags cmake sbcl python-virtualenvwrapper nodejs cmake automake gcc gcc-c++ pgadmin3 postgresql-server postgresql-contrib
+sudo dnf install -y emacs gcc-c++ cmake ctags vim-pysmell vim-enhanced gitg mercurial ctags ctags-etags cmake sbcl python-virtualenvwrapper nodejs cmake automake gcc gcc-c++ pgadmin3 postgresql-server postgresql-contrib
 
 echo "Install Development Libraries"
 sudo dnf install -y glibc-devel.x86_64 postgresql-devel
