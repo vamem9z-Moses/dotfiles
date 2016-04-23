@@ -37,6 +37,7 @@ alias oracle_mvn="JAVA_HOME=/usr/java/latest mvn"
 alias ojava="/usr/java/latest/bin/java"
 alias ojavac="/usr/java/latest/bin/javac"
 alias gopath="source $HOME/bin/gopath"
+alias create_box="/usr/share/vagrant/gems/gems/vagrant-libvirt-0.0.32/tools/create_box.sh"
 
 # Platform specific configurations
 
