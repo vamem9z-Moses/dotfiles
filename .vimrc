@@ -23,7 +23,7 @@ Plugin 'plasticboy/vim-markdown'
 
 "Plugin 'jelera/vim-javascript-syntax'
 Plugin 'altercation/vim-colors-solarized'
-
+Plugin 'hashivim/vim-vagrant'
 Plugin 'tfnico/vim-gradle'
 Plugin 'yegappan/mru'
 Plugin 'git://git.wincent.com/command-t.git/'
