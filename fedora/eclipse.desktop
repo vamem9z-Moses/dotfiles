@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Eclipse
 Encoding=UTF-8
-Exec=/home/mmiles/bin/eclipse
+Exec=env SWT_GTK3=0 /home/mmiles/bin/eclipse
 Icon=/home/mmiles/.local/share/icons/eclipseicon.xpm
 Type=Application
 Categories=GNOME;Development;
