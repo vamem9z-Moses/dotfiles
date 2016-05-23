@@ -222,7 +222,9 @@ set autoindent
 nmap <leader>md :%!~/bin/Markdown.pl --html4tags<cr>
 
 "vim-go config
-"let g:go_fmt_command = "goimports"
+let g:go_fmt_autosave = 1
+let g:go_list_type = "quickfix"
+let g:syntastic_go_checkers = "goimport"
 
 " Add xsd config here
 
