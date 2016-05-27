@@ -11,17 +11,24 @@ PATH="$HOME/Apps:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/
 #  eval "$(pyenv init -)"
 #fi
 
-#export PATH
-
 # Pythonz
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# RVM
+PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # Add all new PATH addtitions above this line
 
 #NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Go Settings
+export NOGOPATH=$PATH
+export GOROOT=$HOME/Apps/go
+export GOPATH=$HOME/Software/gocode
+
+# Final Path
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Aliases
 alias 3rapp="source $HOME/Software/ma/3rapp/src/github.com/MilesAheadLLC/3rapp/bin/3rapp"
