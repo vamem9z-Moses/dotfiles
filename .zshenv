@@ -31,15 +31,11 @@ export GOPATH=$HOME/Software/gocode
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Aliases
-alias 3rapp="source $HOME/Software/ma/3rapp/src/github.com/MilesAheadLLC/3rapp/bin/3rapp"
-alias 3rappweb="source $HOME/Software/ma/3rappweb/src/github.com/MilesAheadLLC/3rappweb/bin/3rappweb"
-alias formanalysis="source $HOME/Software/ATHN/formanalysis/setgopath"
 alias update-grub-fedora="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
 alias update-grub-fedora-efi="sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg"
 alias oracle_mvn="JAVA_HOME=/usr/java/latest mvn"
 alias ojava="/usr/java/latest/bin/java"
 alias ojavac="/usr/java/latest/bin/javac"
-alias gopath="source $HOME/bin/gopath"
 alias create_box="/usr/share/vagrant/gems/gems/vagrant-libvirt-0.0.32/tools/create_box.sh"
 
 # Platform specific configurations
