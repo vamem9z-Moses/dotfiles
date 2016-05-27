@@ -13,7 +13,13 @@ echo "Install Tree Packages"
 apm install tree-view-git-status logo-file-icons
 
 echo "Install Git Packages"
-apm install gedit-plugins
+apm install git-plus
 
 echo "Install Code Cleanup Packages"
 apm install atom-beautify
+
+echo "Install General Packages"
+apm install project-manager minimap minimap-pigments split-diff open-recent pigments todo-show
+
+echo "Install Additional JS Support"
+apm install language-babel atom-ternjs
