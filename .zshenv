@@ -16,10 +16,6 @@ PATH="$HOME/Apps:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/
 # Pythonz
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
 
-# Groovy
-GROOVY_HOME=/home/mmiles/Apps/groovy-2.2.2
-PATH=$PATH:$GROOVY_HOME/bin
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # Add all new PATH addtitions above this line
 
