@@ -24,10 +24,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # Go Settings
 export NOGOPATH=$PATH
+export GOROOT=$HOME/Apps/go
 export GOPATH=$HOME/Software/gocode
 
 # Final Path
-export PATH=$PATH:$HOME/Apps/go/bin:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Aliases
 alias update-grub-fedora="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
