@@ -38,6 +38,10 @@ alias ojava="/usr/java/latest/bin/java"
 alias ojavac="/usr/java/latest/bin/javac"
 alias create_box="/usr/share/vagrant/gems/gems/vagrant-libvirt-0.0.32/tools/create_box.sh"
 
+# Project Directory Aliases
+alias formanalysis="cd $GOPATH/src/github.com/ATHN/formanalysis"
+alias 3rapp="cd $GOPATH/src/github.com/MilesAheadLLC/3rapp"
+
 # Platform specific configurations
 
 platform='unknown'
