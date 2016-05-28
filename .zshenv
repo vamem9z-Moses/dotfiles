@@ -24,7 +24,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Go Settings
 export NOGOPATH=$PATH
-export GOROOT=$HOME/Apps/go
 export GOPATH=$HOME/Software/gocode
 
 # Final Path
