@@ -31,5 +31,5 @@ echo "Install Additional JS Support"
 apm install language-babel atom-ternjs
 
 echo "Install Python Support"
-// TODO: Install Virtualenv when support for 1.7.4 is ready
+# TODO: Install Virtualenv when support for 1.7.4 is ready
 apm install python-debugger autocomplete-python atom-python-test
