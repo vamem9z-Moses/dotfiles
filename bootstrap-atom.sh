@@ -22,7 +22,7 @@ echo "Install Code Cleanup Packages"
 apm install atom-beautify
 
 echo "Install General Packages"
-apm install project-manager open-recent todo-show hyperclick
+apm install project-manager open-recent todo-show hyperclick multi-cursor
 
 echo "Install File Navigation Packages"
 apm install synced-sidebar minimap minimap-pigments pigments minimap-split-diff split-diff minimap-highlight-selected highlight-selected
