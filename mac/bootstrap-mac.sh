@@ -16,7 +16,7 @@ echo "Install Productivity Tools"
 brew install gedit vim zsh
 
 echo "Install Utilities"
-brew install git git-lfs gpg dnsmasq ctags mercurial shrewsoft-vpn-client virt-manager virt-viewer wget 
+brew install git git-lfs gpg dnsmasq ctags mercurial shrewsoft-vpn-client virt-manager virt-viewer wget openssl
 
 echo "Install Casks"
 brew cask install atom clementine emacs-mc handbrake java lighttable mactex pgadmin3 racket tuntap x2goclient xquartz
