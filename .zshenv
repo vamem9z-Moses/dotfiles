@@ -41,7 +41,7 @@ alias create_box="/usr/share/vagrant/gems/gems/vagrant-libvirt-0.0.32/tools/crea
 # Project Directory Aliases
 alias formanalysis="cd $GOPATH/src/github.com/ATHN/formanalysis"
 alias 3rapp="cd $GOPATH/src/github.com/MilesAheadLLC/3rapp"
-alias weaven="cd $GOPATH/src/github.com/MilesAheadLLC/weaven"
+alias weaven-proj="cd $GOPATH/src/github.com/MilesAheadLLC/weaven"
 
 # Platform specific configurations
 
