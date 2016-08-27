@@ -27,8 +27,13 @@ export NOGOPATH=$PATH
 export GOROOT=$HOME/Apps/go
 export GOPATH=$HOME/Software/gocode
 
+
+# Nim Settings
+export NIMPATH=$HOME/Apps/nim
+export NIMBLEPATH=$HOME/.nimble
+
 # Final Path
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin
 
 # Aliases
 alias update-grub-fedora="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
