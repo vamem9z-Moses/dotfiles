@@ -4,7 +4,7 @@ echo "Install HTML and CSS Packages"
 apm install emmet
 
 echo "Install Go Packages"
-apm install go-plus
+apm install go-plus go-debug go-oracle
 
 echo "Install Vim Packages"
 apm install ex-mode vim-mode
