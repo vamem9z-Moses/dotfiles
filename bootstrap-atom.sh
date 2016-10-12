@@ -10,7 +10,7 @@ echo "Install Vim Packages"
 apm install ex-mode vim-mode
 
 echo "Install Terminal Packages"
-apm install term3 terminal-plus
+apm install term3 platformio-ide-terminal
 
 echo "Install Tree Packages"
 apm install tree-view-git-status logo-file-icons
