@@ -30,6 +30,9 @@ apm install synced-sidebar minimap minimap-pigments pigments minimap-split-diff 
 echo "Install Additional JS Support"
 apm install language-babel atom-ternjs
 
+echo "Install RiotJS Support"
+apm install language-riot-tag
+
 echo "Install Typscript Support"
 apm install atom-typescript
 
