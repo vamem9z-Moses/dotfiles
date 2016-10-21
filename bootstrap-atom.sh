@@ -42,3 +42,6 @@ apm install python-debugger autocomplete-python atom-python-test
 
 echo "Install Nim Support"
 apm install nim language-nim
+
+echo "Copy atom config files"
+cp ./atom/* $HOME/.atom
