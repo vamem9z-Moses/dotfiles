@@ -23,3 +23,6 @@ brew cask install atom clementine emacs-mc handbrake java lighttable mactex pgad
 
 echo "Install Virtualenvwrapper"
 sudo pip install virtualenvwrapper
+
+echo "Install Nodejs"
+brew install nodejs
