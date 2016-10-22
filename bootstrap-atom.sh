@@ -28,7 +28,7 @@ echo "Install File Navigation Packages"
 apm install synced-sidebar minimap minimap-pigments pigments minimap-split-diff split-diff minimap-highlight-selected highlight-selected
 
 echo "Install Additional JS Support"
-apm install language-babel atom-ternjs linter linter-eslint
+apm install language-babel atom-ternjs linter linter-eslint linte-stylelint
 
 echo "Install RiotJS Support"
 apm install language-riot-tag
