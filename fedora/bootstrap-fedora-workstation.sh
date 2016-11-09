@@ -56,11 +56,6 @@ sudo dnf install -y python-devel openssl-devel python-pip sqlite-devel zlib-deve
 #echo "Copying .Xresources"
 #cp .Xresources ~/.Xresources
 
-# Setup Chromium
-echo "Installing Chromium"
-sudo dnf copr -y enable churchyard/chromium-russianfedora-tested
-sudo dnf install -y chromium
-
 # Setup rpmbuild
 echo "Setting Up rpmbuild"
 sudo dnf install -y mock rpmbuild
