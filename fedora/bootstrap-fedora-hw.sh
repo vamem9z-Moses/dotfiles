@@ -39,7 +39,3 @@ sudo dnf install -y acpid
 sudo systemctl enable acpid
 sudo systemctl start acpid
 
-# Setup skype
-echo "Installing Skype"
-sudo dnf config-manager -y --add-repo=http://negativo17.org/repos/fedora-skype.repo
-sudo dnf install -y skype
