@@ -53,6 +53,10 @@ sudo cp ~/Apps/gedit-clojure/clojure.lang /usr/share/gtksourceview-3.0/language-
 echo "Install Python 2.7 devel files"
 sudo dnf install -y python-devel openssl-devel python-pip sqlite-devel zlib-devel readline-devel readline
 
+echo "Install Terminix"
+sudo dnf copr -y enable heikoada/terminix
+sudo dnf install -y terminix
+
 # Copy XResources for better fonts
 #echo "Copying .Xresources"
 #cp .Xresources ~/.Xresources
