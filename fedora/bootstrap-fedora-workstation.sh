@@ -53,8 +53,8 @@ echo "Install Python 2.7 devel files"
 sudo dnf install -y python-devel openssl-devel python-pip sqlite-devel zlib-devel readline-devel readline
 
 # Copy XResources for better fonts
-echo "Copying .Xresources"
-cp .Xresources ~/.Xresources
+#echo "Copying .Xresources"
+#cp .Xresources ~/.Xresources
 
 # Setup Chromium
 echo "Installing Chromium"
@@ -73,14 +73,14 @@ sudo dnf install -y nemo nemo-fileroller nemo-extensions nemo-rabbitvcs nemo-dro
 echo "Turning off nemo desktop icons"
 gsettings set org.nemo.desktop show-desktop-icons false
 
-echo "Set terminator as default terminal in nemo"
-gsettings set org.cinnamon.desktop.default-applications.terminal exec 'terminator'
+#echo "Set terminator as default terminal in nemo"
+#gsettings set org.cinnamon.desktop.default-applications.terminal exec 'terminator'
 
-echo "Set file manager to use nemo as default"
-xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
+#echo "Set file manager to use nemo as default"
+#xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
 
-echo "Disable nautilus handling the desktop"
-gsettings set org.gnome.desktop.background show-desktop-icons false
+#echo "Disable nautilus handling the desktop"
+#gsettings set org.gnome.desktop.background show-desktop-icons false
 
 #Increase inotify limits - I ran into this doing a large sftp copy with filezilla
 sudo cp 99-sysctl.conf /etc/sysctl.d/99-sysctl.conf
