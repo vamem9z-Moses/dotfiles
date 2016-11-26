@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 echo "Install HTML and CSS Packages"
-apm install emmet
+apm install emmet html-outliner
 
 echo "Install Go Packages"
-apm install go-plus go-debug go-oracle
+apm install go-plus go-debug go-oracle go-outline
 
 echo "Install Vim Packages"
 apm install ex-mode vim-mode
