@@ -1,10 +1,13 @@
 "B
+
 ":set background&
 
 " General Settigns
-" Set sheel to sh so that env set in .zshenv is ignored
+" Set shell to sh so that env set in .zshenv is ignored
 set shell=bash
 set nocompatible
+" Set term to make arrow keys work conEMU windows 10 bash
+set term=ansi
 filetype off	"required
 syntax enable
 
