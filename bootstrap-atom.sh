@@ -7,7 +7,7 @@ echo "Install Go Packages"
 apm install go-plus go-debug go-oracle go-outline
 
 echo "Install Vim Packages"
-apm install ex-mode vim-mode
+apm install vim-mode-plus vim-mode-plus-ex-mode
 
 echo "Install Terminal Packages"
 apm install term3 platformio-ide-terminal
@@ -42,6 +42,9 @@ apm install python-debugger autocomplete-python atom-python-test
 
 echo "Install Nim Support"
 apm install nim language-nim
+
+echo "Install Powershell Support"
+apm install language-powershell
 
 echo "Copy atom config files"
 cp ./atom/* $HOME/.atom
