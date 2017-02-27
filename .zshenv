@@ -93,10 +93,4 @@ fi
 # Visual Studio Code for Mac
 function vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args "$@"; }
 
-# Make environement variables visible to other apps
-dbus-update-activation-environment --systemd --all
 
-# Fix VTE issue in Terminix
-if [[ $TERMINIX_ID ]]; then
-        source /etc/profile.d/vte.sh
-fi
