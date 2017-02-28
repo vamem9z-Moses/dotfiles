@@ -7,7 +7,7 @@
 set shell=bash
 set nocompatible
 " Set term to make arrow keys work conEMU windows 10 bash
-set term=ansi
+"set term=ansi
 filetype off	"required
 syntax enable
 
