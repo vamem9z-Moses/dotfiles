@@ -10,7 +10,7 @@ echo "Install Utilities"
 sudo yum -y install python-virtualenvwrapper python2-pip vim git mercurial zsh
 
 echo "Install Development Tools"
-sudo yum -y install gcc gcc-c++ cmake automake ctag
+sudo yum -y install gcc gcc-c++ cmake automake ctags
 
 echo "Install Pysmell"
 sudo pip install pysmell
