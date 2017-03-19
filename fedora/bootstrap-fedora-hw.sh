@@ -19,7 +19,7 @@ echo "Install App from fedora-multimedia"
 sudo dnf install -y HandBrake-gui HandBrake-cli makemkv libdvdcss --allowerasing
 
 echo "Install entertainment apps"
-sudo dnf install -y clementine kodi xpaint minitube vlc sound-juicer aisleriot
+sudo dnf install -y clementine kodi vlc sound-juicer aisleriot
 
 echo "Install virtualization tools"
 sudo dnf install -y virt-manager libvirt qemu* vagrant*
