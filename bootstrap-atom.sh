@@ -40,9 +40,6 @@ echo "Install Python Support"
 # TODO: Install Virtualenv when support for 1.7.4 is ready
 apm install python-debugger autocomplete-python atom-python-test
 
-echo "Install Nim Support"
-apm install nim language-nim
-
 echo "Install Powershell Support"
 apm install language-powershell
 
