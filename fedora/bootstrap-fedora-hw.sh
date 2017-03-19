@@ -21,6 +21,9 @@ sudo dnf install -y HandBrake-gui HandBrake-cli makemkv libdvdcss --allowerasing
 echo "Install entertainment apps"
 sudo dnf install -y clementine kodi vlc sound-juicer aisleriot
 
+echo "Install dropbox"
+sudo dnf install -y nautilus-dropbox nemo-dropbox dropbox
+
 echo "Install virtualization tools"
 sudo dnf install -y virt-manager libvirt qemu* vagrant*
 
