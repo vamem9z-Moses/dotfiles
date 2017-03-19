@@ -4,9 +4,9 @@ echo "Update System"
 sudo dnf update -y
 
 # Install Repos
-echo "Adding Repos livna, rpmfusion, fedora-handbrake"
+echo "Adding Repos livna, rpmfusion, negativo multimedia"
 
-sudo dnf config-manager -y --add-repo=http://negativo17.org/repos/fedora-handbrake.repo
+sudo dnf config-manager -y --add-repo=http://negativo17.org/repos/fedora-multimedia.repo
 
 sudo dnf install -y --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
@@ -55,7 +55,7 @@ sudo dnf install -y python-devel openssl-devel python-pip sqlite-devel zlib-deve
 
 echo "Install Terminix"
 sudo dnf copr -y enable heikoada/terminix
-sudo dnf install -y terminix
+sudo dnf install -y tilix
 
 # Copy XResources for better fonts
 #echo "Copying .Xresources"
