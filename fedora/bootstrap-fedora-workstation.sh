@@ -30,7 +30,7 @@ echo "Install System Utilities"
 sudo dnf install -y gnome-system-log tmux strace exfat-utils fuse-exfat  gnome-shell-extension-drive-menu alacarte terminator gnome-power-manager gparted redhat-lsb.x86_64 htop zsh autotrace curl dnf-plugins-core
 
 echo "Install Development Tools"
-sudo dnf install -y gtksourceview2 gtksourceview3 emacs gcc-c++ cmake ctags vim-pysmell vim-enhanced gitg mercurial ctags ctags-etags cmake sbcl python-virtualenvwrapper nodejs cmake automake gcc gcc-c++ pgadmin3 postgresql-server postgresql-contrib uncrustify python-autopep8
+sudo dnf install -y gtksourceview2 gtksourceview3 emacs gcc-c++ cmake ctags vim-pysmell vim-enhanced gitg mercurial ctags ctags-etags cmake sbcl nodejs cmake automake gcc gcc-c++ pgadmin3 postgresql-server postgresql-contrib uncrustify
 
 echo "Install Development Libraries"
 sudo dnf install -y glibc-devel.x86_64 postgresql-devel
@@ -55,6 +55,12 @@ sudo cp ~/Apps/gedit-clojure/clojure.lang /usr/share/gtksourceview-3.0/language-
 # Install dependencies for development and shell
 echo "Install Python 2.7 devel files"
 sudo dnf install -y python-devel openssl-devel python-pip sqlite-devel zlib-devel readline-devel readline
+
+echo "Instsal Python 3 devel files"
+sudo dnf install -y python3-devel python3-pip python3
+
+echo "Install Python libraries"
+sudo dnf install python-autopep8 python3-autopep8 python3-virtualenvwrapper
 
 echo "Install Terminix"
 sudo dnf copr -y enable heikoada/terminix

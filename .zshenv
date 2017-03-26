@@ -76,6 +76,9 @@ fi
 # Virtualenv Wrapper Config
 export WORKON_HOME=$HOME/.virtualenvs
 if [ $platform == 'fedora' ]; then
+	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+	export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv-3
+	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=/usr/bin/virtualenv-clone-3
 	source /usr/bin/virtualenvwrapper.sh
 fi
 if [ $platform == 'ubuntu' ]; then
@@ -92,5 +95,3 @@ fi
 
 # Visual Studio Code for Mac
 function vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args "$@"; }
-
-
