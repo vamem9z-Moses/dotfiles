@@ -8,20 +8,18 @@ sudo apt-get -y upgrade
 
 # Install Basics
 echo "Install Basics"
-
-sudo apt-get install -y ppa-purge git vim gedit build-essential aptitudehtop tree
-
-# Remove Stuff I don't use
-echo "Remove Apps I don't Use"
-sudo apt-get remove -y gnumeric abiword
+sudo apt-get install -y ppa-purge git vim build-essential aptitude htop tree
 
 # Install Applications
 echo "Install Apps"
-sudo apt-get install -y pylint mercurial dkms sbcl ctags cmake libpython2.7-dev virtualenvwrapper curl libreadline-dev zsh unrar rar gpgv2
+sudo apt-get install -y pylint mercurial ctags cmake libpython2.7-dev python3 python python3-pip python-pip curl libreadline-dev zsh unrar rar gpgv2
 
 # Install pysmell
 echo "Install pysmell"
-sudo pip install pysmell
+pip install --user pysmell
+
+echo "Install virtualenvwrapper"
+pip3 install --user virtualenvwrapper
 
 # Install dependencies for development and shell
 echo "Install Python 2.7 devel files"
@@ -30,12 +28,7 @@ sudo apt-get -y build-dep python2.7
 # Install updated vim for trusty 14.04
 sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get update
-sudo apt-get -y install vim
-
-# Install openjdk8
-sudo add-apt-repository -y ppa:openjdk-r/ppa
-sudo apt-get update
-sudo apt-get -y install openjdk-8-jdk
+sudo apt-get -y install vim-nox
 
 echo "All of the automated stuff is done"
 echo "Get  .gitconfig and id files and pull down /bin from github"

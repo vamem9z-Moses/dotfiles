@@ -1,7 +1,7 @@
 # User configuration
 
 
-PATH="$HOME/Apps:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$PATH"
+PATH="$HOME/.local/bin:$HOME/Apps:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$PATH"
 
 # Pyenv
 #export PYENV_ROOT="${HOME}/.pyenv"
@@ -82,7 +82,10 @@ if [ $platform == 'fedora' ]; then
 	source /usr/bin/virtualenvwrapper.sh
 fi
 if [ $platform == 'ubuntu' ]; then
-	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=$HOME/.local/bin/virtualenv-clone
+	export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
+	source $HOME/.local/bin/virtualenvwrapper.sh
 fi
 if [ $platform == 'darwin' ]; then
 	source /usr/local/bin/virtualenvwrapper.sh
