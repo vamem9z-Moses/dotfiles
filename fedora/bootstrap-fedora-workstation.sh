@@ -13,6 +13,11 @@ sudo dnf config-manager --set-disabled fedora-multimedia
 
 sudo dnf install -y --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
+echo "Add Repo for VSCode"
+
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+
 echo "Add google repository key"
 wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O $HOME/linux_signing_key.pub
 sudo rpm --import $HOME/linux_signing_key.pub
@@ -21,6 +26,9 @@ echo "Install Development Tools"
 
 sudo dnf group install "Development Tools" -y
 sudo dnf install kernel-devel kernel-headers -y
+
+echo "Install VSCode"
+sudo dnf install code
 
 # Install Apps
 echo "Install Apps"
