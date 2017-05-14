@@ -55,6 +55,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Fix Tilix config
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
 
 ## The last thing we will do is export the PATH to make sure we got all of the changes
 

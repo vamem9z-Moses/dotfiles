@@ -3,9 +3,9 @@
 # for examples
 
 #Launch Zsh if installed. This is for bash on windows
-#if [ -t 1 ]; then
-#	exec zsh
-#fi
+if [ -t 1 ]; then
+	exec zsh
+fi
 
 # If not running interactively, don't do anything
 case $- in

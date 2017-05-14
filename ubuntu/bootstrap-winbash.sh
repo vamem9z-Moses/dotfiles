@@ -8,12 +8,7 @@ sudo apt-get -y upgrade
 
 # Install Basics
 echo "Install Basics"
-
-sudo apt-get install -y ppa-purge git vim gedit build-essential aptitudehtop tree
-
-# Remove Stuff I don't use
-echo "Remove Apps I don't Use"
-sudo apt-get remove -y gnumeric abiword
+sudo apt-get install -y ppa-purge git vim build-essential aptitude htop tree
 
 # Install Applications
 echo "Install Apps"
@@ -25,13 +20,12 @@ echo "Updating pip"
 pip install --upgrade pip
 pip3 install --upgrade pip
 
-# Install virtualenvwrapper for python3
-echo "Install virtualenvwrapper"
-sudo pip3 install virtualenvwrapper
-
 # Install pysmell
 echo "Install pysmell"
-pip install pysmell
+pip install --user pysmell
+
+echo "Install virtualenvwrapper"
+pip3 install --user virtualenvwrapper
 
 # Install dependencies for development and shell
 echo "Install Python 2.7 devel files"

@@ -13,16 +13,22 @@ echo "Install HW specific utilities"
 sudo dnf install -y powertop tlp smartmontools lm_sensors
 
 echo "Install HW specific apps"
-sudo dnf install -y simple-scan xsane lsdvd dvdbackup HandBrake-gui HandBrake-cli makemkv
+sudo dnf install -y simple-scan xsane lsdvd dvdbackup
+
+echo "Install App from fedora-multimedia"
+sudo dnf install -y HandBrake-gui HandBrake-cli makemkv libdvdcss --allowerasing
 
 echo "Install entertainment apps"
-sudo dnf install -y clementine kodi xpaint minitube vlc sound-juicer aisleriot
+sudo dnf install -y clementine kodi vlc sound-juicer aisleriot
+
+echo "Install dropbox"
+sudo dnf install -y nautilus-dropbox nemo-dropbox dropbox
 
 echo "Install virtualization tools"
 sudo dnf install -y virt-manager libvirt qemu* vagrant*
 
 echo "Install Codecs"
-sudo dnf install -y gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-bad gstreamer1-plugins-bad-free-extras gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good gstreamer1-plugins-good gstreamer-plugins-good-extras gstreamer1-plugins-good-extras gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-base gstreamer1 gstreamer-ffmpeg libdvdcss libdvdread libdvdnav libmad lame
+sudo dnf install -y gstreamer1-libav gstreamer1-plugins-bad-nonfree gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-bad gstreamer1-plugins-bad-free-extras gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good gstreamer1-plugins-good gstreamer-plugins-good-extras gstreamer1-plugins-good-extras gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-base gstreamer1 gstreamer-ffmpeg libdvdread libdvdnav libmad lame
 
 sudo dnf install -y gstreamer{1,}-{plugin-crystalhd,ffmpeg,plugins-{good,ugly,bad{,-free,-nonfree,-freeworld,-extras}{,-extras}}} libmpg123 lame-libs --setopt=strict=0
 
@@ -33,16 +39,8 @@ sudo dnf install -y gstreamer1-plugin-mpg123 mpg123-libs
 
 # Setup thermald
 echo "Setting up thermald"
-sudo dnf copr -y enable hadrons123/thermald
-sudo dnf install -y thermal-daemon
+sudo dnf copr -y enable slaykovsky/thermald
+sudo dnf install -y thermal_daemon
 
 sudo systemctl enable thermald
 sudo systemctl start thermald
-
-# Setup acpid
-echo "Setting up acpid"
-sudo dnf install -y acpid
-
-sudo systemctl enable acpid
-sudo systemctl start acpid
-

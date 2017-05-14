@@ -4,11 +4,19 @@ echo "Update System"
 sudo dnf update -y
 
 # Install Repos
-echo "Adding Repos livna, rpmfusion, fedora-handbrake"
+echo "Adding Repos livna, rpmfusion, negativo multimedia"
 
-sudo dnf config-manager -y --add-repo=http://negativo17.org/repos/fedora-handbrake.repo
+sudo dnf config-manager -y --add-repo=http://negativo17.org/repos/fedora-multimedia.repo
+
+echo "Disable fedora-multimedia we only need it for makemkv and handbrake"
+sudo dnf config-manager --set-disabled fedora-multimedia
 
 sudo dnf install -y --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+echo "Add Repo for VSCode"
+
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 
 echo "Add google repository key"
 wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O $HOME/linux_signing_key.pub
@@ -19,6 +27,9 @@ echo "Install Development Tools"
 sudo dnf group install "Development Tools" -y
 sudo dnf install kernel-devel kernel-headers -y
 
+echo "Install VSCode"
+sudo dnf install code
+
 # Install Apps
 echo "Install Apps"
 sudo dnf install -y paprefs pavucontrol gimp pinta wine brasero gpodder libXScrnSaver.x86_64 gnome-tweak-tool filezilla ike firewall-applet okular chromium
@@ -27,7 +38,7 @@ echo "Install System Utilities"
 sudo dnf install -y gnome-system-log tmux strace exfat-utils fuse-exfat  gnome-shell-extension-drive-menu alacarte terminator gnome-power-manager gparted redhat-lsb.x86_64 htop zsh autotrace curl dnf-plugins-core
 
 echo "Install Development Tools"
-sudo dnf install -y gtksourceview2 gtksourceview3 emacs gcc-c++ cmake ctags vim-pysmell vim-enhanced gitg mercurial ctags ctags-etags cmake sbcl python-virtualenvwrapper nodejs cmake automake gcc gcc-c++ pgadmin3 postgresql-server postgresql-contrib uncrustify python-autopep8
+sudo dnf install -y gtksourceview2 gtksourceview3 emacs gcc-c++ cmake ctags vim-pysmell vim-enhanced gitg mercurial ctags ctags-etags cmake sbcl nodejs cmake automake gcc gcc-c++ pgadmin3 postgresql-server postgresql-contrib uncrustify
 
 echo "Install Development Libraries"
 sudo dnf install -y glibc-devel.x86_64 postgresql-devel
@@ -53,9 +64,15 @@ sudo cp ~/Apps/gedit-clojure/clojure.lang /usr/share/gtksourceview-3.0/language-
 echo "Install Python 2.7 devel files"
 sudo dnf install -y python-devel openssl-devel python-pip sqlite-devel zlib-devel readline-devel readline
 
+echo "Instsal Python 3 devel files"
+sudo dnf install -y python3-devel python3-pip python3
+
+echo "Install Python libraries"
+sudo dnf install python-autopep8 python3-autopep8 python3-virtualenvwrapper
+
 echo "Install Terminix"
 sudo dnf copr -y enable heikoada/terminix
-sudo dnf install -y terminix
+sudo dnf install -y tilix
 
 # Copy XResources for better fonts
 #echo "Copying .Xresources"
