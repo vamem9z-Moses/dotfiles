@@ -12,8 +12,7 @@ sudo apt-get install -y ppa-purge git vim build-essential aptitude htop tree
 
 # Install Applications
 echo "Install Apps"
-sudo apt-get install -y pylint mercurial dkms sbcl ctags cmake libpython2.7-dev virtualenvwrapper curl libreadline-dev zsh unrar rar gpgv2 python-pip python-pip3
-
+sudo apt-get install -y pylint mercurial dkms sbcl ctags cmake libpython2.7-dev virtualenvwrapper curl libreadline-dev zsh unrar rar gpgv2 python-pip python3-pip
 
 # Update pip
 echo "Updating pip"
