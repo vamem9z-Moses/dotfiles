@@ -32,8 +32,12 @@ export GOPATH=$HOME/Software/gocode
 export NIMPATH=$HOME/Apps/nim
 export NIMBLEPATH=$HOME/.nimble
 
+#Add Gemset
+export GEM_HOME=$HOME/.gemsets
+
 # Final Path
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin
+export PATH=$GEM_HOME/bin:$PATH:$GOROOT/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin
+
 
 # Aliases
 alias update-grub-fedora="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
@@ -79,7 +83,8 @@ if [ $platform == 'fedora' ]; then
 	source /usr/bin/virtualenvwrapper.sh
 fi
 if [ $platform == 'ubuntu' ]; then
-	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+	VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
+	source /usr/local/bin/virtualenvwrapper.sh
 fi
 if [ $platform == 'darwin' ]; then
 	source /usr/local/bin/virtualenvwrapper.sh
