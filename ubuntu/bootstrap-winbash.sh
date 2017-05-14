@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+
+# Add source files to sources.list
+echo | sudo tee --append /etc/apt/sources.list
+echo "#Add Sources" | sudo tee --append /etc/apt/sources.list
+echo "deb-src http://archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse" | sudo tee --append /etc/apt/sources.list
+echo "deb-src http://archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse" | sudo tee --append /etc/apt/sources.list
+echo "deb-src  http://security.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse" | sudo tee --append /etc/apt/sources.list
+
 # Update
 echo "Update Computer"
 
@@ -27,8 +35,8 @@ echo "Install virtualenvwrapper"
 pip3 install --user virtualenvwrapper
 
 # Install dependencies for development and shell
-echo "Install Python 2.7 devel files"
-sudo apt-get -y build-dep python2.7
+echo "Install Python devel files for pythonz"
+sudo apt-get -y build-dep python2.7 python3
 
 # Install updated vim for trusty 14.04
 sudo add-apt-repository -y ppa:pi-rho/dev
