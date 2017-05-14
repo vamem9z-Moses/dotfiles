@@ -1,4 +1,7 @@
 ## Install Development Dependencies
+echo "Create gemset directory"
+mkdir $HOME/.gemsets
+
 echo "Installing nvm"
 curl https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
 
