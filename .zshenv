@@ -36,7 +36,7 @@ export NIMBLEPATH=$HOME/.nimble
 export GEM_HOME=$HOME/.gemsets
 
 # Final Path
-export PATH=$GEM_HOME/bin:$PATH:$GOROOT/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin
+export PATH=$GEM_HOME/bin:$GOROOT/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin:$PATH
 
 
 # Aliases
