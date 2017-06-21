@@ -33,7 +33,8 @@ export NIMPATH=$HOME/Apps/nim
 export NIMBLEPATH=$HOME/.nimble
 
 #Add Gemset
-export GEM_HOME=$HOME/.gemsets
+#Commented out for rvm
+#export GEM_HOME=$HOME/.gemsets
 
 # Final Path
 export PATH=$GEM_HOME/bin:$GOROOT/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin:$PATH
