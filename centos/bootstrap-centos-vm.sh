@@ -7,7 +7,10 @@ echo "Add EPEL Repo"
 sudo yum -y install epel-release
 
 echo "Install Utilities"
-sudo yum -y install python-virtualenvwrapper python2-pip vim git mercurial zsh filezilla
+sudo yum -y install python-virtualenvwrapper python2-pip vim git mercurial zsh filezilla htop tree
+
+echo "Install VPN Dependency"
+sudo yum -y install NetworkManager-vpnc-gnome
 
 echo "Install Development Tools"
 sudo yum -y install gcc gcc-c++ cmake automake ctags python34
@@ -52,3 +55,17 @@ echo "Install VSCode"
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 sudo yum install -y code
+
+echo "Update git"
+sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
+sudo yum install -y yum-plugin-replace
+sudo yum replace -y  git --replace-with rh-git29
+sudo yum install -y httpd24-libcurl-devel httpd24-libcurl
+sudo ln -s /opt/rh/rh-git29/root/usr/bin/git /usr/local/bin/git
+sudo ln -s /opt/rh/rh-git29/root/usr/bin/git-receive-pack /usr/local/bin/git-receive-pack
+sudo ln -s /opt/rh/rh-git29/root/usr/bin/git-shell /usr/local/bin/git-shell
+sudo ln -s /opt/rh/rh-git29/root/usr/bin/git-upload-archive /usr/local/bin/git-upload-archive
+sudo ln -s /opt/rh/rh-git29/root/usr/bin/git-upload-pack /usr/local/bin/git-upload-pack
+sudo touch /etc/ld.so.conf.d/rh-git.conf
+sudo echo  "/opt/rh/httpd24/root/usr/lib64/" | sudo tee -a /etc/ld.so.conf.d/rh-git.conf
+sudo ldconfig
