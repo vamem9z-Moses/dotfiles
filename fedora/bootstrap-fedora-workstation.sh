@@ -9,8 +9,6 @@ echo "Adding Repos livna, rpmfusion, negativo multimedia"
 sudo dnf config-manager -y --add-repo=http://negativo17.org/repos/fedora-multimedia.repo
 
 echo "Disable fedora-multimedia we only need it for makemkv and handbrake"
-sudo dnf config-manager --set-disabled fedora-multimedia
-
 sudo dnf install -y --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 echo "Add Repo for VSCode"
