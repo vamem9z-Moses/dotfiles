@@ -59,6 +59,8 @@ platform='unknown'
 unamestr=`uname`
 if [[ "$unamestr" == 'Darwin' ]]; then
   platform='darwin'
+elif [ -e /etc/centos-release ]; then
+  platform='centos'
 elif [ -e /etc/redhat-release ]; then
   platform='fedora'
 elif [ -e /etc/debian_version ]; then
@@ -80,7 +82,7 @@ fi
 
 # Virtualenv Wrapper Config
 export WORKON_HOME=$HOME/.virtualenvs
-if [ $platform == 'fedora' ]; then
+if [ $platform == 'fedora' ] || [ $platform == 'centos' ]; then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 	export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv-3
 	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=/usr/bin/virtualenv-clone-3
@@ -101,4 +103,13 @@ if  [ $platform == 'ubuntu' ]; then
 	export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 fi
 
+#Set enable dev tools for centos vm
+#from gist - https://gist.github.com/puremourning/a41b4c6ac732091f63736e3ccb6d8d67
+if [ -f /opt/rh/devtoolset-6/enable ]; then
+	source /opt/rh/devtoolset-6/enable
+fi
 
+# Centos specific configs
+if [ $platform == 'centos' ]; then
+	export IBUS_ENABLE_SYNC_MODE=1
+fi
