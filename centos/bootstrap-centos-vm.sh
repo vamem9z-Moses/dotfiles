@@ -69,3 +69,13 @@ sudo ln -s /opt/rh/rh-git29/root/usr/bin/git-upload-pack /usr/local/bin/git-uplo
 sudo touch /etc/ld.so.conf.d/rh-git.conf
 sudo echo  "/opt/rh/httpd24/root/usr/lib64/" | sudo tee -a /etc/ld.so.conf.d/rh-git.conf
 sudo ldconfig
+
+echo 'Install postgresql 9.6'
+sudo yum install -y https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-centos96-9.6-3.noarch.rpm
+sudo yum install -y postgresql96 postgresql96-server
+sudo /usr/pgsql-9.6/bin/postgresql96-setup initdb
+sudo systemctl enable postgresql-9.6
+sudo systemctl start postgresql-9.6
+
+echo "Install pgadmin 3 and 4"
+sudi yum install -y pgadmin3 pgadmin4-v1
