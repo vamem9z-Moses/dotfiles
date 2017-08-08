@@ -32,6 +32,9 @@ export GOPATH=$HOME/Software/gocode
 export NIMPATH=$HOME/Apps/nim
 export NIMBLEPATH=$HOME/.nimble
 
+# Apache Ignite Settings
+export IGNITE_HOME=$HOME/Apps/ignite
+
 #Add Gemset
 #Commented out for rvm
 #export GEM_HOME=$HOME/.gemsets
