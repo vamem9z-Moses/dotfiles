@@ -62,7 +62,7 @@ sudo cp ~/Apps/gedit-clojure/clojure.lang /usr/share/gtksourceview-3.0/language-
 echo "Install Python 2.7 devel files"
 sudo dnf install -y python-devel openssl-devel python-pip sqlite-devel zlib-devel readline-devel readline
 
-echo "Instsal Python 3 devel files"
+echo "Install Python 3 devel files"
 sudo dnf install -y python3-devel python3-pip python3
 
 echo "Install Python libraries"
@@ -102,6 +102,11 @@ sudo cp 99-sysctl.conf /etc/sysctl.d/99-sysctl.conf
 
 echo "Install Extra fonts"
 ./bootstrap-fonts.sh
+
+echo "Install opera browser"
+sudo rpm --import https://rpm.opera.com/rpmrepo.key
+sudo cp opera.repo /etc/yum.repos.d/opera.repo
+sudo dnf install opera-stable
 
 echo "***********************************"
 echo "An Important Message for IKE"
