@@ -108,6 +108,12 @@ sudo rpm --import https://rpm.opera.com/rpmrepo.key
 sudo cp opera.repo /etc/yum.repos.d/opera.repo
 sudo dnf install opera-stable
 
+echo "Install Nixnote2"
+sudo dnf copr -y enable nunodias/nixnote2
+sudo dnf install -y nixnote2
+sudo cp nixnote2.png /usr/share/pixmaps
+
+
 echo "***********************************"
 echo "An Important Message for IKE"
 echo
