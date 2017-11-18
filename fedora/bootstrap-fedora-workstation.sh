@@ -111,7 +111,6 @@ sudo dnf install opera-stable
 echo "Install Nixnote2"
 sudo dnf copr -y enable nunodias/nixnote2
 sudo dnf install -y nixnote2
-sudo cp nixnote2.png /usr/share/pixmaps
 
 
 echo "***********************************"
