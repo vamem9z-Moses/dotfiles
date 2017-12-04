@@ -38,9 +38,6 @@ sudo dnf remove -y gstreamer1-plugins-ugly
 sudo dnf install -y gstreamer1-plugin-mpg123 mpg123-libs
 
 # Setup thermald
-echo "Setting up thermald"
-sudo dnf copr -y enable slaykovsky/thermald
-sudo dnf install -y thermal_daemon
-
+sudo dnf install -y thermald
 sudo systemctl enable thermald
 sudo systemctl start thermald
