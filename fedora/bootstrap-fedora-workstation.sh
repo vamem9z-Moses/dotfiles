@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo "Turn on fastest mirror"
+sudo echo fastestmirror=true | tee -a /etc/dnf/dnf.conf
+
 echo "Update System"
 sudo dnf update -y
 
