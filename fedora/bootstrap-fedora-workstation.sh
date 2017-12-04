@@ -68,9 +68,8 @@ sudo dnf install -y python3-devel python3-pip python3
 echo "Install Python libraries"
 sudo dnf install python-autopep8 python3-autopep8 python3-virtualenvwrapper
 
-echo "Install Terminix"
-sudo dnf copr -y enable heikoada/terminix
-sudo dnf install -y tilix
+echo "Install Tilix"
+sudo dnf install -y tilix tilix-nautilus
 
 # Copy XResources for better fonts
 #echo "Copying .Xresources"
