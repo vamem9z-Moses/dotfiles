@@ -25,11 +25,11 @@ sudo rpm --import $HOME/linux_signing_key.pub
 
 echo "Install Development Tools"
 
-sudo dnf group install "Development Tools" -y
+sudo dnf group install "Development Tools" 
 sudo dnf install kernel-devel kernel-headers -y
 
 echo "Install VSCode"
-sudo dnf install code
+sudo dnf install code -y
 
 # Install Apps
 echo "Install Apps"
@@ -69,7 +69,7 @@ echo "Install Python 3 devel files"
 sudo dnf install -y python3-devel python3-pip python3
 
 echo "Install Python libraries"
-sudo dnf install python-autopep8 python3-autopep8 python3-virtualenvwrapper
+sudo dnf install python-autopep8 python3-autopep8 python3-virtualenvwrapper -y
 
 echo "Install Tilix"
 sudo dnf install -y tilix tilix-nautilus
