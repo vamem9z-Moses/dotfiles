@@ -105,11 +105,6 @@ sudo cp 99-sysctl.conf /etc/sysctl.d/99-sysctl.conf
 echo "Install Extra fonts"
 ./bootstrap-fonts.sh
 
-echo "Install opera browser"
-sudo rpm --import https://rpm.opera.com/rpmrepo.key
-sudo cp opera.repo /etc/yum.repos.d/opera.repo
-sudo dnf install opera-stable
-
 echo "Install Nixnote2"
 sudo dnf copr -y enable nunodias/nixnote2
 sudo dnf install -y nixnote2
