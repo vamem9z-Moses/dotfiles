@@ -11,7 +11,7 @@ echo "Install htop"
 sudo yum install -y htop thermald
 
 echo "Install cockpit"
-sudo yum install cockpit-packagekit cockpit-networkmanager cockpit-storaged cockpit-dashboard cockpit-docker
+sudo yum install -y cockpit-packagekit cockpit-networkmanager cockpit-storaged cockpit-dashboard cockpit-docker
 
 sudo firewall-cmd --add-service=cockpit
 sudo firewall-cmd --permanent --add-service=cockpit
