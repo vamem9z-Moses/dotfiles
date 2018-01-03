@@ -47,6 +47,9 @@ sudo dnf install -y glibc-devel.x86_64 postgresql-devel
 echo "Install Nautilus Extensions"
 sudo dnf install -y totem-nautilus rabbitvcs-nautilus sushi nautilus-dropbox file-roller-nautilus brasero-nautilus nautilus-open-terminal nautilus-image-converter evince-nautilus raw-thumbnailer rabbitvcs-gedit rabbitvcs-cli
 
+echo "Install GNOME Virtual Filesytem Extensions"
+sudo dnf install -y gnome-vfs*
+
 echo "Install Additional Fonts"
 sudo dnf install -y cabextract xorg-x11-font-utils fontconfig font-manager google-droid* freetype-freeworld google-roboto-fonts google-roboto-condensed-fonts
 
