@@ -13,7 +13,7 @@ echo "Install HW specific utilities"
 sudo dnf install -y powertop tlp smartmontools lm_sensors
 
 echo "Install HW specific apps"
-sudo dnf install -y simple-scan xsane lsdvd dvdbackup
+sudo dnf install -y simple-scan xsane lsdvd dvdbackup smplayer
 
 echo "Install App from fedora-multimedia"
 sudo dnf install -y HandBrake-gui HandBrake-cli makemkv libdvdcss --allowerasing
