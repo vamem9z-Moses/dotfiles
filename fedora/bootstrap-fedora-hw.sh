@@ -4,7 +4,7 @@ echo "Install Generic workstation"
 ./bootstrap-fedora-workstation.sh
 
 echo "Install vdpau support"
-sudo dnf install -y mesa-vdpau-drivers vdpauinfo libvdpau-va-gl
+sudo dnf install -y mesa-vdpau-drivers vdpauinfo libvdpau-va-gl libva-vdpau-driver
 
 echo ""
 echo "Install software that only makes sense on actual hardware"
