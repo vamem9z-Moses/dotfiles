@@ -77,6 +77,9 @@ sudo dnf install python-autopep8 python3-autopep8 python3-virtualenvwrapper -y
 echo "Install Tilix"
 sudo dnf install -y tilix tilix-nautilus
 
+echo "Install Server Management Tools"
+sudo dnf install -y java-wakeonlan
+
 # Copy XResources for better fonts
 #echo "Copying .Xresources"
 #cp .Xresources ~/.Xresources
