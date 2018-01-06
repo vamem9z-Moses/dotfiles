@@ -2,7 +2,7 @@ echo "Update System"
 sudo yum update -y
 
 echo "Add basic system tools"
-sudo yum install -y vim lm_sensors epel-release tree lshw pciutils net-tools
+sudo yum install -y vim lm_sensors epel-release tree lshw pciutils net-tools deltarpm
 
 echo "Update to get latest epel-release"
 sudo yum update -y
