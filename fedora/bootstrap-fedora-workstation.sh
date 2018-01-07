@@ -25,7 +25,7 @@ sudo rpm --import $HOME/linux_signing_key.pub
 
 echo "Install Development Tools"
 
-sudo dnf group install "Development Tools" 
+sudo dnf group install "Development Tools"
 sudo dnf install kernel-devel kernel-headers -y
 
 echo "Install VSCode"
@@ -115,6 +115,11 @@ echo "Install Nixnote2"
 sudo dnf copr -y enable nunodias/nixnote2
 sudo dnf install -y nixnote2
 
+echo "Install Zim dependencies"
+pip install --user seqdiag
+
+echo "Install Zim"
+sudo dnf install -y zim gtkspell gnome-python2-gtkspell
 
 echo "***********************************"
 echo "An Important Message for IKE"
