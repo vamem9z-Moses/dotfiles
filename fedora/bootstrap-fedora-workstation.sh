@@ -36,7 +36,7 @@ sudo dnf install -y libcurl-devel
 
 # Install Apps
 echo "Install Apps"
-sudo dnf install -y paprefs pavucontrol gimp pinta wine brasero gpodder libXScrnSaver.x86_64 gnome-tweak-tool filezilla ike firewall-applet okular chromium
+sudo dnf install -y paprefs pavucontrol gimp pinta wine brasero gpodder vocal libXScrnSaver.x86_64 gnome-tweak-tool filezilla ike firewall-applet okular chromium
 
 echo "Install System Utilities"
 sudo dnf install -y gnome-system-log tmux strace exfat-utils fuse-exfat  gnome-shell-extension-drive-menu alacarte terminator gnome-power-manager gparted redhat-lsb.x86_64 htop zsh autotrace curl dnf-plugins-core chrome-gnome-shell
