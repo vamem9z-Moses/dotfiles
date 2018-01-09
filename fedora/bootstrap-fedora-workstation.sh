@@ -31,6 +31,9 @@ sudo dnf install kernel-devel kernel-headers -y
 echo "Install VSCode"
 sudo dnf install code -y
 
+echo "Install Dependencies for R Packages"
+sudo dnf install -y libcurl-devel
+
 # Install Apps
 echo "Install Apps"
 sudo dnf install -y paprefs pavucontrol gimp pinta wine brasero gpodder libXScrnSaver.x86_64 gnome-tweak-tool filezilla ike firewall-applet okular chromium
