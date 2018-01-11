@@ -31,9 +31,6 @@ sudo dnf install kernel-devel kernel-headers -y
 echo "Install VSCode"
 sudo dnf install code -y
 
-echo "Install Dependencies for R Packages"
-sudo dnf install -y libcurl-devel
-
 # Install Apps
 echo "Install Apps"
 sudo dnf install -y paprefs pavucontrol gimp pinta wine brasero gpodder vocal libXScrnSaver.x86_64 gnome-tweak-tool filezilla ike firewall-applet okular chromium
@@ -118,11 +115,6 @@ echo "Install Nixnote2"
 sudo dnf copr -y enable nunodias/nixnote2
 sudo dnf install -y nixnote2
 
-echo "Install Zim dependencies"
-pip install --user seqdiag
-
-echo "Install Zim"
-sudo dnf install -y zim gtkspell gnome-python2-gtkspell
 
 echo "***********************************"
 echo "An Important Message for IKE"
