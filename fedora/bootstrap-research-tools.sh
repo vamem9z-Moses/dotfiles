@@ -13,4 +13,4 @@ echo "Install Zim"
 sudo dnf install -y Zim gtkspell gnome-python2-gtkspell pygtksourceview
 
 echo "Install other research tools"
-sudo dnf install -y gnuplot *octave*
+sudo dnf install -y gnuplot *octave* xournal
