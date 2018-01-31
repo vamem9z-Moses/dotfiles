@@ -14,3 +14,10 @@ sudo dnf install -y Zim gtkspell gnome-python2-gtkspell pygtksourceview
 
 echo "Install other research tools"
 sudo dnf install -y gnuplot *octave* xournal
+
+echo "Install Rodeo"
+#### add the rodeo yum repo
+sudo wget http://rodeo-rpm.yhat.com/rodeo-rpm.repo -P /etc/yum.repos.d/
+
+##### install the package and run it
+sudo dnf install -y rodeo
