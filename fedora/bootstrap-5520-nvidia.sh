@@ -1,6 +1,7 @@
 echo "Setting up nvidia on Dell Precision 5520"
-echo "Add negativo17 nvidia repo"
+echo "Add negativo17 nvidia repos"
 sudo dnf config-manager -y --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
+sudo dnf config-manager -y --add-repo=http://negativo17.org/repos/fedora-multimedia.repo
 
 echo "Install nvidia driver"
 sudo dnf install -y nvidia-settings nvidia-driver kernel-devel akmod-nvidia dkms acpi
@@ -15,7 +16,7 @@ echo "Install bbswitch, bumblebee and primus"
 sudo dnf install -y akmod-bbswitch bumblebee primus
 
 echo "Install cuda"
-sudo dnf install -y cuda-devel
+sudo dnf install -y cuda-devel nvidia-driver-cuda
 
 echo "Add user to bumblebee group"
 sudo gpasswd -a $USER bumblebee
