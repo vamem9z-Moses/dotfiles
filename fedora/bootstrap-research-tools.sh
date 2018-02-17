@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Install Dependencies for R Packages"
-sudo dnf install -y libcurl-devel
+sudo dnf install -y libcurl-devel community-mysql-devel
 
 echo "Install R and R related tools"
 sudo dnf install -y R
@@ -21,3 +21,4 @@ sudo wget http://rodeo-rpm.yhat.com/rodeo-rpm.repo -P /etc/yum.repos.d/
 
 ##### install the package and run it
 sudo dnf install -y rodeo
+
