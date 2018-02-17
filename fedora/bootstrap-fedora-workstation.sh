@@ -112,6 +112,8 @@ echo "Install Nixnote2"
 sudo dnf copr -y enable nunodias/nixnote2
 sudo dnf install -y nixnote2
 
+echo "Install dependencies for changing the shell"
+sudo dnf install -y elfutils-libelf-devel util-linux-users zsh
 
 echo "***********************************"
 echo "An Important Message for IKE"
