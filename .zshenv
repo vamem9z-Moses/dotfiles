@@ -98,7 +98,7 @@ if [ $platform == 'ubuntu' ]; then
 	source $HOME/.local/bin/virtualenvwrapper.sh
 fi
 if [ $platform == 'darwin' ]; then
-	source /usr/local/bin/virtualenvwrapper.sh
+	source $HOME/Library/Python/3.6/bin/virtualenvwrapper.sh
 fi
 
 #JAVA_HOME
