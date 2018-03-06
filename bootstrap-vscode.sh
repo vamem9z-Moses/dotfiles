@@ -44,3 +44,6 @@ code --install-extension christian-kohler.npm-intellisense
 
 echo "Installing npm support"
 code --install-extension eg2.vscode-npm-script
+
+echo "Setup User Settings"
+ln -s $PWD/vscode/settings.json $HOME/.config/Code/User

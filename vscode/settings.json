@@ -1,0 +1,14 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "C_Cpp.intelliSenseEngine": "Default",
+    "editor.rulers": [
+        80, 120
+    ],
+    "workbench.editor.enablePreview": false,
+    "go.testOnSave": true,
+    "go.coverOnSave": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "extensions.ignoreRecommendations": false,
+    "editor.minimap.enabled": false,
+    "python.linting.pylintArgs": ["--load-plugins", "pylint_django"]
+}
