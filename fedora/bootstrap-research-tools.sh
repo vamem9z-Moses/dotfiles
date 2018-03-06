@@ -22,3 +22,5 @@ sudo wget http://rodeo-rpm.yhat.com/rodeo-rpm.repo -P /etc/yum.repos.d/
 ##### install the package and run it
 sudo dnf install -y rodeo
 
+echo "Install Texlive Dependencies for Jupyter"
+sudo dnf install -y texlive-adjustbox texlive-upquote texlive-ulem
