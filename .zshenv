@@ -61,13 +61,13 @@ alias weaven-proj="cd $GOPATH/src/github.com/MilesAheadLLC/weaven"
 platform='unknown'
 unamestr=`uname`
 if [[ "$unamestr" == 'Darwin' ]]; then
-  platform='darwin'
+  export platform='darwin'
 elif [ -e /etc/centos-release ]; then
-  platform='centos'
+  export platform='centos'
 elif [ -e /etc/redhat-release ]; then
-  platform='fedora'
+  export platform='fedora'
 elif [ -e /etc/debian_version ]; then
-  platform='ubuntu'
+  export platform='ubuntu'
 fi
 
 # Add Postgres App Path for mac
