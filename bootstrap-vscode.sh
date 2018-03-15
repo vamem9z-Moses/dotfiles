@@ -45,5 +45,12 @@ code --install-extension christian-kohler.npm-intellisense
 echo "Installing npm support"
 code --install-extension eg2.vscode-npm-script
 
+echo "Installing vim support"
+code --install-extension vscodevim.vim
+
 echo "Setup User Settings"
-ln -s $PWD/vscode/settings.json $HOME/.config/Code/User
+if [ "$platform" == 'darwin' ]; then
+	ln -s $PWD/vscode/settings.json $HOME/Library/"Application Support"/Code/User
+else
+	ln -s $PWD/vscode/settings.json $HOME/.config/Code/User
+fi
