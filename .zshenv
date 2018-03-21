@@ -73,7 +73,7 @@ fi
 # Add Postgres App Path for mac
 #
 if [[ $platform == 'darwin' ]]; then
-	PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+	PATH=/usr/local/opt/postgresql@9.6/bin:$PATH
 fi
 
 ## Add help for zsh on mac installed with Homebrew
