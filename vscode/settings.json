@@ -10,5 +10,9 @@
     "workbench.startupEditor": "newUntitledFile",
     "extensions.ignoreRecommendations": false,
     "editor.minimap.enabled": false,
-    "python.linting.pylintArgs": ["--load-plugins", "pylint_django"]
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django"
+    ],
+    "gitlens.keymap": "alternate"
 }
