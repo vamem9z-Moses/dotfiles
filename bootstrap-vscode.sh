@@ -48,6 +48,10 @@ code --install-extension eg2.vscode-npm-script
 echo "Installing vim support"
 code --install-extension vscodevim.vim
 
+echo "Installing jinja support"
+code --install-extension wholroyd.jinja
+
+
 echo "Setup User Settings"
 if [ "$platform" == 'darwin' ]; then
 	ln -s $PWD/vscode/settings.json $HOME/Library/"Application Support"/Code/User
