@@ -12,10 +12,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "extensions.ignoreRecommendations": false,
     "editor.minimap.enabled": false,
-    "python.linting.pylintArgs": [
-        "--load-plugins",
-        "pylint_django"
-    ],
+    "python.linting.pylintArgs": [],
     "gitlens.keymap": "alternate",
     "python.formatting.provider": "yapf",
     "files.exclude": {
@@ -25,5 +22,6 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/__pycache__/": true
-    }
+    },
+    "python.linting.pep8Enabled": true
 }
