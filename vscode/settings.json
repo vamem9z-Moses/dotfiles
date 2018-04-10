@@ -13,7 +13,7 @@
     "extensions.ignoreRecommendations": false,
     "editor.minimap.enabled": false,
     "python.linting.pylintArgs": [],
-    "gitlens.keymap": "alternate",
+    "gitlens.keymap": "chorded",
     "python.formatting.provider": "yapf",
     "files.exclude": {
         "**/.git": true,
@@ -23,5 +23,18 @@
         "**/.DS_Store": true,
         "**/__pycache__/": true
     },
-    "python.linting.pep8Enabled": true
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "html.format.wrapLineLength": 90,
+    "html.format.unformatted": "wbr, {%, %}",
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    }
 }
