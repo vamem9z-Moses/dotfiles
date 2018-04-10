@@ -51,6 +51,11 @@ code --install-extension vscodevim.vim
 echo "Installing jinja support"
 code --install-extension wholroyd.jinja
 
+echo "Installing jupyter support"
+code --install-extension donjayamanne.jupyter
+
+echo "Install run snippet support"
+code --install-extension formulahendry.code-runner
 
 echo "Setup User Settings"
 if [ "$platform" == 'darwin' ]; then
