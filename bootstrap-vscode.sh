@@ -57,6 +57,9 @@ code --install-extension donjayamanne.jupyter
 echo "Install run snippet support"
 code --install-extension formulahendry.code-runner
 
+echo "Install run babel support"
+code --install-extension mrorz.language-gettext
+
 echo "Setup User Settings"
 if [ "$platform" == 'darwin' ]; then
 	ln -s $PWD/vscode/settings.json $HOME/Library/"Application Support"/Code/User
