@@ -25,6 +25,7 @@
     },
     "python.linting.pylintEnabled": true,
     "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
     "html.format.wrapLineLength": 90,
     "html.format.unformatted": "wbr, {%, %}",
     "gitlens.advanced.messages": {
@@ -36,5 +37,6 @@
         "suppressNoRepositoryWarning": false,
         "suppressResultsExplorerNotice": false,
         "suppressShowKeyBindingsNotice": true
-    }
+    },
+    "window.zoomLevel": 0
 }
