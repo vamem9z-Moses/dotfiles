@@ -89,7 +89,7 @@ if [ $platform == 'fedora' ] || [ $platform == 'centos' ]; then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 	export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv-3
 	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=/usr/bin/virtualenv-clone-3
-	source /usr/bin/virtualenvwrapper.sh
+	source /usr/bin/virtualenvwrapper-3.sh
 fi
 if [ $platform == 'ubuntu' ]; then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
