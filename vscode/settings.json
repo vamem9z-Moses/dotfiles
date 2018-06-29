@@ -38,5 +38,6 @@
         "suppressResultsExplorerNotice": false,
         "suppressShowKeyBindingsNotice": true
     },
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "gitlens.historyExplorer.enabled": true
 }
