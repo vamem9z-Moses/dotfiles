@@ -77,6 +77,11 @@ sudo dnf install -y tilix tilix-nautilus
 echo "Install Server Management Tools"
 sudo dnf install -y java-wakeonlan
 
+echo "Install PgAdmin 4 (from Postgres 10 repo)"
+sudo dnf install https://download.postgresql.org/pub/repos/yum/10/fedora/fedora-28-x86_64/pgdg-fedora10-10-4.noarch.rpm
+sudo dnf install pgadmin4-desktop-gnome
+sudo dnf install python3-flask-babelex
+
 # Copy XResources for better fonts
 #echo "Copying .Xresources"
 #cp .Xresources ~/.Xresources
