@@ -39,5 +39,6 @@
         "suppressShowKeyBindingsNotice": true
     },
     "window.zoomLevel": 0,
-    "gitlens.historyExplorer.enabled": true
+    "gitlens.historyExplorer.enabled": true,
+    "vsicons.dontShowNewVersionMessage": true
 }
