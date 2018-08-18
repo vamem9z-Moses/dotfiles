@@ -40,5 +40,6 @@
     },
     "window.zoomLevel": 0,
     "gitlens.historyExplorer.enabled": true,
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "breadcrumbs.enabled": true
 }
