@@ -66,3 +66,6 @@ if [ "$platform" == 'darwin' ]; then
 else
 	ln -s $PWD/vscode/settings.json $HOME/.config/Code/User
 fi
+
+echo "Install markdownlint"
+code --install-extension DavidAnson.vscode-markdownlint
