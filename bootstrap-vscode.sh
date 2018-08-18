@@ -25,7 +25,7 @@ echo "Installing TSLint support"
 code --install-extension eg2.tslint
 
 echo "Installing Go support"
-code --install-extension lukehoban.Go
+code --install-extension ms-vscode.Go
 
 echo "Installing Project Manager"
 code --install-extension alefragnani.project-manager
