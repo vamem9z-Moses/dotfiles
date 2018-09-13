@@ -56,6 +56,9 @@ alias formanalysis="cd $GOPATH/src/github.com/ATHN/formanalysis"
 alias 3rapp="cd $GOPATH/src/github.com/MilesAheadLLC/3rapp"
 alias weaven-proj="cd $GOPATH/src/github.com/MilesAheadLLC/weaven"
 
+# Clean Python Files Alias
+alias pyclean='find . -name "*.py[c|o]" -o -name __pycache__ -exec rm -rf {} +'
+
 # Platform specific configurations
 
 platform='unknown'
@@ -116,3 +119,4 @@ fi
 if [ $platform == 'centos' ]; then
 	export IBUS_ENABLE_SYNC_MODE=1
 fi
+
