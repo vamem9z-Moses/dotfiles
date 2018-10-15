@@ -41,5 +41,6 @@
     "window.zoomLevel": 0,
     "gitlens.historyExplorer.enabled": true,
     "vsicons.dontShowNewVersionMessage": true,
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }
