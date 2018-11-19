@@ -42,5 +42,6 @@
     "gitlens.historyExplorer.enabled": true,
     "vsicons.dontShowNewVersionMessage": true,
     "breadcrumbs.enabled": true,
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "window.titleBarStyle": "custom"
 }
