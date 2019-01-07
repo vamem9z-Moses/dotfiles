@@ -80,7 +80,7 @@ if [[ $platform == 'darwin' ]]; then
 fi
 
 ## Add help for zsh on mac installed with Homebrew
-if [ $platform == 'darwin' ]; then
+if [[ $platform == 'darwin' ]]; then
 	unalias run-help
 	autoload run-help
 	HELPDIR=/usr/local/share/zsh/help
@@ -88,24 +88,24 @@ fi
 
 # Virtualenv Wrapper Config
 export WORKON_HOME=$HOME/.virtualenvs
-if [ $platform == 'fedora' ] || [ $platform == 'centos' ]; then
+if [[ $platform == 'fedora' ]] || [[ $platform == 'centos' ]]; then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 	export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv-3
 	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=/usr/bin/virtualenv-clone-3
 	source /usr/bin/virtualenvwrapper-3.sh
 fi
-if [ $platform == 'ubuntu' ]; then
+if [[ $platform == 'ubuntu' ]]; then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=$HOME/.local/bin/virtualenv-clone
 	export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
 	source $HOME/.local/bin/virtualenvwrapper.sh
 fi
-if [ $platform == 'darwin' ]; then
+if [[ $platform == 'darwin' ]]; then
 	source $HOME/Library/Python/3.6/bin/virtualenvwrapper.sh
 fi
 
 #JAVA_HOME
-if  [ $platform == 'ubuntu' ]; then
+if  [[ $platform == 'ubuntu' ]]; then
 	export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 fi
 
@@ -116,7 +116,8 @@ if [ -f /opt/rh/devtoolset-6/enable ]; then
 fi
 
 # Centos specific configs
-if [ $platform == 'centos' ]; then
+if [[ $platform == 'centos' ]]; then
+
 	export IBUS_ENABLE_SYNC_MODE=1
 fi
 
