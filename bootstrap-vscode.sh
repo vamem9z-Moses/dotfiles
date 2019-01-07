@@ -69,3 +69,9 @@ fi
 
 echo "Install markdownlint"
 code --install-extension DavidAnson.vscode-markdownlint
+
+echo "Install Prettier"
+code --install-extension esbenp.prettier-vscode
+
+echo "Install Babel E6/E7"
+code --install-extension dzannotti.vscode-babel-coloring

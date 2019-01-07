@@ -39,9 +39,10 @@
         "suppressShowKeyBindingsNotice": true
     },
     "window.zoomLevel": 0,
-    "gitlens.historyExplorer.enabled": true,
     "vsicons.dontShowNewVersionMessage": true,
     "breadcrumbs.enabled": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "window.titleBarStyle": "custom"
+    "window.titleBarStyle": "custom",
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
 }
