@@ -86,6 +86,12 @@ if [[ $platform == 'darwin' ]]; then
 	HELPDIR=/usr/local/share/zsh/help
 fi
 
+## Add Openssl config locations on Mac from Homebrew
+if [[ $platform == 'darwin' ]]; then
+	export LDFLAGS="-L/usr/local/opt/openssl/lib -L/usr/local/opt/zlib/lib"
+  	export CPPFLAGS="-I/usr/local/opt/openssl/include -I/usr/local/opt/zlib/include"
+fi
+
 # Virtualenv Wrapper Config
 export WORKON_HOME=$HOME/.virtualenvs
 if [[ $platform == 'fedora' ]] || [[ $platform == 'centos' ]]; then
