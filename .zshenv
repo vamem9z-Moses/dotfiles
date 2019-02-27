@@ -86,10 +86,13 @@ if [[ $platform == 'darwin' ]]; then
 	HELPDIR=/usr/local/share/zsh/help
 fi
 
-## Add Openssl config locations on Mac from Homebrew
+## Add Openssl, zlib and ruby config locations on Mac from Homebrew
+## For this to work must install homebrew and run 
+## brew install ruby zlib openssl
 if [[ $platform == 'darwin' ]]; then
-	export LDFLAGS="-L/usr/local/opt/openssl/lib -L/usr/local/opt/zlib/lib"
-  	export CPPFLAGS="-I/usr/local/opt/openssl/include -I/usr/local/opt/zlib/include"
+	export PATH="/usr/local/opt/ruby/bin:$PATH"
+	export LDFLAGS="-L/usr/local/opt/openssl/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/ruby/lib"
+  	export CPPFLAGS="-I/usr/local/opt/openssl/include -I/usr/local/opt/zlib/include -I/usr/local/opt/ruby/include"
 fi
 
 # Virtualenv Wrapper Config
@@ -105,9 +108,6 @@ if [[ $platform == 'ubuntu' ]]; then
 	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=$HOME/.local/bin/virtualenv-clone
 	export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
 	source $HOME/.local/bin/virtualenvwrapper.sh
-fi
-if [[ $platform == 'darwin' ]]; then
-	source $HOME/Library/Python/3.6/bin/virtualenvwrapper.sh
 fi
 
 #JAVA_HOME
