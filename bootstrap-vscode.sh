@@ -21,9 +21,6 @@ code --install-extension dbaeumer.vscode-eslint
 echo "Installing vscode icons"
 code --install-extension robertohuertasm.vscode-icons
 
-echo "Installing TSLint support"
-code --install-extension eg2.tslint
-
 echo "Installing Go support"
 code --install-extension ms-vscode.Go
 
@@ -75,3 +72,6 @@ code --install-extension esbenp.prettier-vscode
 
 echo "Install Babel E6/E7"
 code --install-extension dzannotti.vscode-babel-coloring
+
+echo "Install Typescript tslint plugin"
+code --install-extension ms-vscode.vscode-typescript-tslint-plugin
