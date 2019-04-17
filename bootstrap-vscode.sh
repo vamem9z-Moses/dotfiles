@@ -75,3 +75,6 @@ code --install-extension dzannotti.vscode-babel-coloring
 
 echo "Install Typescript tslint plugin"
 code --install-extension ms-vscode.vscode-typescript-tslint-plugin
+
+echo "Install Excel Viewer"
+code --install-extension GrapeCity.gc-excelviewer
