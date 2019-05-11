@@ -1,5 +1,4 @@
 {
-    "workbench.iconTheme": "vscode-icons",
     "C_Cpp.intelliSenseEngine": "Default",
     "editor.rulers": [
         80,
@@ -39,7 +38,6 @@
         "suppressShowKeyBindingsNotice": true
     },
     "window.zoomLevel": 0,
-    "vsicons.dontShowNewVersionMessage": true,
     "breadcrumbs.enabled": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "window.titleBarStyle": "custom",
@@ -48,5 +46,5 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    },
+    }
 }
