@@ -46,5 +46,7 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    },
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.iconTheme": "vscode-icons"
 }
