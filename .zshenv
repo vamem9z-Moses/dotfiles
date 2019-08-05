@@ -92,7 +92,7 @@ fi
 ## gettext is needed to fix vim
 if [[ $platform == 'darwin' ]]; then
 	export PATH="/usr/local/opt/gettext/bin:/usr/local/opt/ruby/bin:$PATH"
-	export LDFLAGS="L/usr/local/opt/gettext/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/ruby/lib -L/usr/local/opt/sqlite/lib -L/usr/local/opt/readline/lib"
+	export LDFLAGS="-L/usr/local/opt/gettext/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/ruby/lib -L/usr/local/opt/sqlite/lib -L/usr/local/opt/readline/lib"
   	export CPPFLAGS="-I/usr/local/opt/gettext/include -I/usr/local/opt/openssl/include -I/usr/local/opt/zlib/include -I/usr/local/opt/ruby/include -I/usr/local/opt/sqlite/include -I/usr/local/opt/readline/include"
   	export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig:/usr/local/opt/sqlite/lib/pkgconfig:/usr/local/opt/openssl/lib/pkgconfig:/usr/local/opt/readline/lib/pkgconfig"
 fi
