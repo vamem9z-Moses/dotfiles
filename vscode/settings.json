@@ -46,5 +46,11 @@
   },
   "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": "vscode-icons",
-  "terminal.integrated.shellArgs.linux": ["-l"]
+  "terminal.integrated.shellArgs.linux": [
+    "-l"
+  ],
+  "editor.formatOnType": true,
+  "typescript.format.insertSpaceAfterTypeAssertion": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.cwd": ""
 }
