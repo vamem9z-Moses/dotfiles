@@ -52,5 +52,6 @@
   "editor.formatOnType": true,
   "typescript.format.insertSpaceAfterTypeAssertion": true,
   "python.testing.pytestEnabled": true,
-  "python.testing.cwd": ""
+  "python.testing.cwd": "",
+  "python.dataScience.sendSelectionToInteractiveWindow": true
 }
