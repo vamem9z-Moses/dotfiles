@@ -10,7 +10,7 @@
   "editor.minimap.enabled": false,
   "python.linting.pylintArgs": [],
   "gitlens.keymap": "chorded",
-  "python.formatting.provider": "yapf",
+  "python.formatting.provider": "black",
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -53,5 +53,8 @@
   "typescript.format.insertSpaceAfterTypeAssertion": true,
   "python.testing.pytestEnabled": true,
   "python.testing.cwd": "",
-  "python.dataScience.sendSelectionToInteractiveWindow": true
+  "python.dataScience.sendSelectionToInteractiveWindow": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  }
 }
