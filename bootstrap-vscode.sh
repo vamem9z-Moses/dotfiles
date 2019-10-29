@@ -78,3 +78,6 @@ code --install-extension ms-vscode.vscode-typescript-tslint-plugin
 
 echo "Install Excel Viewer"
 code --install-extension GrapeCity.gc-excelviewer
+
+echo "Install Calva Clojure Extension"
+code --install-extension betterthantomorrow.calva
