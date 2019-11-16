@@ -11,4 +11,10 @@ echo "Setting up new spaceemacs install"
 ln -s $PWD/.spacemacs $HOME/.spacemacs
 git clone --recursive https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
 
+echo "Install tern binary"
+npm install -g tern
+
+echo "Install tools required for clojure support"
+./bootstrap-clojure-tools.sh
+
 echo "Spacemacs is installed, to complete installation of packages run emacs"
