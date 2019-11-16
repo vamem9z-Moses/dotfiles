@@ -36,7 +36,6 @@ values."
      (clojure :variables
               clojure-enable-sayid t
               clojure-enable-clj-refactor t
-              clojure-enable-fancify-symbols t
               clojure-enable-linters '(clj-kondo joker))
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
