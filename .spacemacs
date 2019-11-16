@@ -33,7 +33,11 @@ values."
    '(
      python
      javascript
-     clojure
+     (clojure :variables
+              clojure-enable-sayid t
+              clojure-enable-clj-refactor t
+              clojure-enable-fancify-symbols t
+              clojure-enable-linters '(clj-kondo joker))
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -322,8 +326,24 @@ you should place your code here."
   (add-hook 'prog-mode-hook 'turn-on-fci-mode)
   (add-hook 'text-mode-hook 'turn-on-fci-mode)
 
+
+  ;; Add ability to jack-in with a specific profile
+  (defun cider-jack-in-with-profile ()
+    (interactive)
+    (letrec ((profile (read-string "Enter profile name: "))
+             (lein-params (concat "with-profile +" profile " repl :headless")))
+      (message "lein-params set to: %s" lein-params)
+      (set-variable 'cider-lein-parameters lein-params)
+      ;; just a empty parameter
+      (cider-jack-in '())))
+
+  ;; additional neotree configuration
   (setq neo-theme 'classic)
   (setq neo-vc-integration '(face))
+
+  ;; treemacs configuration - not all of this is necessary when treemacs is
+  ;; incorporated into spacemacs this may not be necessary. Currently treemacs
+  ;; is on a development branch.
 (use-package treemacs
   :ensure t
   :defer t
