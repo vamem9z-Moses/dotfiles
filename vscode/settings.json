@@ -56,5 +56,8 @@
   "python.dataScience.sendSelectionToInteractiveWindow": true,
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
-  }
+  },
+  "editor.fontFamily": "'Hasklig','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "calva.evalOnSave": true,
+  "calva.fmt.removeConsecutiveBlankLines": true
 }
