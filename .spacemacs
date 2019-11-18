@@ -35,7 +35,11 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     python
+     (python :variables
+             python-formatter 'yapf
+             python-format-on-save t
+             python-fill-column 88
+             python-sort-imports-on-save t)
      javascript
      (clojure :variables
               clojure-enable-sayid t
@@ -195,7 +199,7 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(soft-charcoal
+   dotspacemacs-themes '(farmhouse-dark
                          spacemacs-dark
                          spacemacs-light)
 
@@ -490,6 +494,13 @@ you should place your code here."
   (setq neo-theme 'classic)
   (setq neo-vc-integration '(face))
 
+  ;; Use pipenv porcelain with python mode - https://github.com/pwalsh/pipenv.el 
+  (use-package pipenv
+    :hook (python-mode . pipenv-mode)
+    :init
+    (setq
+     pipenv-projectile-after-switch-function
+     #'pipenv-projectile-after-switch-extended))
   ;; treemacs configuration - not all of this is necessary when treemacs is
   ;; incorporated into spacemacs this may not be necessary. Currently treemacs
   ;; is on a development branch.
