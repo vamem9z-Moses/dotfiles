@@ -12,7 +12,7 @@ ln -s $PWD/.spacemacs $HOME/.spacemacs
 git clone --recursive https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
 
 echo "Install tern binary"
-npm install -g tern
+sudo npm install -g tern
 
 echo "Install tools required for clojure support"
 ./bootstrap-clojure-tools.sh
