@@ -7,7 +7,7 @@ echo "Update System"
 sudo dnf update -y --refresh
 
 echo "Install basic tools"
-sudo dnf -y install htop vim git zsh
+sudo dnf -y install htop vim git zsh xorg-x11-xauth
 
 echo "Install Development Tools"
 sudo dnf install -y emacs gcc-c++ cmake ctags vim-pysmell vim-enhanced gitg mercurial ctags ctags-etags cmake sbcl nodejs cmake automake gcc gcc-c++ postgresql-server postgresql-contrib uncrustify
