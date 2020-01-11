@@ -10,10 +10,10 @@ echo "Install basic tools"
 sudo dnf -y install htop vim git zsh xorg-x11-xauth
 
 echo "Install Development Tools"
-sudo dnf install -y emacs gcc-c++ cmake ctags vim-pysmell vim-enhanced gitg mercurial ctags ctags-etags cmake sbcl nodejs cmake automake gcc gcc-c++ postgresql-server postgresql-contrib uncrustify
+sudo dnf install -y emacs gcc-c++ cmake ctags vim-pysmell vim-enhanced gitg mercurial ctags ctags-etags cmake sbcl nodejs cmake automake gcc gcc-c++ postgresql-server postgresql-contrib uncrustify make patch
 
 echo "Install Development Libraries"
-sudo dnf install -y glibc-devel.x86_64 postgresql-devel
+sudo dnf install -y glibc-devel.x86_64 postgresql-devel postgresql-server-devel cpan
 
 echo "Install Python 3 devel files"
 sudo dnf install -y python3-devel python3-pip python3
