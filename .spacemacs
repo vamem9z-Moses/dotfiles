@@ -581,7 +581,7 @@ you should place your code here."
 
 (use-package treemacs-magit
   :after treemacs magit
-  )
+  :ensure t)
 )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
