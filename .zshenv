@@ -27,6 +27,8 @@ export NOGOPATH=$PATH
 export GOROOT=$HOME/Apps/go
 export GOPATH=$HOME/Software/gocode
 
+# Rust Settings
+export CARGOPATH=$HOME/.cargo
 
 # Nim Settings
 export NIMPATH=$HOME/Apps/nim
@@ -40,7 +42,7 @@ export IGNITE_HOME=$HOME/Apps/ignite
 #export GEM_HOME=$HOME/.gemsets
 
 # Final Path
-export PATH=$GEM_HOME/bin:$GOROOT/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin:$PATH
+export PATH=$CARGOPATH/bin:$GEM_HOME/bin:$GOROOT/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin:$PATH
 
 
 # Aliases
