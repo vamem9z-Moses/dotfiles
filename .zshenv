@@ -109,9 +109,9 @@ if [[ $platform == 'fedora' ]] || [[ $platform == 'centos' ]]; then
 fi
 if [[ $platform == 'ubuntu' ]]; then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=$HOME/.local/bin/virtualenv-clone
-	export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
-	source $HOME/.local/bin/virtualenvwrapper.sh
+	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=/usr/bin/virtualenv-clone
+	export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
 
 #JAVA_HOME
