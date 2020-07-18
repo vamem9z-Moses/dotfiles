@@ -26,7 +26,7 @@ echo "Install Python devel files for pythonz"
 sudo apt -y build-dep python3
 
 # Install Development Dependencies
-sudo apt -y install openjdk-11-jdk postgresql nodejs npm
+sudo apt install -y openjdk-11-jdk postgresql nodejs npm rlwrap
 
 echo "All of the automated stuff is done"
 echo "Get  .gitconfig and id files and pull down /bin from github"
