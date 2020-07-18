@@ -1,55 +1,33 @@
 #!/usr/bin/env bash
 
-
 # Add source files to sources.list
 echo | sudo tee --append /etc/apt/sources.list
 echo "#Add Sources" | sudo tee --append /etc/apt/sources.list
-echo "deb-src http://archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse" | sudo tee --append /etc/apt/sources.list
-echo "deb-src http://archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse" | sudo tee --append /etc/apt/sources.list
-echo "deb-src  http://security.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse" | sudo tee --append /etc/apt/sources.list
+echo "deb-src http://archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse" | sudo tee --append /etc/apt/sources.list
+echo "deb-src http://archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse" | sudo tee --append /etc/apt/sources.list
+echo "deb-src  http://security.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse" | sudo tee --append /etc/apt/sources.list
 
 # Update
 echo "Update Computer"
 
-sudo apt-get update
-sudo apt-get -y upgrade
+sudo apt update
+sudo apt -y upgrade
 
 # Install Basics
 echo "Install Basics"
-sudo apt-get install -y ppa-purge git vim build-essential aptitude htop tree
+sudo apt install -y ppa-purge git vim build-essential htop tree
 
 # Install Applications
 echo "Install Apps"
-sudo apt-get install -y pylint mercurial dkms sbcl ctags cmake libpython2.7-dev virtualenvwrapper curl libreadline-dev zsh unrar rar gpgv2 python-pip python3-pip
-
-# Update pip
-echo "Updating pip"
-pip install --upgrade pip
-pip3 install --upgrade pip
-
-# Install pysmell
-echo "Install pysmell"
-pip install --user pysmell
-
-echo "Install virtualenvwrapper"
-pip3 install --user virtualenvwrapper
+sudo apt install -y pylint mercurial ctags cmake virtualenvwrapper curl libreadline-dev zsh unrar rar gpgv2 python3-pip
 
 # Install dependencies for development and shell
 echo "Install Python devel files for pythonz"
-sudo apt-get -y build-dep python2.7 python3
+sudo apt -y build-dep python3
 
-# Install updated vim for trusty 14.04
-sudo add-apt-repository -y ppa:pi-rho/dev
-sudo apt-get update
-sudo apt-get -y install vim
+# Install Development Dependencies
+sudo apt -y install openjdk-11-jdk postgresql
 
-# Install openjdk8
-sudo apt-get -y install openjdk-8-jdk
-
-#echo "Install Python 3.6"
-#sudo add-apt-repository -y ppa:jonathonf/python-3.6
-#sudo apt-get update
-#sudo apt-get -y install python3.6
 
 echo "All of the automated stuff is done"
 echo "Get  .gitconfig and id files and pull down /bin from github"
