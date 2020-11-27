@@ -8,11 +8,11 @@ sudo apt -y upgrade
 
 # Install Basics
 echo "Install Basics"
-sudo apt install -y ppa-purge git vim build-essential htop tree chsh
+sudo apt install -y ppa-purge git vim build-essential htop tree
 
 # Install Applications
 echo "Install Apps"
-sudo apt install -y pylint mercurial ctags cmake virtualenvwrapper curl libreadline-dev zsh unrar rar gpgv2 python3-pip
+sudo apt install -y pylint mercurial ctags cmake virtualenvwrapper curl libreadline-dev zsh unrar gpgv2 python3-pip
 
 # Install dependencies for development and shell
 echo "Install Python devel files for pythonz"
