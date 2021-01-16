@@ -6,11 +6,6 @@ sudo echo fastestmirror=true | sudo tee -a /etc/dnf/dnf.conf
 echo "Update System"
 sudo dnf update -y
 
-# Install Repos
-echo "Adding Repos negativo multimedia"
-
-sudo dnf config-manager -y --add-repo=http://negativo17.org/repos/fedora-multimedia.repo
-
 echo "Add Repo for VSCode"
 
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -19,14 +14,15 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 echo "Add google repository key"
 wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O $HOME/linux_signing_key.pub
 sudo rpm --import $HOME/linux_signing_key.pub
+rm $HOME/linux_signing_key.pub
 
 echo "Install Development Tools"
 
-sudo dnf group install "Development Tools"
-sudo dnf install kernel-devel kernel-headers -y
+sudo dnf group install -y "Development Tools"
+sudo dnf install -y kernel-devel kernel-headers
 
 echo "Install VSCode"
-sudo dnf install code -y
+sudo dnf install -y code
 
 # Install Apps
 echo "Install Apps"
@@ -69,7 +65,7 @@ echo "Install Python 3 devel files"
 sudo dnf install -y python3-devel python3-pip python3
 
 echo "Install Python libraries"
-sudo dnf install python-autopep8 python3-autopep8 python3-virtualenvwrapper -y
+sudo dnf install -y python-autopep8 python3-autopep8 python3-virtualenvwrapper
 
 echo "Install Tilix"
 sudo dnf install -y tilix tilix-nautilus
@@ -77,35 +73,10 @@ sudo dnf install -y tilix tilix-nautilus
 echo "Install Server Management Tools"
 sudo dnf install -y java-wakeonlan
 
-echo "Install PgAdmin 4 (from Postgres 10 repo)"
-sudo dnf install https://download.postgresql.org/pub/repos/yum/10/fedora/fedora-28-x86_64/pgdg-fedora10-10-4.noarch.rpm
-sudo dnf install pgadmin4-desktop-gnome
-sudo dnf install python3-flask-babelex
-
-# Copy XResources for better fonts
-#echo "Copying .Xresources"
-#cp .Xresources ~/.Xresources
-
 # Setup rpmbuild
 echo "Setting Up rpmbuild"
 sudo dnf install -y mock rpmbuild
 sudo useradd -s /sbin/nologin mockbuild
-
-#Turn off Nemo Desktop Icons
-echo "Install Nemo"
-sudo dnf install -y nemo nemo-fileroller nemo-extensions nemo-rabbitvcs nemo-dropbox nemo-image-converter nemo-emblems
-
-echo "Turning off nemo desktop icons"
-gsettings set org.nemo.desktop show-desktop-icons false
-
-#echo "Set terminator as default terminal in nemo"
-#gsettings set org.cinnamon.desktop.default-applications.terminal exec 'terminator'
-
-#echo "Set file manager to use nemo as default"
-#xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
-
-#echo "Disable nautilus handling the desktop"
-#gsettings set org.gnome.desktop.background show-desktop-icons false
 
 #Increase inotify limits - I ran into this doing a large sftp copy with filezilla
 sudo cp 99-sysctl.conf /etc/sysctl.d/99-sysctl.conf
@@ -118,7 +89,7 @@ sudo dnf copr -y enable nunodias/nixnote2
 sudo dnf install -y nixnote2
 
 echo "Install dependencies for changing the shell"
-sudo dnf install -y elfutils-libelf-devel util-linux-users zsh
+sudo dnf install -y elfutils-libelf-devel util-linux-user zsh
 
 echo "***********************************"
 echo "An Important Message for IKE"
