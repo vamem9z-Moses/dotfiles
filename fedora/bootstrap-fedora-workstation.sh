@@ -26,25 +26,25 @@ sudo dnf install -y code
 
 # Install Apps
 echo "Install Apps"
-sudo dnf install -y paprefs pavucontrol gimp pinta wine brasero gpodder vocal libXScrnSaver.x86_64 gnome-tweak-tool filezilla ike firewall-applet okular chromium
+sudo dnf install -y paprefs pavucontrol gimp pinta wine brasero gpodder libXScrnSaver.x86_64 gnome-tweak-tool filezilla firewall-applet okular chromium
 
 echo "Install System Utilities"
 sudo dnf install -y mediawriter gnome-system-log tmux strace exfat-utils fuse-exfat  gnome-shell-extension-drive-menu alacarte terminator gnome-power-manager gparted redhat-lsb.x86_64 htop zsh autotrace curl dnf-plugins-core chrome-gnome-shell
 
 echo "Install Development Tools"
-sudo dnf install -y gtksourceview2 gtksourceview3 emacs gcc-c++ cmake ctags vim-pysmell vim-enhanced gitg mercurial ctags ctags-etags cmake sbcl nodejs cmake automake gcc gcc-c++ pgadmin3 postgresql-server postgresql-contrib uncrustify
+sudo dnf install -y rlwrap gtksourceview2 gtksourceview3 emacs gcc-c++ cmake ctags vim-enhanced gitg mercurial ctags ctags-etags cmake sbcl nodejs cmake automake gcc gcc-c++ pgadmin3 postgresql-server postgresql-contrib uncrustify
 
 echo "Install Development Libraries"
 sudo dnf install -y glibc-devel.x86_64 postgresql-devel
 
 echo "Install Nautilus Extensions"
-sudo dnf install -y totem-nautilus rabbitvcs-nautilus sushi nautilus-dropbox file-roller-nautilus brasero-nautilus nautilus-open-terminal nautilus-image-converter evince-nautilus raw-thumbnailer rabbitvcs-gedit rabbitvcs-cli
+sudo dnf install -y rabbitvcs-nautilus sushi nautilus-dropbox file-roller-nautilus brasero-nautilus nautilus-open-terminal nautilus-image-converter evince-nautilus raw-thumbnailer rabbitvcs-cli
 
 echo "Install GNOME Virtual Filesytem Extensions"
 sudo dnf install -y gnome-vfs*
 
 echo "Install Additional Fonts"
-sudo dnf install -y cabextract xorg-x11-font-utils fontconfig font-manager google-droid* freetype-freeworld google-roboto-fonts google-roboto-condensed-fonts
+sudo dnf install -y cabextract xorg-x11-font-utils fontconfig google-droid* freetype-freeworld google-roboto-fonts google-roboto-condensed-fonts
 
 # Install mscorefonts
 sudo rpm -ivh https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
@@ -72,11 +72,6 @@ sudo dnf install -y tilix tilix-nautilus
 
 echo "Install Server Management Tools"
 sudo dnf install -y java-wakeonlan
-
-# Setup rpmbuild
-echo "Setting Up rpmbuild"
-sudo dnf install -y mock rpmbuild
-sudo useradd -s /sbin/nologin mockbuild
 
 #Increase inotify limits - I ran into this doing a large sftp copy with filezilla
 sudo cp 99-sysctl.conf /etc/sysctl.d/99-sysctl.conf

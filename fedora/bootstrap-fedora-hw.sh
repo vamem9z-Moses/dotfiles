@@ -10,7 +10,7 @@ echo ""
 echo "Install software that only makes sense on actual hardware"
 
 echo "Install HW specific utilities"
-sudo dnf install -y powertop smartmontools lm_sensors
+sudo dnf install -y powertop smartmontools lm_sensors gnome-tweaks
 
 echo "Install HW specific apps"
 sudo dnf install -y simple-scan xsane lsdvd dvdbackup smplayer
