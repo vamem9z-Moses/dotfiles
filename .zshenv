@@ -1,7 +1,7 @@
 # User configuration
 
 
-PATH="$HOME/.npm-global/$HOME/.local/bin:$HOME/Apps:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$PATH"
+BASE_PATH="$HOME/.npm-global/:$HOME/.local/bin:$HOME/Apps:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$PATH"
 
 # Pyenv
 #export PYENV_ROOT="${HOME}/.pyenv"
@@ -15,7 +15,7 @@ PATH="$HOME/.npm-global/$HOME/.local/bin:$HOME/Apps:$HOME/bin:/usr/local/sbin:/u
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
 
 # RVM
-PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+RVM_PATH="$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # Add all new PATH addtitions above this line
 
 #NVM
@@ -42,7 +42,7 @@ export IGNITE_HOME=$HOME/Apps/ignite
 #export GEM_HOME=$HOME/.gemsets
 
 # Final Path
-export PATH=$CARGOPATH/bin:$GEM_HOME/bin:$GOROOT/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin:$PATH
+export PATH=$BASE_PATH:$RVM_PATH:$CARGOPATH/bin:$GEM_HOME/bin:$GOROOT/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin
 
 
 # Aliases
