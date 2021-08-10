@@ -16,19 +16,17 @@ echo "Install HW specific apps"
 sudo dnf install -y simple-scan xsane lsdvd dvdbackup smplayer
 
 echo "Install App from fedora-multimedia"
+suod dnf config-manager --add-repo=https://negativo17.org/repos/fedora-multimedia.repo
 sudo dnf install -y HandBrake-gui HandBrake-cli makemkv libdvdcss --allowerasing
 
 echo "Install entertainment apps"
 sudo dnf install -y clementine kodi vlc sound-juicer aisleriot
 
-echo "Install dropbox"
-sudo dnf install -y nautilus-dropbox dropbox
-
 echo "Install virtualization tools"
-sudo dnf install -y virt-manager libvirt qemu* vagrant*
+sudo dnf install -y virt-manager libvirt qemu vagrant*
 
 echo "Install Codecs"
-sudo dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
+sudo dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel --skip-broken --allowerasing
 
 sudo dnf install -y lame\* --exclude=lame-devel
 
