@@ -1,6 +1,7 @@
-#/usr/bin/env bash
+#/usr/bin/env sh
 
 echo "Install Generic workstation"
+./bootstrap-fedora-repos.sh
 ./bootstrap-fedora-workstation.sh
 
 echo "Install and Configure Tuned"

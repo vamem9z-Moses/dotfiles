@@ -1,20 +1,7 @@
-#!/usr/bin/env bash
-
-echo "Turn on fastest mirror"
-sudo echo fastestmirror=true | sudo tee -a /etc/dnf/dnf.conf
+#!/usr/bin/env sh
 
 echo "Update System"
 sudo dnf update -y
-
-echo "Add Repo for VSCode"
-
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-
-echo "Add google repository key"
-wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O $HOME/linux_signing_key.pub
-sudo rpm --import $HOME/linux_signing_key.pub
-rm $HOME/linux_signing_key.pub
 
 echo "Install Development Tools"
 
@@ -57,12 +44,8 @@ echo "Install clojure syntax support for clojure"
 git clone git@github.com:mattfenwick/gedit-clojure.git ~/Apps/gedit-clojure
 sudo cp ~/Apps/gedit-clojure/clojure.lang /usr/share/gtksourceview-3.0/language-specs/
 
-# Install dependencies for development and shell
-echo "Install Python 2.7 devel files"
-sudo dnf install -y python-devel openssl-devel python-pip sqlite-devel zlib-devel readline-devel readline
-
 echo "Install Python 3 devel files"
-sudo dnf install -y python3-devel python3-pip python3
+sudo dnf install -y python3-devel python3-pip python3 openssl-devel python-pip sqlite-devel zlib-devel readline-devel readline
 
 echo "Install Python libraries"
 sudo dnf install -y python-autopep8 python3-autopep8 python3-virtualenvwrapper
