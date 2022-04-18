@@ -46,8 +46,8 @@ export PATH=$BASE_PATH:$RVM_PATH:$CARGOPATH/bin:$GEM_HOME/bin:$GOROOT/bin:$GOPAT
 
 
 # Aliases
-alias update-grub-fedora="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
-alias update-grub-fedora-efi="sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg"
+alias update-grub-fedora="sudo grub2-mkconfig -o /etc/grub2.cfg"
+alias update-grub-fedora-efi="sudo grub2-mkconfig -o /etc/grub2-efi.cfg"
 alias oracle_mvn="JAVA_HOME=/usr/java/latest mvn"
 alias ojava="/usr/java/latest/bin/java"
 alias ojavac="/usr/java/latest/bin/javac"
