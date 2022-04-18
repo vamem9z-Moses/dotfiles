@@ -16,10 +16,10 @@ echo "Install Apps"
 sudo dnf install -y gimp pinta wine brasero gpodder libXScrnSaver.x86_64 gnome-tweak-tool gnome-extensions-app filezilla firewall-applet okular chromium
 
 echo "Install System Utilities"
-sudo dnf install -y mediawriter gnome-system-log tmux strace exfatprogs gnome-shell-extension-drive-menu alacarte terminator gnome-power-manager gparted redhat-lsb.x86_64 htop zsh autotrace curl dnf-plugins-core chrome-gnome-shell
+sudo dnf install -y mediawriter gnome-system-log tmux strace exfatprogs gnome-shell-extension-drive-menu alacarte terminator gnome-power-manager gparted redhat-lsb.x86_64 htop zsh autotrace curl dnf-plugins-core chrome-gnome-shell gnome-tweaks
 
 echo "Install Development Tools"
-sudo dnf install -y rlwrap gtksourceview2 gtksourceview3 emacs gcc-c++ cmake ctags vim-enhanced gitg mercurial ctags ctags-etags cmake sbcl nodejs cmake automake gcc gcc-c++ pgadmin3 postgresql-server postgresql-contrib uncrustify
+sudo dnf install -y rlwrap gtksourceview2 gtksourceview3 emacs gcc-c++ cmake ctags vim-enhanced gitg mercurial ctags ctags cmake sbcl nodejs cmake automake gcc gcc-c++ pgadmin3 postgresql-server postgresql-contrib uncrustify
 
 echo "Install Development Libraries"
 sudo dnf install -y glibc-devel.x86_64 postgresql-devel

@@ -12,6 +12,8 @@ wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O $HOME/linux_signin
 sudo rpm --import $HOME/linux_signing_key.pub
 rm $HOME/linux_signing_key.pub
 
-echo "Add negativo17 nvidia repos"
-sudo dnf config-manager -y --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
-sudo dnf config-manager -y --add-repo=http://negativo17.org/repos/fedora-multimedia.repo
+echo "Add RPM Fusion Repos"
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+echo "Add flathub repo"
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
