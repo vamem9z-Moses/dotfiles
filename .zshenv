@@ -40,8 +40,13 @@ export IGNITE_HOME=$HOME/Apps/ignite
 #Commented out for rvm
 #export GEM_HOME=$HOME/.gemsets
 
+#cuda Path
+export CUDA_PATH=/usr/local/cuda
+
 # Final Path
-export PATH=$BASE_PATH:$RVM_PATH:$CARGOPATH/bin:$GEM_HOME/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin
+export PATH=$BASE_PATH:$RVM_PATH:$CARGOPATH/bin:$GEM_HOME/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin:$CUDA_PATH/bin
+
+
 
 
 # Aliases
@@ -130,3 +135,4 @@ if [[ $platform == 'centos' ]]; then
 	export IBUS_ENABLE_SYNC_MODE=1
 fi
 
+. "$HOME/.cargo/env"
