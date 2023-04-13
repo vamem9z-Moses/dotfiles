@@ -43,8 +43,11 @@ export IGNITE_HOME=$HOME/Apps/ignite
 #cuda Path
 export CUDA_PATH=/usr/local/cuda
 
+#snap Path 
+export SNAP_PATH=/snap
+
 # Final Path
-export PATH=$BASE_PATH:$RVM_PATH:$CARGOPATH/bin:$GEM_HOME/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin:$CUDA_PATH/bin
+export PATH=$BASE_PATH:$RVM_PATH:$CARGOPATH/bin:$GEM_HOME/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin:$CUDA_PATH/bin:$SNAP_PATH/bin
 
 
 
