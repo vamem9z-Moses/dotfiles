@@ -9,26 +9,24 @@ sudo apt-get -y upgrade
 # Install Basics
 echo "Install Basics"
 
-sudo apt-get install -y git vim gedit build-essential aptitude lm-sensors htop tree
-
-# Remove Stuff I don't use
-echo "Remove Apps I don't Use"
-sudo apt-get remove -y gnumeric abiword
+sudo apt-get install -y git lm-sensors curl wget gpg-agent gnupg gnupg-agent vim gedit build-essential aptitude lm-sensors htop tree
 
 # Install Applications
 echo "Install Apps"
-sudo apt-get install -y emacs gnome-disk-utility gparted pylint gstreamer0.10-plugins-bad mercurial dkms sbcl okular okular-extra-backends aisleriot ctags cmake libpython2.7-dev virtualenvwrapper curl libreadline-dev zsh konsole unrar rar ttf-mscorefonts-installer libreoffice gstreamer0.10-plugins-ugly libxine1-ffmpeg gxine mencoder libdvdread4 totem-mozilla icedax tagtool easytag id3tool lame nautilus-script-audio-convert libmad0 mpg321 libavcodec-extra openjdk-7-jdk vlc clementine wine nautilus-dropbox firewalld firewall-applet chromium-browser filezilla gdebi
+sudo apt-get install -y emacs pylint mercurial dkms okular okular-extra-backends aisleriot ctags cmake virtualenvwrapper libreadline-dev zsh konsole unrar rar ttf-mscorefonts-installer libdvdread7 firewalld firewall-applet chromium-browser filezilla
 
 echo "Install CSS"
 sudo /usr/share/doc/libdvdread4/install-css.sh
 
-# Install pysmell
-echo "Install pysmell"
-sudo pip install pysmell
-
 # Install dependencies for development and shell
-echo "Install Python 2.7 devel files"
-sudo apt-get -y build-dep python2.7
+echo "Install Python3  devel files"
+sudo apt-get -y build-dep python3
+
+echo "Install pythonz dependencies"
+sudo apt-get -y install build-essential zlib1g-dev libbz2-dev libssl-dev libreadline-dev libncurses5-dev libsqlite3-dev libgdbm-dev libdb-dev libexpat-dev libpcap-dev liblzma-dev libpcre3-dev libffi-dev
+
+# Fix tilix vte error"
+sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 
 echo "All of the automated stuff is done"
 echo "Get  .gitconfig and id files and pull down /bin from github"
