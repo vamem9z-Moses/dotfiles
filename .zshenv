@@ -134,4 +134,4 @@ if [[ $platform == 'centos' ]]; then
 	export IBUS_ENABLE_SYNC_MODE=1
 fi
 
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
