@@ -121,10 +121,6 @@ if [[ $platform == 'ubuntu' ]]; then
 	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
 
-#JAVA_HOME
-if  [[ $platform == 'ubuntu' ]]; then
-	export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-fi
 
 #Set enable dev tools for centos vm
 #from gist - https://gist.github.com/puremourning/a41b4c6ac732091f63736e3ccb6d8d67
