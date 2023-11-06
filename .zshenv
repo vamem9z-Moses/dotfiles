@@ -1,6 +1,5 @@
 # User configuration
 
-
 BASE_PATH="$HOME/.npm-global/:$HOME/.local/bin:$HOME/Apps:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$PATH"
 
 # Pyenv
@@ -46,11 +45,11 @@ export CUDA_PATH=/usr/local/cuda
 # JBAKE PATH
 export JBAKE_PATH=$HOME/Apps/jbake
 
+#snap Path 
+export SNAP_PATH=/snap
+
 # Final Path
-export PATH=$BASE_PATH:$RVM_PATH:$CARGOPATH/bin:$GEM_HOME/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin:$CUDA_PATH/bin:$JBAKE_PATH/bin
-
-
-
+export PATH=$BASE_PATH:$RVM_PATH:$CARGOPATH/bin:$GEM_HOME/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin:$CUDA_PATH/bin:$SNAP_PATH/bin:$JBAKE_PATH/bin
 
 # Aliases
 alias update-grub-fedora="sudo grub2-mkconfig -o /etc/grub2.cfg"
@@ -120,7 +119,6 @@ if [[ $platform == 'ubuntu' ]]; then
 	export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
 	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
-
 
 #Set enable dev tools for centos vm
 #from gist - https://gist.github.com/puremourning/a41b4c6ac732091f63736e3ccb6d8d67
