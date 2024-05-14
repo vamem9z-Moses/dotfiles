@@ -12,7 +12,7 @@ sudo apt install -y git vim build-essential htop tree
 
 # Install Applications
 echo "Install Apps"
-sudo apt install -y pylint mercurial exuberant-ctags cmake virtualenvwrapper curl libreadline-dev zsh unrar-free gpgv2 python3-pip virtualenvwrapper
+sudo apt install -y zsh pylint mercurial exuberant-ctags cmake virtualenvwrapper curl libreadline-dev zsh unrar-free gpgv2 python3-pip virtualenvwrapper
 
 # Install dependencies for development and shell
 echo "Install Python devel files for pythonz"
@@ -27,7 +27,7 @@ echo " "
 echo " "
 echo "All of the automated stuff is done"
 echo " "
-echo "if you have not done this already update the /etc/wsl.conf use the example file as a guide" 
+echo "if you are using wsl2 and have not done this already update the /etc/wsl.conf use the example file as a guide" 
 echo " "
 echo "Get .gitconfig and id files and pull down /bin from github"
 echo " "
