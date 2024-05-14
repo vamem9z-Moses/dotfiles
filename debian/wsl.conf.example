@@ -1,0 +1,5 @@
+[boot]
+systemd=true
+
+[network]
+hostname=neo-gaming-debian.mileshome
