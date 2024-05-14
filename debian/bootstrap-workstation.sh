@@ -8,7 +8,7 @@ sudo apt -y upgrade
 
 # Install Basics
 echo "Install Basics"
-sudo apt install -y git vim build-essential htop tree
+sudo apt install -y git vim build-essential htop tree wget unzip
 
 # Install Applications
 echo "Install Apps"
