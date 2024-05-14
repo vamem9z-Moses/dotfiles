@@ -12,7 +12,7 @@ sudo apt install -y git vim build-essential htop tree wget unzip
 
 # Install Applications
 echo "Install Apps"
-sudo apt install -y zsh pylint mercurial exuberant-ctags cmake virtualenvwrapper curl libreadline-dev zsh unrar-free gpgv2 python3-pip virtualenvwrapper
+sudo apt install -y pipx zsh pylint mercurial exuberant-ctags cmake virtualenvwrapper curl libreadline-dev zsh unrar-free gpgv2 python3-pip virtualenvwrapper
 
 # Install dependencies for development and shell
 echo "Install Python devel files for pythonz"
