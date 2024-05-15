@@ -133,3 +133,9 @@ if [[ $platform == 'centos' ]]; then
 fi
 
 #. "$HOME/.cargo/env"
+
+# Begin added by argcomplete
+if [ -f /home/mmiles/.local/pipx/venvs/ansible/lib/python3.11/site-packages/argcomplete/bash_completion.d ]; then 
+	fpath=( /home/mmiles/.local/pipx/venvs/ansible/lib/python3.11/site-packages/argcomplete/bash_completion.d "${fpath[@]}" )
+fi
+# End added by argcomplet
