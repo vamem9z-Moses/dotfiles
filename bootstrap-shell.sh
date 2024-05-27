@@ -15,6 +15,10 @@ curl -kL https://raw.github.com/saghul/pythonz/master/pythonz-install | bash
 echo "Install oh-my-zsh"
 curl -L http://install.ohmyz.sh | sh
 
+echo "Create Symbolic Links to dotfile custom theme"
+### Add support to id distrobox containers by their container name
+ln -s $PWD/oh-my-zsh/agnoster.zsh-theme $HOME/.oh-my-zsh/custom/themes/agnoster.zsh-theme
+
 echo "Change shell to zsh"
 chsh -s /bin/zsh
 
