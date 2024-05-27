@@ -21,6 +21,11 @@ sudo apt -y build-dep python3
 # Install Development Dependencies
 sudo apt install -y openjdk-17-jdk postgresql nodejs npm rlwrap
 
+# Install SDKMAN
+curl -s "https://get.sdkman.io" | bash
+
+# Fix Tilix VTE issue
+ln -s /etc/profile.d/vte-219.sh /etc/profile.d/vte.sh
 
 echo " "
 echo " "

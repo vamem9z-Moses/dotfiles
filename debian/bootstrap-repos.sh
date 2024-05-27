@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 
-echo "Add repos to sources.list"
-sudo echo "deb-src http://deb.debian.org/debian bookworm main" | sudo tee -a /etc/apt/sources.list
-sudo echo "deb-src http://deb.debian.org/debian bookworm-updates main" | sudo tee -a /etc/apt/sources.list
-sudo echo "deb-src http://security.debian.org/debian-security bookworm-security main" | sudo tee -a /etc/apt/sources.list
+echo "Add repos to debian.sources"
+sudo cp $PWD/debian.sources /etc/apt/sources.list.d/debian.sources
+
+if [ -f /etc/apt/sources.list ]; then
+  echo "Remove sources.lit in favor of debian.sources"  
+  sudo rm /etc/apt/sources.list
+fi
