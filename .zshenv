@@ -54,15 +54,7 @@ export PATH=$BASE_PATH:$RVM_PATH:$CARGOPATH/bin:$GEM_HOME/bin:$GOPATH/bin:$NIMPA
 # Aliases
 alias update-grub-fedora="sudo grub2-mkconfig -o /etc/grub2.cfg"
 alias update-grub-fedora-efi="sudo grub2-mkconfig -o /etc/grub2-efi.cfg"
-alias oracle_mvn="JAVA_HOME=/usr/java/latest mvn"
-alias ojava="/usr/java/latest/bin/java"
-alias ojavac="/usr/java/latest/bin/javac"
 alias create_box="/usr/share/vagrant/gems/gems/vagrant-libvirt-0.0.32/tools/create_box.sh"
-
-# Project Directory Aliases
-alias formanalysis="cd $GOPATH/src/github.com/ATHN/formanalysis"
-alias 3rapp="cd $GOPATH/src/github.com/MilesAheadLLC/3rapp"
-alias weaven-proj="cd $GOPATH/src/github.com/MilesAheadLLC/weaven"
 
 # Clean Python Files Alias
 alias pyclean='find . -name "*.py[c|o]" -o -name __pycache__ -exec rm -rf {} +'
@@ -81,58 +73,21 @@ elif [ -e /etc/debian_version ]; then
   export platform='ubuntu'
 fi
 
-# Add Postgres App Path for mac
-#
-if [[ $platform == 'darwin' ]]; then
-	PATH=/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/postgresql@9.6/bin:$PATH
-fi
-
-## Add help for zsh on mac installed with Homebrew
-if [[ $platform == 'darwin' ]]; then
-	unalias run-help
-	autoload run-help
-	HELPDIR=/usr/local/share/zsh/help
-fi
-
-## Add Openssl, zlib, gettext, sqlite, readline and ruby config locations on Mac from Homebrew
-## For this to work must install homebrew and run
-## brew install ruby zlib openssl gettext sqlite readline libffi
-## gettext is needed to fix vim
-if [[ $platform == 'darwin' ]]; then
-	export PATH="/Users/moses/Library/Python/3.7/bin:/usr/local/opt/gettext/bin:/usr/local/opt/ruby/bin:$PATH"
-	export LDFLAGS="-L/usr/local/opt/gettext/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/ruby/lib -L/usr/local/opt/sqlite/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libffi/lib"
-  	export CPPFLAGS="-I/usr/local/opt/gettext/include -I/usr/local/opt/openssl/include -I/usr/local/opt/zlib/include -I/usr/local/opt/ruby/include -I/usr/local/opt/sqlite/include -I/usr/local/opt/readline/include"
-  	export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig:/usr/local/opt/sqlite/lib/pkgconfig:/usr/local/opt/openssl/lib/pkgconfig:/usr/local/opt/readline/lib/pkgconfig:/usr/local/opt/libffi/lib/pkgconfig"
-fi
-
 # Virtualenv Wrapper Config
 export WORKON_HOME=$HOME/.virtualenvs
-if [[ $platform == 'fedora' ]] || [[ $platform == 'centos' ]]; then
+if [[ $platform == 'fedora' ]] && [[ -f /usr/bin/virtualenv-3 ]]; then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 	export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv-3
 	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=/usr/bin/virtualenv-clone-3
 	source /usr/bin/virtualenvwrapper-3.sh
 fi
+
 if [[ $platform == 'ubuntu' ]]; then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=/usr/bin/virtualenv-clone
 	export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
 	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
-
-#Set enable dev tools for centos vm
-#from gist - https://gist.github.com/puremourning/a41b4c6ac732091f63736e3ccb6d8d67
-if [ -f /opt/rh/devtoolset-6/enable ]; then
-	source /opt/rh/devtoolset-6/enable
-fi
-
-# Centos specific configs
-if [[ $platform == 'centos' ]]; then
-
-	export IBUS_ENABLE_SYNC_MODE=1
-fi
-
-#. "$HOME/.cargo/env"
 
 # Begin added by argcomplete
 if [ -f /home/mmiles/.local/pipx/venvs/ansible/lib/python3.11/site-packages/argcomplete/bash_completion.d ]; then 
