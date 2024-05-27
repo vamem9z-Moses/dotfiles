@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Microsoft Powerpoint 2007
-Encoding=UTF-8
-Exec=wine "/home/mmiles/.wine/drive_c/Program Files/Microsoft Office/Office12/POWERPNT.EXE"
-Icon=/home/mmiles/.local/share/icons/Office07/image004.png
-Type=Application
-Categories=GNOME;Office;
-Name[en-us]=Microsoft Powerpoint 2007
