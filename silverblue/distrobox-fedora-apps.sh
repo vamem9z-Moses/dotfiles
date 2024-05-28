@@ -1,9 +1,25 @@
 #!/usr/bin/env sh
 
+echo "Update repo"
+echo "" 
+
+sudo dnf update --refresh
+
 echo "Install utilities"
 echo ""
 
 sudo dnf install zsh git
+
+echo "Install Additional Fonts"
+echo ""
+sudo dnf install -y cabextract xorg-x11-font-utils fontconfig
+sudo mv /usr/share/X11/fonts/util $HOME/.fonts/
+sudo chown -R $USER:$USER ~/.fonts
+
+echo "Install mscorefonts"
+sudo rpm -ivh https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+sudo mv /usr/share/fonts/msttcore $HOME/.fonts/
+sudo chown -R $USER:$USER ~/.fonts
 
 echo "Install vscode"
 echo ""
@@ -12,7 +28,6 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 sudo dnf install -y code
 distrobox-export --app code
-
 
 echo "Install 1password"
 echo ""
@@ -33,3 +48,8 @@ echo ""
 
 sudo ln -s /usr/bin/distrobox-host-exec /usr/bin/podman
 sudo ln -s /usr/bin/distrobox-host-exec /usr/bin/podman-compose
+
+
+echo ""
+echo ""
+echo "You will need to run fc-cache -f -v in the host terminal to update the font cache"
