@@ -1,14 +1,6 @@
 # User configuration
 
-BASE_PATH="$HOME/.npm-global/:$HOME/.local/bin:$HOME/Apps:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$PATH"
-
-# Pyenv
-#export PYENV_ROOT="${HOME}/.pyenv"
-
-#if [ -d "${PYENV_ROOT}" ]; then
-#  export PATH="${PYENV_ROOT}/bin:${PATH}"
-#  eval "$(pyenv init -)"
-#fi
+BASE_PATH="$HOME/.local/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$PATH"
 
 # Pythonz
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
@@ -66,7 +58,7 @@ if [[ $platform == 'ubuntu' ]] && [[ -f /usr/share/virtualenvwrapper/virtualenvw
 	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
 
-# Begin added by argcomplete
+# Begin added by ansible argcomplete
 if [ -f /home/mmiles/.local/pipx/venvs/ansible/lib/python3.11/site-packages/argcomplete/bash_completion.d ]; then 
 	fpath=( /home/mmiles/.local/pipx/venvs/ansible/lib/python3.11/site-packages/argcomplete/bash_completion.d "${fpath[@]}" )
 fi
