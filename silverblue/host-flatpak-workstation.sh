@@ -13,7 +13,7 @@ flatpak install --or-update com.github.tchx84.Flatseal com.mattjakeman.Extension
 echo "Install utilities"
 echo ""
 
-flatpak install --or-update org.filezillaproject.Filezilla -y
+flatpak install --or-update org.filezillaproject.Filezilla org.fedoraproject.FirewallConfig -y
 
 echo "Install audio / visual apps and tools"
 echo ""
@@ -23,7 +23,7 @@ flatpak install --or-update org.videolan.VLC.Plugin.makemkv com.makemkv.MakeMKV 
 echo "Install productivity apps"
 echo ""
 
-flatpak install --or-update org.libreoffice.LibreOffice com.hamrick.VueScan com.strlen.TreeSheets com.github.phase1geo.minder org.freeplane.App com.github.tenderowl.norka -y
+flatpak install --or-update org.libreoffice.LibreOffice com.hamrick.VueScan com.strlen.TreeSheets com.github.phase1geo.minder org.freeplane.App com.github.tenderowl.norka net.cozic.joplin_desktop -y
 
 echo "Install development tools"
 echo ""
