@@ -12,6 +12,9 @@ curl -sSL https://get.rvm.io | bash -s stable
 echo "Install Pythonz"
 curl -kL https://raw.github.com/saghul/pythonz/master/pythonz-install | bash
 
+# Install SDKMAN
+curl -s "https://get.sdkman.io" | bash
+
 echo "Install oh-my-zsh"
 curl -L http://install.ohmyz.sh | sh
 

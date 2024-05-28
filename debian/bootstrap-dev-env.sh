@@ -6,23 +6,20 @@ echo "Update Computer"
 sudo apt update
 sudo apt -y upgrade
 
-# Install Basics
-echo "Install Basics"
-sudo apt install -y git vim build-essential htop tree wget unzip
+# Install Utilities
+echo "Install Utilities"
+sudo apt install -y git vim htop tree wget unzip curl zsh mercurial exuberant-ctags cmake unrar-free gpgv2 rlwrap
 
-# Install Applications
-echo "Install Apps"
-sudo apt install -y pipx zsh pylint mercurial exuberant-ctags cmake virtualenvwrapper curl libreadline-dev zsh unrar-free gpgv2 python3-pip virtualenvwrapper
+# Install Development Platform
+echo "Install Development Platform"
+sudo apt install -y python3-pip virtualenvwrapper pipx pylint
 
 # Install dependencies for development and shell
 echo "Install Python devel files for pythonz"
 sudo apt -y build-dep python3
 
 # Install Development Dependencies
-sudo apt install -y openjdk-17-jdk postgresql nodejs npm rlwrap
-
-# Install SDKMAN
-curl -s "https://get.sdkman.io" | bash
+sudo apt install -y libreadline-dev build-essential
 
 # Fix Tilix VTE issue
 ln -s /etc/profile.d/vte-219.sh /etc/profile.d/vte.sh

@@ -25,31 +25,8 @@ export NVM_DIR="$HOME/.nvm"
 export NOGOPATH=$PATH
 export GOPATH=$HOME/Software/gocode
 
-# Rust Settings
-export CARGOPATH=$HOME/.cargo
-
-# Nim Settings
-export NIMPATH=$HOME/Apps/nim
-export NIMBLEPATH=$HOME/.nimble
-
-# Apache Ignite Settings
-export IGNITE_HOME=$HOME/Apps/ignite
-
-#Add Gemset
-#Commented out for rvm
-#export GEM_HOME=$HOME/.gemsets
-
-#cuda Path
-export CUDA_PATH=/usr/local/cuda
-
-# JBAKE PATH
-export JBAKE_PATH=$HOME/Apps/jbake
-
-#snap Path 
-export SNAP_PATH=/snap
-
 # Final Path
-export PATH=$BASE_PATH:$RVM_PATH:$CARGOPATH/bin:$GEM_HOME/bin:$GOPATH/bin:$NIMPATH/bin:$NIMBLEPATH/bin:$CUDA_PATH/bin:$SNAP_PATH/bin:$JBAKE_PATH/bin
+export PATH=$BASE_PATH:$RVM_PATH:$GOPATH/bin
 
 # Aliases
 alias update-grub-fedora="sudo grub2-mkconfig -o /etc/grub2.cfg"
@@ -82,7 +59,7 @@ if [[ $platform == 'fedora' ]] && [[ -f /usr/bin/virtualenv-3 ]]; then
 	source /usr/bin/virtualenvwrapper-3.sh
 fi
 
-if [[ $platform == 'ubuntu' ]]; then
+if [[ $platform == 'ubuntu' ]] && [[ -f /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]]; then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=/usr/bin/virtualenv-clone
 	export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv

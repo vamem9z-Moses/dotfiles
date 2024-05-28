@@ -57,9 +57,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Fix Tilix config
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+   if [[ -f /etc/profile.d/vte.sh ]]; then
         source /etc/profile.d/vte.sh
+   fi 
 fi
-
 
 #nvm config
 #

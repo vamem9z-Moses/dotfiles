@@ -18,7 +18,7 @@ flatpak install --or-update org.filezillaproject.Filezilla -y
 echo "Install audio / visual apps and tools"
 echo ""
 
-flatpak install org.videolan.VLC.Plugin.makemkv com.makemkv.MakeMKV org.videolan.VLC org.videolan.VLC.Plugin.pause_click org.videolan.VLC.Plugin.bdj org.videolan.VLC.Plugin.fdkaac org.clementine_player.Clementine org.gnome.SoundJuicer org.gnome.Cheese org.gpodder.gpodder -y
+flatpak install --or-update org.videolan.VLC.Plugin.makemkv com.makemkv.MakeMKV org.videolan.VLC org.videolan.VLC.Plugin.pause_click org.videolan.VLC.Plugin.bdj org.videolan.VLC.Plugin.fdkaac org.clementine_player.Clementine org.gnome.SoundJuicer org.gnome.Cheese org.gpodder.gpodder -y
 
 echo "Install productivity apps"
 echo ""
