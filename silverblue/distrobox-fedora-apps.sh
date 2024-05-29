@@ -3,23 +3,12 @@
 echo "Update repo"
 echo "" 
 
-sudo dnf update --refresh
+sudo dnf update -y --refresh
 
 echo "Install utilities"
 echo ""
 
 sudo dnf install zsh git
-
-echo "Install Additional Fonts"
-echo ""
-sudo dnf install -y cabextract xorg-x11-font-utils fontconfig
-sudo mv /usr/share/X11/fonts/util $HOME/.fonts/
-sudo chown -R $USER:$USER ~/.fonts
-
-echo "Install mscorefonts"
-sudo rpm -ivh https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
-sudo mv /usr/share/fonts/msttcore $HOME/.fonts/
-sudo chown -R $USER:$USER ~/.fonts
 
 echo "Install vscode"
 echo ""
@@ -49,6 +38,9 @@ echo ""
 sudo ln -s /usr/bin/distrobox-host-exec /usr/bin/podman
 sudo ln -s /usr/bin/distrobox-host-exec /usr/bin/podman-compose
 
+echo "Copy fonts to $HOME/.fonts"
+mkdir -p $HOME/.fonts
+cp -R $PWD/../fonts/* $HOME/.fonts/
 
 echo ""
 echo ""
