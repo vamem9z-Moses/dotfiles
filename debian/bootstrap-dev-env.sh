@@ -22,7 +22,7 @@ sudo apt -y build-dep python3
 sudo apt install -y libreadline-dev build-essential
 
 # Fix Tilix VTE issue
-ln -s /etc/profile.d/vte-219.sh /etc/profile.d/vte.sh
+sudo ln -s /etc/profile.d/vte-219.sh /etc/profile.d/vte.sh
 
 echo " "
 echo " "
