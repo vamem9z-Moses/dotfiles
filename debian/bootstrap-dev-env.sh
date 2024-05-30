@@ -8,7 +8,7 @@ sudo apt -y upgrade
 
 # Install Utilities
 echo "Install Utilities"
-sudo apt install -y git vim htop tree wget unzip curl zsh mercurial exuberant-ctags cmake unrar-free gpgv2 rlwrap
+sudo apt install -y git vim htop tree wget unzip curl zsh mercurial exuberant-ctags cmake unrar-free gpgv2 rlwrap tmux
 
 # Install Development Platform
 echo "Install Development Platform"

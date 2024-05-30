@@ -8,7 +8,7 @@ sudo dnf update -y --refresh
 echo "Install utilities"
 echo ""
 
-sudo dnf install -y zsh git
+sudo dnf install -y zsh git tmux
 
 echo "Install vscode"
 echo ""
