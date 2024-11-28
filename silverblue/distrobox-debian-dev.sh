@@ -9,4 +9,4 @@ sudo apt -y upgrade
 echo "Install utilities"
 echo ""
 
-sudo apt -y install zsh git tmux vim rlwrap
+sudo apt -y install zsh git tmux vim rlwrap python-is-python3
