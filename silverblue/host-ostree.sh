@@ -3,7 +3,7 @@
 echo "Install apps into the System OS Tree"
 echo "" 
 
-sudo rpm-ostree install distrobox htop tilix zsh gnome-tweaks lm_sensors powertop podman-compose nautilus-gsconnect gnome-shell-extension-gsconnect
+sudo rpm-ostree install xhost distrobox htop tilix zsh gnome-tweaks lm_sensors powertop podman-compose nautilus-gsconnect gnome-shell-extension-gsconnect
 
 echo "Set inotify watchers to higher limit for distrobox"
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
