@@ -35,7 +35,6 @@ mv $HOME/.ctags $HOME/.ctags.old
 ### Create Symbolic Links to dotfiles replacements
 echo "Creating Symbolic Links to dotfiles Replacements"
 ln -s $PWD/.zshrc $HOME/.zshrc
-ln -s $PWD/.zshenv $HOME/.zshenv
 ln -s $PWD/.bashrc $HOME/.bashrc
 ln -s $PWD/.ctags $HOME/.ctags
 ln -s $PWD/.distroboxrc $HOME/.distroboxrc

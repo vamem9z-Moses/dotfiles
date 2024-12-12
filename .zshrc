@@ -54,6 +54,66 @@ plugins=(git python)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+#
+BASE_PATH="$HOME/.local/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$PATH"
+
+# Pythonz
+[[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
+
+#NVM
+NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Go Settings
+NOGOPATH=$PATH
+export GOPATH="$HOME/Software/gocode"
+
+# Add Go to PATH
+export PATH="$GOPATH/bin:$BASE_PATH"
+
+# Aliases
+alias update-grub-fedora="sudo grub2-mkconfig -o /etc/grub2.cfg"
+alias update-grub-fedora-efi="sudo grub2-mkconfig -o /etc/grub2-efi.cfg"
+alias create_box="/usr/share/vagrant/gems/gems/vagrant-libvirt-0.0.32/tools/create_box.sh"
+
+# Clean Python Files Alias
+alias pyclean='find . -name "*.py[c|o]" -o -name __pycache__ -exec rm -rf {} +'
+
+# Platform specific configurations
+
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Darwin' ]]; then
+  export platform='darwin'
+elif [ -e /etc/centos-release ]; then
+  export platform='centos'
+elif [ -e /etc/redhat-release ]; then
+  export platform='fedora'
+elif [ -e /etc/debian_version ]; then
+  export platform='ubuntu'
+fi
+
+# Virtualenv Wrapper Config
+export WORKON_HOME=$HOME/.virtualenvs
+if [[ $platform == 'fedora' ]] && [[ -f /usr/bin/virtualenv-3 ]]; then
+	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+	export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv-3
+	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=/usr/bin/virtualenv-clone-3
+	source /usr/bin/virtualenvwrapper-3.sh
+fi
+
+if [[ $platform == 'ubuntu' ]] && [[ -f /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]]; then
+	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+	export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=/usr/bin/virtualenv-clone
+	export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+fi
+
+# Begin added by ansible argcomplete
+if [ -f /home/mmiles/.local/pipx/venvs/ansible/lib/python3.11/site-packages/argcomplete/bash_completion.d ]; then 
+	fpath=( /home/mmiles/.local/pipx/venvs/ansible/lib/python3.11/site-packages/argcomplete/bash_completion.d "${fpath[@]}" )
+fi
+# End added by argcomplet
 
 # Fix Tilix config
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
@@ -105,7 +165,8 @@ if [[ -d $HOME/.sdkman ]]; then
   export SDKMAN_DIR="$HOME/.sdkman"
   [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 fi 
-# >>> conda initialize >>>
+
+#>>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/mmiles/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
@@ -114,9 +175,15 @@ else
     if [ -f "/home/mmiles/miniconda3/etc/profile.d/conda.sh" ]; then
         . "/home/mmiles/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/mmiles/miniconda3/bin:$PATH"
+        export PATH"/home/mmiles/miniconda3/bin:$PATH"
+
     fi
-fi
+ fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# check to see if rbenv exist and init if it does
+if which rbenv >/dev/null 2>&1; then
+	eval "$(rbenv init - zsh)"
+fi
 
