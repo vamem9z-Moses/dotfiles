@@ -18,7 +18,7 @@ export NOGOPATH=$PATH
 export GOPATH=$HOME/Software/gocode
 
 # Final Path
-export PATH=$BASE_PATH:$RVM_PATH:$GOPATH/bin
+export PATH=$RVM_PATH:$BASE_PATH:$GOPATH/bin
 
 # Aliases
 alias update-grub-fedora="sudo grub2-mkconfig -o /etc/grub2.cfg"
