@@ -37,3 +37,4 @@ echo "Creating Symbolic Links to dotfiles Replacements"
 ln -s $PWD/.zshrc $HOME/.zshrc
 ln -s $PWD/.ctags $HOME/.ctags
 ln -s $PWD/.distroboxrc $HOME/.distroboxrc
+ln -s $PWD/nvim $HOME/.config/nvim

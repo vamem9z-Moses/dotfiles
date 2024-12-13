@@ -55,13 +55,13 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 #
-BASE_PATH="$HOME/.local/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$PATH"
+BASE_PATH=$HOME/.local/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$PATH
 
 # Go Settings
-export GOPATH="$HOME/Software/gocode"
+export GOPATH=$HOME/Software/gocode
 
 # Add Go to PATH
-export PATH="$GOPATH/bin:$BASE_PATH"
+export PATH=$GOPATH/bin:$BASE_PATH
 
 # Aliases
 alias update-grub-fedora="sudo grub2-mkconfig -o /etc/grub2.cfg"
@@ -171,3 +171,6 @@ if [[ "$TERM_PROGRAM" == "vscode" ]]; then
 else
   eval "$($HOME/.local/bin/mise activate zsh)"
 fi
+
+# Update Path with Neovim built from source
+export PATH=$PATH:$HOME/neovim/bin

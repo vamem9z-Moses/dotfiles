@@ -6,7 +6,7 @@ sudo apt -y update && sudo apt -y upgrade
 
 # Add Utilities
 echo "Install utilities"
-sudo apt -y install zsh git tmux vim python-is-python3 gnome-keyring wget gpg fontconfig openssl software-properties-common
+sudo apt -y install zsh git tmux vim python-is-python3 gnome-keyring wget gpg fontconfig openssl software-properties-common gettext make cmake
 
 # Add Development Tools 
 echo "Install VSCode"
@@ -17,6 +17,10 @@ rm -f packages.microsoft.gpg
 sudo apt -y install apt-transport-https
 sudo apt update
 sudo apt -y install code # or code-insiders
+
+## Add dependencies to build neovim from source
+echo "Add neovim build dependencies"
+sudo apt install -y gettext make cmake
 
 ## Add dependencies to build ruby
 echo "Add ruby build dependencies"
@@ -29,6 +33,7 @@ sudo apt -y install build-essential zlib1g-dev libbz2-dev libssl-dev libreadline
 ## Add dependencies for clojure
 echo "Add clojure dependencies"
 sudo apt -y install rlwrap
+
 
 # Podman
 echo "Make Podman and Podman-Compose available to apps container"

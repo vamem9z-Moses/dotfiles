@@ -15,6 +15,10 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 sudo dnf update -y refresh
 sudo dnf install -y code
 
+## Add dependencies to build neovim from source
+echo "Add neovim build dependencies"
+sudo dnf install -y make cmake gettext
+
 ## Add dependencies to build ruby 
 echo "Add ruby build dependencies"
 sudo dnf install -y libxcrypt libxcrypt-devel libxcrypt-compat autoconf gcc rust patch make bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel
