@@ -57,15 +57,7 @@ source $ZSH/oh-my-zsh.sh
 #
 BASE_PATH="$HOME/.local/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$PATH"
 
-# Pythonz
-[[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
-
-#NVM
-NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # Go Settings
-NOGOPATH=$PATH
 export GOPATH="$HOME/Software/gocode"
 
 # Add Go to PATH
@@ -74,15 +66,14 @@ export PATH="$GOPATH/bin:$BASE_PATH"
 # Aliases
 alias update-grub-fedora="sudo grub2-mkconfig -o /etc/grub2.cfg"
 alias update-grub-fedora-efi="sudo grub2-mkconfig -o /etc/grub2-efi.cfg"
-alias create_box="/usr/share/vagrant/gems/gems/vagrant-libvirt-0.0.32/tools/create_box.sh"
 
 # Clean Python Files Alias
 alias pyclean='find . -name "*.py[c|o]" -o -name __pycache__ -exec rm -rf {} +'
 
 # Platform specific configurations
-
 platform='unknown'
 unamestr=`uname`
+
 if [[ "$unamestr" == 'Darwin' ]]; then
   export platform='darwin'
 elif [ -e /etc/centos-release ]; then
@@ -122,18 +113,6 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
    fi 
 fi
 
-#nvm config
-#
-#export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-## The last thing we will do is export the PATH to make sure we got all of the changes
-
 # Set 256 Colors for Vim
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
         export TERM='xterm-256color'
@@ -159,7 +138,6 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 if [[ -d $HOME/.sdkman ]]; then 
   export SDKMAN_DIR="$HOME/.sdkman"
@@ -182,8 +160,14 @@ else
 unset __conda_setup
 # <<< conda initialize <<<
 
-# check to see if rbenv exist and init if it does
-if which rbenv >/dev/null 2>&1; then
-	eval "$(rbenv init - zsh)"
-fi
+# UV 
+source $HOME/.local/share/../bin/env 
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
 
+# MISE
+if [[ "$TERM_PROGRAM" == "vscode" ]]; then
+  eval "$($HOME/.local/bin/mise activate zsh --shims)"
+else
+  eval "$($HOME/.local/bin/mise activate zsh)"
+fi
