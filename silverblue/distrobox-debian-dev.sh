@@ -6,7 +6,7 @@ sudo apt -y update && sudo apt -y upgrade
 
 # Add Utilities
 echo "Install utilities"
-sudo apt -y install zsh git tmux vim python-is-python3 gnome-keyring wget gpg fontconfig openssl
+sudo apt -y install zsh git tmux vim python-is-python3 gnome-keyring wget gpg fontconfig openssl software-properties-common
 
 # Add Development Tools 
 echo "Install VSCode"
