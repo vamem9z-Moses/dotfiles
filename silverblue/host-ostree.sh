@@ -5,6 +5,7 @@ echo ""
 
 sudo rpm-ostree install xhost distrobox htop tilix zsh gnome-tweaks lm_sensors powertop podman-compose nautilus-gsconnect gnome-shell-extension-gsconnect
 
+# Distrobox
 echo "Set inotify watchers to higher limit for distrobox"
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 

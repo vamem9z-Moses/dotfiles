@@ -8,7 +8,7 @@ sudo dnf update -y --refresh
 echo "Install utilities"
 echo ""
 
-sudo dnf install -y zsh git tmux vim
+sudo dnf install -y zsh git tmux vim htop
 
 echo "Install vscode"
 echo ""
@@ -38,10 +38,6 @@ echo ""
 sudo ln -s /usr/bin/distrobox-host-exec /usr/bin/podman
 sudo ln -s /usr/bin/distrobox-host-exec /usr/bin/podman-compose
 
-echo "Copy fonts to $HOME/.fonts"
-mkdir -p $HOME/.fonts
-cp -R $PWD/../fonts/* $HOME/.fonts/
-
-echo ""
-echo ""
-echo "You will need to run fc-cache -f -v in the host terminal to update the font cache"
+# Fonts
+echo "Make fonts available inside of container" 
+fc-cache -f -v
