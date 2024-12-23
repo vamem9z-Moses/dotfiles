@@ -6,7 +6,7 @@ sudo apt update -y && sudo apt upgrade -y
 
 # Add Utilities
 echo "Install utilities"
-sudo apt install -y nala zsh git tmux vim python-is-python3 gnome-keyring wget gpg fontconfig openssl software-properties-common gettext make cmake htop sqlitebrowser
+sudo apt install -y nala zsh git tmux vim python-is-python3 gnome-keyring curl wget gpg fontconfig openssl software-properties-common gettext make cmake htop sqlitebrowser
 
 # Ensure we are using the fastest mirror
 sudo nala fetch
