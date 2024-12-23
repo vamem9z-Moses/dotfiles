@@ -21,6 +21,10 @@ sudo nala install -y apt-transport-https
 sudo nala update
 sudo nala install -y code # or code-insiders
 
+## Add dependencies for sdkman
+echo "Add sdkman dependencies"
+sudo nala install -y zip unzip
+
 ## Add dependencies to build neovim from source
 echo "Add neovim build runtime dependencies"
 sudo nala install -y gettext make cmake fzf wl-clipboard xclip ripgrep fd-find
