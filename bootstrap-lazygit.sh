@@ -5,8 +5,8 @@ go_version = ""
 function install_lazygit() {
   if [[ -e $HOME/.local/bin/mise ]]; then
     mise install "go@$go_version"
-    mise use -g "go@go_version"
-    mkdir $HOME/installed
+    mise use -g "go@$go_version"
+    mkdir -p $HOME/installed
     cd $HOME/installed
     git clone https://github.com/jesseduffield/lazygit.git
     cd lazygit
