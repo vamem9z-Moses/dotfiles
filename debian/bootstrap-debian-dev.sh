@@ -23,7 +23,7 @@ sudo nala install -y code # or code-insiders
 
 ## Add dependencies to build neovim from source
 echo "Add neovim build runtime dependencies"
-sudo nala install -y gettext make cmake fzf wl-clipboard xclip
+sudo nala install -y gettext make cmake fzf wl-clipboard xclip ripgrep fd-find
 
 ## Add dependencies to build ruby
 echo "Add ruby build dependencies"
