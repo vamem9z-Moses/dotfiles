@@ -1,5 +1,11 @@
 !#/bin/bash
 
+# Check to ensure that bootstrap-repos.sh has been run first
+if [ ! -f /etc/apt/sources.list.d/debian.sources ]; then
+  echo "Run boostrap-repos.sh first"
+  exit 1
+fi
+
 echo "Copy Bootstrap Sources to sources.list.d and update apt"
 sudo cp backports.list /etc/apt/sources.list.d/
 sudo apt update
