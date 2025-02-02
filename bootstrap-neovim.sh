@@ -10,6 +10,7 @@ mv neovim-stable $HOME/installed
 
 cd $HOME/installed/neovim-stable
 rm -r build/  # clear the CMake cache
+make CMAKE_BUILD_TYPE=Release
 make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim"
 make install
 
