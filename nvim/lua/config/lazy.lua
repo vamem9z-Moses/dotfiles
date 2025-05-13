@@ -19,6 +19,8 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import/override with your plugins
+    { import = "lazyvim.plugins.extras.test.core" },
+    { import = "lazyvim.plugins.extras.dap.core" },
     { import = "plugins" },
   },
   defaults = {
@@ -51,4 +53,3 @@ require("lazy").setup({
     },
   },
 })
-
