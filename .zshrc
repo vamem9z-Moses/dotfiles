@@ -175,3 +175,4 @@ fi
 
 # Update Path with Neovim built from source
 export PATH=$PATH:$HOME/neovim/bin
+export BUNDLER_EDITOR="nvim"
