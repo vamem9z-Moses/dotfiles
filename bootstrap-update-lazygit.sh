@@ -15,9 +15,9 @@ function get_go_ver() {
   if [[ $go_version =~ $re ]]; then
     echo $go_install_intro
     echo " "
-    read -p 'Enter Golang Version Number: ' $go_version
+    read -p 'Enter Golang Version Number: ' go_version
   else
-    echo "'$version' must be a valid version number"
+    echo "'$go_version' must be a valid Go version number"
     exit 1
   fi
 }
@@ -49,6 +49,7 @@ function update_lazygit() {
   echo "Pull latest version of lazygit"
   git pull
   echo "Installing lazygit with go install"
+  mise use -g "go@$go_version"
   go install
   echo "LazyGit has been updated"
 }
