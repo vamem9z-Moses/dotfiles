@@ -108,6 +108,11 @@ if [ -f /home/mmiles/.local/pipx/venvs/ansible/lib/python3.11/site-packages/argc
 fi
 # End added by argcomplet
 
+# Add linux brew to path 
+if [[ $platform == 'fedora' ]]; then 
+  export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+fi
+
 # Fix Tilix config
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
    if [[ -f /etc/profile.d/vte.sh ]]; then
@@ -175,6 +180,5 @@ else
   eval "$($HOME/.local/bin/mise activate zsh)"
 fi
 
-# Update Path with Neovim built from source
-export PATH=$PATH:$HOME/neovim/bin
+# Update set editor for use with bundler 
 export BUNDLER_EDITOR="nvim"
