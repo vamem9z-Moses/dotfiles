@@ -1,6 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    tag = "v0.10.0",
     dependencies = { "RRethy/nvim-treesitter-endwise" },
     opts = {
       endwise = { enable = true },
