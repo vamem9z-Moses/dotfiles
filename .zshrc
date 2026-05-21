@@ -102,6 +102,16 @@ if [[ $platform == 'ubuntu' ]] && [[ -f /usr/share/virtualenvwrapper/virtualenvw
 	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
 
+
+if [[ "$unamestr" == 'Linux' ]]; then
+  export brew_platform='linux'
+fi
+
+# Homebrew for Linux 
+if [[ $brew_platform == 'linux' ]]; then
+	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+fi 
+
 # Begin added by ansible argcomplete
 if [ -f /home/mmiles/.local/pipx/venvs/ansible/lib/python3.11/site-packages/argcomplete/bash_completion.d ]; then 
 	fpath=( /home/mmiles/.local/pipx/venvs/ansible/lib/python3.11/site-packages/argcomplete/bash_completion.d "${fpath[@]}" )
@@ -175,9 +185,9 @@ eval "$(uvx --generate-shell-completion zsh)"
 
 # MISE
 if [[ "$TERM_PROGRAM" == "vscode" ]]; then
-  eval "$($HOME/.local/bin/mise activate zsh --shims)"
+  eval "$(mise activate zsh --shims)"
 else
-  eval "$($HOME/.local/bin/mise activate zsh)"
+  eval "$(mise activate zsh)"
 fi
 
 # Update set editor for use with bundler 
