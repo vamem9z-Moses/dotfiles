@@ -155,12 +155,6 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-if [[ -d $HOME/.sdkman ]]; then 
-  export SDKMAN_DIR="$HOME/.sdkman"
-  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-fi 
-
 if [[ -e /home/mmiles/miniconda3/bin ]]; then
 # >>> conda initialize >>>
  !! Contents within this block are managed by 'conda init' !!
