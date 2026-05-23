@@ -1,0 +1,67 @@
+#!/usr/bin/env sh
+
+# Bootstrap the correct repos
+echo "Bootstrap the correct repos"
+./bootstrap-repos.sh
+
+# Make sure we are up to date
+echo "Update repo"
+sudo apt update -y && sudo apt upgrade -y
+
+# Add Utilities
+echo "Install utilities"
+sudo apt install -y nala zsh git tmux vim python-is-python3 gnome-keyring curl wget gpg fontconfig openssl gettext make cmake htop sqlitebrowser zip unzip
+
+# Ensure we are using the fastest mirror
+echo "Ensure we are using the fastest mirror"
+sudo nala fetch
+
+# Add flatpak
+echo "Add flatpak"
+sudo nala install flatpak gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+# Add codecs
+echo "Add codecs"
+sudo nala install -y libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly vlc
+
+# Add Injest Software
+echo "Add Injest Software"
+sudo nala install -y handbrake
+
+# Add Makemkv
+echo "Add Makemkv"
+wget -O- ramses.hjramses.com/deb/hjmooses-2025.pgp | gpg --dearmor | tee /etc/apt/keyrings/hjmooses-2025.pgp > /dev/null
+wget -O- ramses.hjramses.com/deb/hjmooses-trixie.sources | tee /etc/apt/sources.list.d/hjmooses-trixie.sources
+sudo nala update
+sudo nala install -y makemkv-oss makemkv-bin 
+
+## Add Development Dependencies
+echo "Add Development Dependencies"
+
+## Add kernel headers 
+echo "Add kernel headers"
+sudo nala install -y linux-headers-generic
+
+## Add dependencies for sdkman
+echo "Add sdkman dependencies"
+sudo nala install -y zip unzip
+
+## Add dependencies to build neovim from source
+echo "Add neovim build runtime dependencies"
+sudo nala install -y gettext make cmake fzf wl-clipboard xclip ripgrep fd-find
+
+## Add dependencies to build ruby
+echo "Add ruby build dependencies"
+sudo nala install -y autoconf patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev
+
+## Add dependencies to build python
+echo "Add python build dependencies"
+sudo nala install -y build-essential zlib1g-dev libbz2-dev libssl-dev libreadline-dev libncurses5-dev libsqlite3-dev libgdbm-dev libdb-dev libexpat-dev libpcap-dev liblzma-dev libpcre3-dev libffi-dev
+
+## Add dependencies for clojure
+echo "Add clojure dependencies"
+sudo nala install -y rlwrap
+
+# Final Message
+echo "Restart the system to fully enable flatpak"
