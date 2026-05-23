@@ -18,7 +18,7 @@ sudo nala fetch
 
 # Add flatpak
 echo "Add flatpak"
-sudo nala install flatpak gnome-software-plugin-flatpak
+sudo nala install flatpak gnome-software-plugin-flatpak flatseal
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Add codecs
@@ -31,15 +31,15 @@ sudo nala install -y handbrake
 
 # Add Makemkv
 echo "Add Makemkv"
-wget -O- ramses.hjramses.com/deb/hjmooses-2025.pgp | gpg --dearmor | tee /etc/apt/keyrings/hjmooses-2025.pgp > /dev/null
+wget -O- ramses.hjramses.com/deb/hjmooses-2025.pgp | gpg --dearmor | tee /etc/apt/keyrings/hjmooses-2025.pgp >/dev/null
 wget -O- ramses.hjramses.com/deb/hjmooses-trixie.sources | tee /etc/apt/sources.list.d/hjmooses-trixie.sources
 sudo nala update
-sudo nala install -y makemkv-oss makemkv-bin 
+sudo nala install -y makemkv-oss makemkv-bin
 
 ## Add Development Dependencies
 echo "Add Development Dependencies"
 
-## Add kernel headers 
+## Add kernel headers
 echo "Add kernel headers"
 sudo nala install -y linux-headers-generic
 
