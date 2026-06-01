@@ -4,6 +4,11 @@
 echo "Bootstrap the correct repos"
 ./bootstrap-repos.sh
 
+# Set Yama status to 1 to allow secure notes to add files in 1Password
+# Check Yama status by running cat /proc/sys/kernel/yama/ptrace_scope in the terminal.  A value of 0 indicates it is unrestricted (causing the error), while 1 indicates it is restricted (required for functionality).
+# Restart 1Password if necessary
+sudo sysctl -w kernel.yama.ptrace_scope=1 | sudo tee -a /etc/sysctl.conf
+
 # Make sure we are up to date
 echo "Update repo"
 sudo apt update -y && sudo apt upgrade -y
