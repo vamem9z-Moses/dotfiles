@@ -186,3 +186,6 @@ fi
 
 # Update set editor for use with bundler 
 export BUNDLER_EDITOR="nvim"
+
+# Fix Globbing Errors in zsh when using * with commands like scp
+setopt +o nomatch
