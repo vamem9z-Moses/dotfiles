@@ -191,16 +191,5 @@ export BUNDLER_EDITOR="nvim"
 setopt +o nomatch
 
 
-# Cache GPG Key from 1Password
-_gpg_preset_from_1password() {
-  local keygrip="YOUR_KEYGRIP"
-  # Check if already cached
-  local cached=$(gpg-connect-agent "keyinfo $keygrip" /bye 2>/dev/null | awk '{print $7}')
-  [ "$cached" = "1" ] && return 0
 
-  # Fetch and preset
-  op item get "GPG Key" --fields password --reveal 2>/dev/null \
-    | /usr/lib/gnupg/gpg-preset-passphrase --preset "$keygrip" 2>/dev/null
-}
-
-_gpg_preset_from_1password   
+if [ -e /home/mmiles/.nix-profile/etc/profile.d/nix.sh ]; then . /home/mmiles/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
