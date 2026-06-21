@@ -9,3 +9,6 @@ vim.g.lazyvim_ruby_lsp = "ruby_lsp"
 -- vim.g.lazyvim_ruby_formatter = "rubocop"
 
 vim.opt.winbar = "%=%m %f"
+
+-- Force files detected as "conf" to highlight using the bash Tree-sitter parser
+vim.treesitter.language.register("bash", "conf")
